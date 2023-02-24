@@ -2,3 +2,12 @@
 .bg-image {
   background-image: "url('../assets/bg-images/about-bg.png')";
 }
+
+  .box:after {
+    content: ' ';
+    border-bottom: 25vh solid #424248;
+    border-right: 55vw solid transparent;
+    width: 0;
+    position: absolute;
+    bottom: 0px;
+  }
