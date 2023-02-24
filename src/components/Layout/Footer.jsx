@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import logo from "../../assets/logo.png";
 import Button from "../UI/Button";
@@ -36,34 +37,34 @@ const Footer = () => {
       <div className="flex gap-x-[64px] pt-[70px] text-white text-[14px] ">
         <div>
           <ul className="flex flex-col gap-y-[24px]">
-            <li className="font-bold">Services</li>
-            <li className="text-color">Digital Marketing Services</li>
-            <li className="text-color">Back office Services</li>
+           <Link href={"#"}> <li className="font-bold">Services</li></Link>
+           <Link href={"#"}> <li className="text-color">Digital Marketing Services</li></Link>
+           <Link href={"#"}> <li className="text-color">Back office Services</li></Link>
           </ul>
         </div>
 
         <div>
           <ul className="flex flex-col gap-y-[24px]">
-            <li className="font-bold">Development</li>
-            <li className="text-color">Mobile & Web Development</li>
-            <li className="text-color">AI & Machine Learning</li>
+           <Link href={"#"}> <li className="font-bold">Development</li></Link>
+           <Link href={"#"}> <li className="text-color">Mobile & Web Development</li></Link>
+           <Link href={"#"}> <li className="text-color">AI & Machine Learning</li></Link>
           </ul>
         </div>
 
         <div>
           <ul className="flex flex-col gap-y-[24px]">
-            <li className="font-bold">Resources</li>
-            <li className="text-color">Careers</li>
-            <li className="text-color">Blogs</li>
+           <Link href={"#"}> <li className="font-bold">Resources</li></Link>
+           <Link href={"#"}> <li className="text-color">Careers</li></Link>
+           <Link href={"#"}> <li className="text-color">Blogs</li></Link>
           </ul>
         </div>
 
         <div>
           <ul className="flex flex-col gap-y-[24px]">
-            <li className="font-bold" >Legal</li>
-            <li className="text-color">Privacy Policy</li>
-            <li className="text-color">Terms & Condition</li>
-            <li className="text-color">Cookie Policy</li>
+           <Link href={"#"}> <li className="font-bold" >Legal</li></Link>
+           <Link href={"#"}> <li className="text-color">Privacy Policy</li></Link>
+           <Link href={"#"}> <li className="text-color">Terms & Condition</li></Link>
+           <Link href={"#"}> <li className="text-color">Cookie Policy</li></Link>
           </ul>
         </div>
       </div>

@@ -18,21 +18,21 @@ const Header = () => {
         </div>
 
         <div>
-          <ul className="flex gap-x-[64px] ">
-            <Link href={"/"}><li className="text-[#ffffff] text-[14px] font-bold border-b-[4px] border-b-[#136C2C]">
+          <ul className="flex gap-x-[64px] items-center ">
+            <Link href={"/"}><li className="text-[#ffffff] text-[14px] font-bold border-b-[4px] border-b-[#136C2C] p-[2]">
               Home
             </li> </Link>
             <div className="flex gap-x-2 items-center">
-             <Link href={"#"}> <li className="text-[#808080] text-[16px]">Services</li></Link>
+             <Link href={"#"}> <li className="text-[#808080] text-[16px] border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">Services</li></Link>
               <i class="fa-solid fa-chevron-down text-[#808080] text-[12px]"></i>
             </div>
             <div className="flex gap-x-2 items-center">
-             <Link href={"#"}> <li className="text-[#808080] text-[16px]">Deployment</li></Link>
+             <Link href={"#"}> <li className="text-[#808080] text-[16px] border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">Deployment</li></Link>
               <i class="fa-solid fa-chevron-down text-[#808080] text-[12px]"></i>
             </div>
-           <Link href={"#"}> <li className="text-[#808080] text-[16px]">Portfolio</li></Link>
-           <Link href={"#"}> <li className="text-[#808080] text-[16px]">Partnership</li></Link>
-           <Link href={"#"}> <li className="text-[#808080] text-[16px]">Blog</li></Link>
+           <Link href={"#"}> <li className="text-[#808080] text-[16px] border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">Portfolio</li></Link>
+           <Link href={"#"}> <li className="text-[#808080] text-[16px] border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">Partnership</li></Link>
+           <Link href={"#"}> <li className="text-[#808080] text-[16px] border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">Blog</li></Link>
           </ul>
         </div>
       </div>
