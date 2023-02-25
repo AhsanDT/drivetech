@@ -4,10 +4,13 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import Button from "../UI/Button";
 import FooterIcon from "./FooterIcon";
+import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
   return (
-    <footer className="min-w-[1440px] h-[298px] bg-[#36373A] flex justify-between gap-x-[64px] px-[80px] py-[10px]">
+    <footer className=" bg-[#36373A]  px-[20px] lg:px-[80px] py-[40px] lg:py-[10px]">
+    <div className="w-full xl:max-w-[14 40px] h-[298px] items-center justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex">
+
       <div className="flex flex-col gap-y-[16px] justify-center">
         <div className="flex gap-x-2 items-center">
           <div>
@@ -34,7 +37,7 @@ const Footer = () => {
         </span>
         <Button>Start a Project</Button>
       </div>
-      <div className="flex gap-x-[64px] pt-[70px] text-white text-[14px] ">
+      <div className="flex gap-x-[32px]  xl:gap-x-[64px] pt-[30px] text-white text-[14px] ">
         <div>
           <ul className="flex flex-col gap-y-[24px]">
            <Link href={"#"}> <li className="font-bold">Services</li></Link>
@@ -68,6 +71,11 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      </div>
+      {/* mobile footer */}
+      <div className="lg:hidden text-[16px] flex flex-col gap-y-[20px] text-[#A3A3A3] font-jakarta">
+        <MobileFooter />
+        </div>
     </footer>
   );
 };
