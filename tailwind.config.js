@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "jakarta": ["Plus Jakarta Sans", "sans-serif"],
+        "oswald": ['Oswald', "sans-serif"],
         sans: ["Inter", "sans-serif"],
       },
     },

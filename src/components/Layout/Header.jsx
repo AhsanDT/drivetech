@@ -6,19 +6,24 @@ import Button from "../UI/Button";
 
 const Header = () => {
   return (
-    <header className="min-w-[1440px] h-[80px] bg-[#36373A] flex items-center justify-between  gap-x-[64px] px-[80px] py-[10px]">
+    <header className="bg-[#36373A] px-[20px] md:px-[80px] py-[4px] md:py-[10px]">
+        <div className="w-full xl:max-w-[14 40px] h-[80px]  flex items-center justify-between  gap-x-[64px]">
       <div className="flex items-center gap-x-[64px] ">
         <div className="flex gap-x-2 items-center">
           <Link href={"/"}>
             <Image src={logo} width={55} height={48} />
           </Link>
-          <span className="text-[20px]  text-white font-bold">
+          <span className="text-[16px] sm:text-[20px] text-white font-bold  md:hidden lg:block">
             Drive Technology
           </span>
         </div>
 
+       
+   
+
         <div>
-          <ul className="flex gap-x-[64px] items-center ">
+
+          <ul className="gap-x-[32px] xl:gap-x-[64px] items-center hidden md:flex ">
             <Link href={"/"}><li className="text-[#ffffff] text-[14px] font-bold border-b-[4px] border-b-[#136C2C] p-[2]">
               Home
             </li> </Link>
@@ -48,7 +53,10 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <Button>Start a Project</Button>
+      <i class="fa-solid fa-bars md:hidden text-[#E2E2E2] text-[20px]"></i>
+
+      <Button className ="hidden xl:block">Start a Project</Button>
+      </div>
     </header>
   );
 };
