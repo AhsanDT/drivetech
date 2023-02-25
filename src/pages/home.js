@@ -8,10 +8,10 @@ import styles from "../styles/Home.module.css"
 const HomePage = () => {
   return (
     <Layout>
-            <section className="w-full">
+     <section className="w-full ">
       <div className={` img-container w-full h-screen xl:h-[800px] relative`}>
         <Image src={heroImage} alt="img"/>
-        <div className="absolute top-[60px] xl:top-[149px] left-[20px] md:left-[100px] xl:left-[184px] flex flex-col gap-y-[15px] md:gap-y-[27px] w-[80%] lg:w-[70%] xl:w-[39%] z-[11]">
+        <div className="absolute top-[160px] xl:top-[209px] left-[20px] md:left-[100px] xl:left-[184px] flex flex-col gap-y-[15px] md:gap-y-[27px] w-[80%] lg:w-[70%] xl:w-[39%] z-[11]">
           <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]"> 
             We help you drive your business to <span className="text-[#136C2C]">success</span>
           </span>
