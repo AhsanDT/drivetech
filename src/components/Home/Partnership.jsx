@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import image from "../../assets/partnership/img.png";
+import styles from "../../styles/Hero.module.css";
+
+
 const DATA = [
   { id: "d1", img: image, name: "Core Partner Name" },
   { id: "d2", img: image, name: "Core Partner Name" },
@@ -9,8 +12,8 @@ const DATA = [
 
 const Partnership = () => {
   return (
-    <section className={`w-full px-[80px] py-[100px]`}>
-      <div className="flex flex-col gap-y-[16px] items-center">
+    <section className={`w-full  py-[100px]`}>
+      <div className="flex flex-col gap-y-[16px] items-center px-[80px]">
         <h1 className="text-[48px] font-oswald font-bold text-[#282829] text-center">
           Partnership
         </h1>
@@ -48,6 +51,7 @@ const Partnership = () => {
           })}
         </div>
       </div>
+      {/* <div className={`${styles.box}`}></div> */}
     </section>
   );
 };
