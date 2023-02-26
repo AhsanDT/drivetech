@@ -7,6 +7,7 @@ import service3 from "../../assets/services/service4.png";
 import service4 from "../../assets/services/service3.png";
 import ServiceItem from "./ServiceItem";
 import Button from "../UI/Button";
+import styles from "../../styles/Hero.module.css"
 
 const SERVICES = [
   {
@@ -42,7 +43,8 @@ const SERVICES = [
 
 const Services = () => {
   return (
-    <section className="w-full h-[3157px] bg-[#424248] px-[80px]">
+    <section className={` w-full h-[2726px] bg-[#424248] px-[80 px] `}>
+
       <div className={` img-container w-full relative`}>
         <Image src={bgImage} alt="img" />
         <div className="absolute top-0 z-[11] px-[120px] w-full">
@@ -52,7 +54,7 @@ const Services = () => {
           <div className="flex flex-col gap-y-[158px] pt-[150px]">
             {SERVICES.map((service,index) => {
               return (
-                <div className={`flex justify-between ${index == 1 && 'flex-row-reverse'} ${index == 3 && 'flex-row-reverse'} w-full`}>
+                <div className={`flex justify-between ${index == 1 && 'flex-row-reverse'} ${index == 3 && 'flex-row-reverse'} w-full`} key={service.id}>
                   <ServiceItem service={service} />
                 </div>
               );
@@ -64,7 +66,10 @@ const Services = () => {
           </div>
         </div>
       </div>
+      {/* <div className={styles.box2}></div> */}
+
     </section>
+
   );
 };
 

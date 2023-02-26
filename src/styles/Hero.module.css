@@ -1,13 +1,36 @@
 
+.box:after {
+  content: " ";
+  border-bottom: 30vh solid #424248;
+  border-right: 100vw solid transparent;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+}
+/* .box2 {
+  background-color: #424248;
+} */
+/* .box2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 28.8675vw solid #424248;
+} */
 
-  .box{
-    margin-top: 100px;
-  }
-  .box:after {
-    content: ' ';
-    border-bottom: 30vh solid #424248;
-    border-right: 100vw solid transparent;
-    width: 0;
-    position: absolute;
-    bottom: 0px;
-  }
+.box2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-top: 28.8675vw solid #424248;
+  width: 0;
+  position: absolute;
+  top: 3523px;
+}
