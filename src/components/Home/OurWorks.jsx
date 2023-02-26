@@ -41,7 +41,7 @@ const OurWorks = () => {
                 <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">CRYPTO</li>
             </ul>
           </div>
-          <div className="flex gap-x-[80px] flex-wrap justify-center  gap-y-[40px]">
+          <div className="flex gap-x-[80px] flex-wrap justify-center  gap-y-[40px] mt-[30px]">
           {DATA.map((data) => {
             return (
               <div className=" flex flex-col  gap-y-[21px]">
