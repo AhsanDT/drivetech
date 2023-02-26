@@ -13,35 +13,35 @@ const BLOGS = [
     img: img1,
     title: "Technology Blog",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim... Read More",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
   },
   {
     id: "b2",
     img: img2,
     title: "Technology Blog",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim... Read More",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
   },
   {
     id: "b3",
     img: img3,
     title: "Technology Blog",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim... Read More",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
   },
   {
     id: "b4",
     img: img4,
     title: "Technology Blog",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim... Read More",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
   },
   {
     id: "b5",
     img: img4,
     title: "Technology Blog",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim... Read More",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
   },
 ];
 
@@ -64,7 +64,7 @@ const Blogs = () => {
                 </div>
                 <div className="px-[18px]">
                 <span className="text-[16px] font-oswald font-bold">{data.title}</span>
-                <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">{data.content}</p>
+                <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">{data.content}<span className="text-[#F28E1C] cursor-pointer">Read More</span></p>
                 </div>
               </div>
             );
