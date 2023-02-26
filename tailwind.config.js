@@ -15,6 +15,7 @@ module.exports = {
         "oswald": ['Oswald', "sans-serif"],
         sans: ["Inter", "sans-serif"],
       },
+  
     },
   },
   plugins: [],
