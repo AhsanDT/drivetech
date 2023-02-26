@@ -5,6 +5,7 @@ import Layout from "@/components/Layout/Layout";
 import React from "react";
 import OurWorks from "@/components/Home/OurWorks";
 import Partnership from "@/components/Home/Partnership";
+import Blogs from "@/components/Home/Blogs";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <WhyUs />
       <OurWorks />
       <Partnership />
+      <Blogs />
     </Layout>
   );
 };
