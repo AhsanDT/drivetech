@@ -82,7 +82,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#ffffff] bg-opacity-[10%] mt-[120px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[240px] py-[38px]">
+      <div className="bg-[#ffffff] bg-opacity-[10%] lg:mt-[120px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[240px] py-[38px]">
         <div className="flex flex-col ">
           <span className="font-oswald text-[24px] lg:text-[50px] font-bold text-[#ffffff] uppercase">
           Have an idea?
