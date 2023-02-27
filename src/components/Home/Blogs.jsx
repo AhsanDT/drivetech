@@ -56,7 +56,7 @@ const Blogs = () => {
             Blogs
           </h1>
 
-          <div className="flex gap-x-[32px] justify-center overflow-scroll">
+          <div className="flex gap-x-[32px] justify-center overflow-scroll xl:overflow-hidden">
             {BLOGS.map((data) => {
               return (
                 <div className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]">
@@ -80,14 +80,15 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#ffffff] bg-opacity-[10%] mt-[150px] flex  justify-between items-center px-[240px] py-[38px]">
+      <div className="bg-[#ffffff] bg-opacity-[10%] mt-[150px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[240px] py-[38px]">
         <div className="flex flex-col">
-          <span className="font-oswald text-[50px] font-bold text-[#ffffff] uppercase">
+          <span className="font-oswald text-[24px] lg:text-[50px] font-bold text-[#ffffff] uppercase">
           Have an idea?
           </span>
-          <span className="font-oswald text-[50px] font-light text-[#ffffff] uppercase">Tell us about it.</span>
+          <span className="font-oswald text-[24px] lg:text-[50px] font-light text-[#ffffff] uppercase">Tell us about it.</span>
         </div>
-        <Button>Achieve Your Goals Faster With Us</Button>
+        <Button className="hidden md:block w-fit">Achieve Your Goals Faster With Us</Button>
+        <Button className=" md:hidden w-fit">Start a Project</Button>
       </div>
     </section>
   );
