@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../../styles/Hero.module.css";
+import styles from "../../styles/Blogs.module.css";
 import image from "../../assets/blogs/blogs-bg.png";
 import img1 from "../../assets/blogs/img1.png";
 import img2 from "../../assets/blogs/img2.png";
 import img3 from "../../assets/blogs/img3.png";
 import img4 from "../../assets/blogs/img4.png";
 import Button from "../UI/Button";
+import Idea from "./Idea";
 
 const BLOGS = [
   {
@@ -48,7 +49,7 @@ const BLOGS = [
 
 const Blogs = () => {
   return (
-    <section className={`w-full linear-grad pt-[80px] border-b border-b-[#747474]  relative`}>
+    <section className={`w-full linear-grad pt-[80px] border-b border-b-[#747474] pb-[210px] md:pb-[unset]  relative`}>
         <div className="w-full">
       <div className={` img-container h-[500px] abso lute top-0`}>
         <Image src={image} alt="img" />
@@ -82,6 +83,10 @@ const Blogs = () => {
           </div>
         </div>
       </div>
+      <div className={`${styles.box} linear-grad mt-[260px] hidden md:block`}></div>
+            <Idea />
+
+      
 
     </section>
   );

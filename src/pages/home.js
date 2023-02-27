@@ -6,6 +6,7 @@ import React from "react";
 import OurWorks from "@/components/Home/OurWorks";
 import Partnership from "@/components/Home/Partnership";
 import Blogs from "@/components/Home/Blogs";
+import Idea from "@/components/Home/Idea";
 
 const HomePage = () => {
   return (
@@ -17,7 +18,7 @@ const HomePage = () => {
 
        <OurWorks />
        <Partnership />
-      <Blogs />     
+      <Blogs /> 
     </Layout>
   );
 };
