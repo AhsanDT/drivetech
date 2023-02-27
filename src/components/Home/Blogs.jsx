@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "../../styles/Hero.module.css";
-import image from "../../assets/ourwork/design.png";
+import image from "../../assets/blogs/blogs-bg.png";
 import img1 from "../../assets/blogs/img1.png";
 import img2 from "../../assets/blogs/img2.png";
 import img3 from "../../assets/blogs/img3.png";
@@ -49,8 +49,8 @@ const BLOGS = [
 const Blogs = () => {
   return (
     <section className={`w-full linear-grad pt-[80px] border-b border-b-[#747474]  relative`}>
-        <div className="w-full h-[500px]">
-      <div className={` img-container  abso lute top-0`}>
+        <div className="w-full">
+      <div className={` img-container h-[500px] abso lute top-0`}>
         <Image src={image} alt="img" />
         </div>
         <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px]  lg:px-[80px] ">
@@ -82,16 +82,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#ffffff] bg-opacity-[10%] lg:mt-[120px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[240px] py-[38px]">
-        <div className="flex flex-col ">
-          <span className="font-oswald text-[24px] lg:text-[50px] font-bold text-[#ffffff] uppercase">
-          Have an idea?
-          </span>
-          <span className="font-oswald text-[24px] lg:text-[50px] font-light text-[#ffffff] uppercase">Tell us about it.</span>
-        </div>
-        <Button className="hidden md:block w-fit">Achieve Your Goals Faster With Us</Button>
-        <Button className=" md:hidden w-fit">Start a Project</Button>
-      </div>
+
     </section>
   );
 };

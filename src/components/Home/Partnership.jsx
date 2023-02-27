@@ -54,7 +54,7 @@ const Partnership = () => {
         
       </div>
    
-      <div className={`${styles.box}`}></div>
+      <div className={`${styles.box} linear-grad`}></div>
     </section>
   );
 };
