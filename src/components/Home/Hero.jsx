@@ -6,13 +6,13 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="w-full relative">
+    <section className="w-full relative ">
         <div className="w-full h-sc reen  ">
       <div className={` img-container w-full h-sc reen absolute z-[-2]`}>
         <Image src={heroImage} alt="img" className=" hidden sm:block" />
         <Image src={heromobImage} alt="img" className="sm:hidden" />
       </div>
-      <div className=" pt-[130px] flex flex-col justify-center gap-y-[15px] md:gap-y-[27px] w-[80%] lg:w-[70%] xl:w-[49%] z-[11] px-[20px] md:px-[80px]">
+      <div className=" pt-[130px] flex flex-col justify-center gap-y-[6px] lg:gap-y-[15px] md:gap-y-[27px] w-[80%] lg:w-[70%] xl:w-[49%] z-[11] px-[20px] md:px-[80px]">
         <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[50px] md:leading-[73px]">
           We help you drive your business to{" "}
           <span className="text-[#136C2C]">success</span>
@@ -30,12 +30,12 @@ const Hero = () => {
         <button className="border-[2px] border-black bg-[transparent]  text-[20px] px-[40px] py-[10px] w-fit text-black font-bold hidden lg:block ">
           Achieve Your Goals Faster With Us
         </button>
-        <button className="border-black border-[2px] bg-[transparent] text-[20px] px-[20px] py-[5px] w-fit text-black font-bold lg:hidden font-oswald ">
+        <button className="border-black border-[2px] bg-[transparent] text-[12px] px-[10px] py-[3px] w-fit text-black font-bold lg:hidden font-oswald ">
           Start a Project
         </button>
       </div>
       </div>
-      <div className={`${styles.box} pt-[120px] xl:pt-[350px]`}></div>
+      <div className={`${styles.box} pt-[12px] xl:pt-[350px]`}></div>
     </section>
   );
 };
