@@ -16,7 +16,7 @@ const MobileFooter = () => {
             icon="fa-brands fa-linkedin-in"
             className="bg-[#007BB6]"
           />
-          <FooterIcon icon="fa-brands fa-instagram" className="bg-[#C1328C]" />
+          <FooterIcon icon="fa-brands fa-instagram" className="icon-grad" />
           <FooterIcon icon="fa-brands fa-pinterest" className="bg-[#CD1E25]" />
         </div>
       </div>
