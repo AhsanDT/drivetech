@@ -33,7 +33,7 @@ const Partnership = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px]">
+        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px] pb-[50px]">
           {DATA.map((data) => {
             return (
               <div className=" flex flex-col ustify-center lg:items-center ">
