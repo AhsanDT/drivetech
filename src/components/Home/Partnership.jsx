@@ -14,7 +14,7 @@ const DATA = [
 const Partnership = () => {
   return (
     <section className={`w-full  py-[100px] relative`}>
-      <div className="flex flex-col gap-y-[16px] lg:items-center px-[20px] lg:px-[80px]">
+      <div className="flex flex-col gap-y-[16px] lg:items-center px-[20px]  md:px-[80px]">
         <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center">
           Partnership
         </h1>
@@ -25,7 +25,7 @@ const Partnership = () => {
         </p>    
         <div className="mt-[30px]">
           <ul className="text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] lg:justify-center items-center">
-            <li className="text-white bg-black px-[8px] lg:px-[16px] py-[8px] cursor-pointer border">
+            <li className="text-white bg-black px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black">
               CORE PARTNERS
             </li>
             <li className="text-black hover:bg-black hover:text-white border border-black px-[8px] lg:px-[16px] py-[8px] cursor-pointer">
@@ -33,7 +33,7 @@ const Partnership = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px] pb-[50px]">
+        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px] pb-[130px]">
           {DATA.map((data) => {
             return (
               <div className=" flex flex-col ustify-center lg:items-center ">

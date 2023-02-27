@@ -20,7 +20,7 @@ const DATA = [
 const OurWorks = () => {
   return (
     <>
-<section className={`w-full h-full bg-[#424248]  px-[30px] md:px-[40px] lg:px-[80px] relative pb-[180px]`}>
+<section className={`w-full h-full linear-grad  px-[30px] md:px-[40px] lg:px-[80px] relative pb-[180px]`}>
     <div className="w-full ">
 <div className={`img-container w-fit absolute top-0 `}>
         <Image src={bgImage} alt="img" />

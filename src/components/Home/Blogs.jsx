@@ -48,9 +48,9 @@ const BLOGS = [
 
 const Blogs = () => {
   return (
-    <section className={`w-full bg-[#424248] pt-[80px] border-b border-b-[#747474]  relative`}>
+    <section className={`w-full linear-grad pt-[80px] border-b border-b-[#747474]  relative`}>
         <div className="w-full h-full">
-      <div className={` img-container h-screen olute top-0`}>
+      <div className={` img-container  abso lute top-0`}>
         <Image src={image} alt="img" />
         </div>
         <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px]  lg:px-[80px] ">

@@ -98,6 +98,9 @@ font-family: 'Oswald', sans-serif;
   height: 100% !important;
   object-fit: cover;
 }
+.linear-grad {
+  background: linear-gradient(180deg, #424248 9.85%, #252525 47.46%, #303031 82.43%);
+}
 
 body {
   /* color: rgb(var(--foreground-rgb));
