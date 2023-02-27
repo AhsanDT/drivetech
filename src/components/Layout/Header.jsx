@@ -29,21 +29,23 @@ const Header = () => {
                   </li>{" "}
                 </Link>
                 <div className="flex gap-x-2 items-center cursor-pointer group relative h-[90px]">
-                  <Link href={"#"}>
-                    {" "}
-                    <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent  group-hover:border-b-[#136C2C] group-hover:text-white">
-                      Services
-                    </li>
-                  </Link>
+                  {" "}
+                  <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent  group-hover:border-b-[#136C2C] group-hover:text-white">
+                    Services
+                  </li>
                   <i class="fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold"></i>
                   <div className="w-[205px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
-                      <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                        Digital Marketing Services
-                      </li>
-                      <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                        Back Office Services
-                      </li>
+                      <Link href="/services">
+                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                          Digital Marketing Services
+                        </li>
+                      </Link>
+                      <Link href="/services">
+                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                          Back Office Services
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
@@ -51,7 +53,7 @@ const Header = () => {
                   <Link href={"#"}>
                     {" "}
                     <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent group-hover:border-b-[#136C2C] group-hover:text-white">
-                      Deployment
+                      Development
                     </li>
                   </Link>
                   <i class="fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold"></i>
