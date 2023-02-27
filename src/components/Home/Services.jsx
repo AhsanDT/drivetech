@@ -48,7 +48,7 @@ const Services = () => {
       <section className={` w-full h-full bg-[#424248] relative `}>
 
 
-        <div className="w-full h-full py-[40px]">
+        <div className="w-full h-full py-[ 40px]">
         <div className={` img-container absolute    w-full`}>
           <Image src={bgImage} alt="img" />
           </div>
