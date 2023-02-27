@@ -53,7 +53,7 @@ const Blogs = () => {
       <div className={` img-container h-screen olute top-0`}>
         <Image src={image} alt="img" />
         </div>
-        <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px] py-[80px] lg:px-[80px] ">
+        <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px]  lg:px-[80px] ">
           <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
             Blogs
           </h1>

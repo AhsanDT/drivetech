@@ -13,7 +13,7 @@ const DATA = [
 
 const Partnership = () => {
   return (
-    <section className={`w-full  py-[40px] lg:py-[100px]`}>
+    <section className={`w-full  py-[100px] relative`}>
       <div className="flex flex-col gap-y-[16px] lg:items-center px-[20px] lg:px-[80px]">
         <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center">
           Partnership
@@ -54,7 +54,7 @@ const Partnership = () => {
         
       </div>
    
-      {/* <div className={`${styles.box}`}></div> */}
+      <div className={`${styles.box}`}></div>
     </section>
   );
 };
