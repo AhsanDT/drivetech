@@ -48,15 +48,15 @@ const BLOGS = [
 
 const Blogs = () => {
   return (
-    <section className={`w-full bg-[#424248] h-[]   `}>
+    <section className={`w-full bg-[#424248] py-[80px]`}>
       <div className={` img-container w-full relative  `}>
         <Image src={image} alt="img" />
         <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[80px] ">
-          <h1 className="text-[48px] font-oswald font-bold text-white text-center">
-            Our Works
+          <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
+            Blogs
           </h1>
 
-          <div className="flex gap-x-[32px] justify-center">
+          <div className="flex gap-x-[32px] justify-center overflow-scroll">
             {BLOGS.map((data) => {
               return (
                 <div className="w-[210px] h-[385px] bg-white flex flex-col gap-y-[18px]">

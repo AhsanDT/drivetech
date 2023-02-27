@@ -17,7 +17,7 @@ const HomePage = () => {
 
        <OurWorks />
        <Partnership />
-      {/* <Blogs />   */}
+      <Blogs />     
     </Layout>
   );
 };

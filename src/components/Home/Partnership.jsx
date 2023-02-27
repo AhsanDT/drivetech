@@ -24,7 +24,7 @@ const Partnership = () => {
           intention of making everyone succeed.
         </p>    
         <div className="mt-[30px]">
-          <ul className="text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] justify-center items-center">
+          <ul className="text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] lg:justify-center items-center">
             <li className="text-white bg-black px-[8px] lg:px-[16px] py-[8px] cursor-pointer border">
               CORE PARTNERS
             </li>
@@ -33,10 +33,10 @@ const Partnership = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-x-[80px] flex-wrap justify-center  gap-y-[40px] mt-[30px]">
+        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px]">
           {DATA.map((data) => {
             return (
-              <div className=" flex flex-col justify-center items-center ">
+              <div className=" flex flex-col ustify-center lg:items-center ">
                 <div className="img-container ">
                   <Image src={data.img} alt="img" />
                 </div>
