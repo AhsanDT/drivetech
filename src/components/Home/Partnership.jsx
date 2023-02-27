@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import image from "../../assets/partnership/img.png";
 import styles from "../../styles/Hero.module.css";
+import Button from "../UI/Button";
 
 
 const DATA = [
@@ -50,7 +51,12 @@ const Partnership = () => {
             );
           })}
         </div>
+        <div className="bg-[#ffffff] bg-opacity-[10%] h-[168px] mt-[150px] flex flex-col gap-y-[24px] justify-center items-center">
+            <p className="font-oswald text-[20px] font-bold text-[#ffffff] text-opacity-[60%]">ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL MARKETING SERVICES </p>
+          <Button>BOOK A FREE CONSULTATION</Button>
+          </div>
       </div>
+   
       {/* <div className={`${styles.box}`}></div> */}
     </section>
   );
