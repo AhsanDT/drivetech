@@ -49,7 +49,7 @@ const BLOGS = [
 const Blogs = () => {
   return (
     <section className={`w-full linear-grad pt-[80px] border-b border-b-[#747474]  relative`}>
-        <div className="w-full h-full">
+        <div className="w-full h-[500px]">
       <div className={` img-container  abso lute top-0`}>
         <Image src={image} alt="img" />
         </div>
