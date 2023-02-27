@@ -12,7 +12,7 @@ const Hero = () => {
         <Image src={heroImage} alt="img" className=" hidden sm:block" />
         <Image src={heromobImage} alt="img" className="sm:hidden min-h-[640px]" />
       </div>
-      <div className=" pt-[130px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[80%] lg:w-[70%] xl:w-[49%] z-[11] px-[20px] md:px-[80px]">
+      <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[80%] lg:w-[70%] xl:w-[49%] z-[11] px-[20px] md:px-[80px]">
         <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]">
           We help you drive your business to{" "}
           <span className="text-[#136C2C]">success</span>

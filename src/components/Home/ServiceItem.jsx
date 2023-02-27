@@ -15,7 +15,7 @@ const ServiceItem = ({ service }) => {
         <div className=" bg-white w-[12px] h-[12px] rounded-full"></div>
         </div>
         <p className=" text-[15px] lg:text-[16px] text-white font-jakarta">{service.content}</p>
-        <Button className="bg-transparent text-white text-[16px] py-1 font-oswald font-medium w-fit hidden md:block">Learn More</Button>
+        <Button className="bg-transparent text-white text-[16px] px-[40px] py-1 font-oswald font-medium w-fit hidden md:block">Learn More</Button>
       </div>
     </>
   );
