@@ -7,7 +7,7 @@ import service3 from "../../assets/services/service4.png";
 import service4 from "../../assets/services/service3.png";
 import ServiceItem from "./ServiceItem";
 import Button from "../UI/Button";
-import styles from "../../styles/Hero.module.css"
+import styles from "../../styles/Hero.module.css";
 
 const SERVICES = [
   {
@@ -43,33 +43,47 @@ const SERVICES = [
 
 const Services = () => {
   return (
-    <section className={` w-full h-[2726px] bg-[#424248] px-[80 px] `}>
+    <>
 
-      <div className={` img-container w-full relative`}>
-        <Image src={bgImage} alt="img" />
-        <div className="absolute top-0 z-[11] px-[120px] w-full">
-          <h1 className="text-[48px] font-oswald font-bold text-white text-center">
-            Digital Services
-          </h1>
-          <div className="flex flex-col gap-y-[158px] pt-[150px]">
-            {SERVICES.map((service,index) => {
-              return (
-                <div className={`flex justify-between ${index == 1 && 'flex-row-reverse'} ${index == 3 && 'flex-row-reverse'} w-full`} key={service.id}>
-                  <ServiceItem service={service} />
-                </div>
-              );
-            })}
+      <section className={` w-full h-full bg-[#424248] relative `}>
+
+
+        <div className="w-full h-full ">
+        <div className={` img-container absolute  w-full`}>
+          <Image src={bgImage} alt="img" />
           </div>
-          <div className="bg-[#ffffff] bg-opacity-[10%] h-[168px] mt-[150px] flex flex-col gap-y-[24px] justify-center items-center">
-            <p className="font-oswald text-[20px] font-bold text-[#ffffff] text-opacity-[60%]">ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL MARKETING SERVICES </p>
-          <Button>BOOK A FREE CONSULTATION</Button>
+          <div>
+          <div className="px-[30px] sm:px-[120px] xl:px-[200px] w-full py-[40px]">
+            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
+              Digital Services
+            </h1>
+            <div className="flex flex-col gap-y-[48px] xl:gap-y-[158px] pt-[45px] xl:pt-[150px]">
+              {SERVICES.map((service, index) => {
+                return (
+                  <div
+                    className={`flex flex-col gap-y-[16px] md:flex-row gap-x-[20px] md:justify-between ${
+                      index == 1 && "md:flex-row-reverse"
+                    } ${index == 3 && "md:flex-row-reverse"} w-full`}
+                    key={service.id}
+                  >
+                    <ServiceItem service={service} />
+                  </div>
+                );
+              })}
+            </div>
+            </div>
+            <div className="bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[80px] py-[20px]">
+              <p className="font-oswald text-[20px] font-bold text-[#ffffff] text-opacity-[60%] text-center">
+                ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL
+                MARKETING SERVICES{" "}
+              </p>
+              <Button>BOOK A FREE CONSULTATION</Button>
+            </div>
           </div>
-        </div>
-      </div>
-      {/* <div className={styles.box2}></div> */}
+          </div>
+      </section>
 
-    </section>
-
+    </>
   );
 };
 

@@ -9,7 +9,7 @@ const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   return (
     <>
-      <header className="w-full bg-[#36373A] px-[20px] md:px-[80px] py-[4px] md:py-[10px] fixed z-[100]">
+      <header className="w-full bg-[#36373A] px-[20px] md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100]">
         <div className="w-full xl:max-w-[14 40px] h-[80px]  flex items-center justify-between  gap-x-[64px]">
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">

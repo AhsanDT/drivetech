@@ -12,10 +12,10 @@ const HomePage = () => {
     <Layout>
       <Hero />
       <Services />
-      <WhyUs />
-      <OurWorks />
+       {/* <WhyUs /> */}
+      {/* <OurWorks />
       <Partnership />
-      <Blogs />
+      <Blogs />  */}
     </Layout>
   );
 };

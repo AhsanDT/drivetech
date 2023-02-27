@@ -8,7 +8,7 @@ import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#36373A]  px-[20px] lg:px-[80px] py-[40px] lg:py-[10px]">
+    <footer className=" bg-[#36373A]  px-[20px] lg:px-[80px] py-[40px] lg:py-[10px] ">
       <div className="w-full xl:max-w-[14 40px] h-[298px] items-center justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex border-b border-b-[#6F6F6F]">
         <div className="flex flex-col-reverse gap-y-[16px] justify-center">
           <div className="flex gap-x-2 items-center">
@@ -123,7 +123,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-[12px] text-[#6F6F6F] font-jakarta font-medium flex justify-end gap-x-[160px] py-[30px]">
+      <div className="text-[12px] text-[#6F6F6F] font-jakarta font-medium hidden lg:flex justify-end gap-x-[160px] py-[30px]">
         <span>Privacy Policy</span>
         <span>Terms of Use</span>
         <span>Copyright 2023 DriveTech. All Rights Reserved.</span>
