@@ -48,12 +48,12 @@ const Services = () => {
       <section className={` w-full h-full bg-[#424248] relative `}>
 
 
-        <div className="w-full h-full ">
+        <div className="w-full h-full py-[40px]">
         <div className={` img-container absolute  w-full`}>
           <Image src={bgImage} alt="img" />
           </div>
           <div>
-          <div className="px-[30px] sm:px-[120px] xl:px-[200px] w-full py-[40px]">
+          <div className="px-[30px] sm:px-[120px] xl:px-[200px] w-full lg:pb-[40px]">
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
               Digital Services
             </h1>
@@ -72,8 +72,8 @@ const Services = () => {
               })}
             </div>
             </div>
-            <div className="bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[80px] py-[20px]">
-              <p className="font-oswald text-[20px] font-bold text-[#ffffff] text-opacity-[60%] text-center">
+            <div className="bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[30px] py-[20px]">
+              <p className="font-oswald text-[20px] font-bold text-[#ffffff] text-opacity-[60%] lg:text-center">
                 ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL
                 MARKETING SERVICES{" "}
               </p>

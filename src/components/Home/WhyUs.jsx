@@ -58,9 +58,9 @@ const DATA = [
 const WhyUs = () => {
   return (
     <section className="w-full relative">
-      <div className="flex flex-col gap-y-[76px] items-center justify-center px-[120px]">
-        <div className="bg-[#5E5E5E] bg-opacity-[10%] h-[168px] mt-[150px] flex flex-col gap-y-[24px] px-[240px]  justify-center items-center ">
-          <p className="font-oswald text-[16px] font-bold text-[#1D1D1D] text-opacity-[60%] text-center">
+      <div className="flex flex-col gap-y-[40px] lg:gap-y-[76px] items-center justify-center px-[0px] md:px-[120px] md:py-[40px]">
+        <div className="bg-[#5E5E5E] bg-opacity-[10%] lg:h-[168px] flex flex-col gap-y-[24px]  px-[30px] py-[20px]  justify-center items-center ">
+          <p className="font-oswald text-[16px] font-bold text-[#1D1D1D] text-opacity-[60%] lg:text-center">
             In a crowded market of software development, digital marketing, and
             marketing automation services, what makes Drive Technology stand out
             as the right choice for you?
@@ -70,13 +70,13 @@ const WhyUs = () => {
             and Marketing Automation
           </p>
         </div>
-        <h1 className="text-[48px] font-oswald font-bold">
+        <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold">
           Why Drive Technology
         </h1>
-        <div className="flex gap-x-[80px] flex-wrap justify-center  gap-y-[108px]">
+        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[40px] px-[20px] lg:gap-y-[108px]">
           {DATA.map((data) => {
             return (
-              <div className="w-[401px] h-[268px] flex flex-col items-center gap-y-[32px]" key={data.id}>
+              <div className="w-full lg:w-[401px] lg:h-[268px] flex flex-col  md:items-center gap-y-[32px]" key={data.id}>
                 <WhyUsItem data={data} />
               </div>
             );
