@@ -13,9 +13,9 @@ const DATA = [
 
 const Partnership = () => {
   return (
-    <section className={`w-full  py-[100px]`}>
-      <div className="flex flex-col gap-y-[16px] items-center px-[80px]">
-        <h1 className="text-[48px] font-oswald font-bold text-[#282829] text-center">
+    <section className={`w-full  py-[40px] lg:py-[100px]`}>
+      <div className="flex flex-col gap-y-[16px] items-center px-[20px] lg:px-[80px]">
+        <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] text-center">
           Partnership
         </h1>
 
@@ -24,7 +24,7 @@ const Partnership = () => {
           intention of making everyone succeed.
         </p>
         <div className="mt-[30px]">
-          <ul className="text-[16px] font-oswald font-bold flex gap-x-[40px] justify-center items-center">
+          <ul className="text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] justify-center items-center">
             <li className="text-white bg-black px-[16px] py-[8px] cursor-pointer border">
               CORE PARTNERS
             </li>
@@ -51,10 +51,7 @@ const Partnership = () => {
             );
           })}
         </div>
-        <div className="bg-[#ffffff] bg-opacity-[10%] h-[168px] mt-[150px] flex flex-col gap-y-[24px] justify-center items-center">
-            <p className="font-oswald text-[20px] font-bold text-[#ffffff] text-opacity-[60%]">ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL MARKETING SERVICES </p>
-          <Button>BOOK A FREE CONSULTATION</Button>
-          </div>
+        
       </div>
    
       {/* <div className={`${styles.box}`}></div> */}

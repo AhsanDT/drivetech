@@ -19,19 +19,22 @@ const DATA = [
 
 const OurWorks = () => {
   return (
-    <section className={`w-full bg-[#424248] px-[80px] `}>
-      <div className={` img-container w-full relative `}>
+    <>
+<section className={`w-full h-full bg-[#424248]  px-[30px] md:px-[40px] lg:px-[80px] relative pb-[180px]`}>
+    <div className="w-full ">
+<div className={`img-container w-fit absolute top-0 `}>
         <Image src={bgImage} alt="img" />
-        <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center ">
-          <h1 className="text-[48px] font-oswald font-bold text-white text-center">
+        </div>
+        <div className="relative z-[21] w-full flex flex-col gap-y-[32px] items-cen ter justify-center ">
+          <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white text-center">
             Our Works
           </h1>
           <div className="relative flex items-center justify-center">
-          <i class="fa-solid fa-magnifying-glass absolute left-[220px] top-3 text-[16px]"></i>
-            <input type="text" placeholder="Search industry or name" className="w-[70%] h-[40px] outline-none text-[14px] font-jakarta text-[#000000] text-opacity-[50%] px-[56px] py-[11px]" />
+          <i class="fa-solid fa-magnifying-glass absolute md:left-[140px] lg:left-[220px] left-[10px] top-3 text-[16px]"></i>
+            <input type="text" placeholder="Search industry or name" className="w-full md:w-[70%] h-[40px] outline-none text-[14px] font-jakarta text-[#000000] text-opacity-[50%] px-[56px] py-[11px]" />
           </div>
           <div>
-            <ul className="text-[16px] font-oswald font-bold flex gap-x-[86px] justify-center items-center">
+            <ul className="text-[16px] font-oswald font-bold flex gap-x-[14px] flex-wrap lg:gap-x-[86px] justify-center items-center">
                 <li className="text-black bg-white px-[16px] py-[8px] cursor-pointer">ALL CATEGORIES</li>
                 <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">HEALTH TECH</li>
                 <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">FINTECH</li>
@@ -41,10 +44,10 @@ const OurWorks = () => {
                 <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">CRYPTO</li>
             </ul>
           </div>
-          <div className="flex gap-x-[80px] flex-wrap justify-center  gap-y-[40px] mt-[30px]">
+          <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[24px] lg:gap-y-[40px] mt-[30px]">
           {DATA.map((data) => {
             return (
-              <div className=" flex flex-col  gap-y-[21px]">
+              <div className=" flex flex-col gap-y-[21px]">
                 <OurWorkItem data={data} />
               </div>
             );
@@ -53,6 +56,9 @@ const OurWorks = () => {
         </div>
       </div>
     </section>
+ 
+
+  </>
   );
 };
 

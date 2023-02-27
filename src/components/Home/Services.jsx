@@ -49,10 +49,10 @@ const Services = () => {
 
 
         <div className="w-full h-full py-[40px]">
-        <div className={` img-container absolute  w-full`}>
+        <div className={` img-container absolute    w-full`}>
           <Image src={bgImage} alt="img" />
           </div>
-          <div>
+          <div className="relative z-[1]">
           <div className="px-[30px] sm:px-[120px] xl:px-[200px] w-full lg:pb-[40px]">
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
               Digital Services

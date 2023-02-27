@@ -10,12 +10,14 @@ import Blogs from "@/components/Home/Blogs";
 const HomePage = () => {
   return (
     <Layout>
-      <Hero />
-      <Services />
+       <Hero />
+      <Services />  
        <WhyUs />
-      {/* <OurWorks />
-      <Partnership />
-      <Blogs />  */}
+       
+
+       <OurWorks />
+       <Partnership />
+      {/* <Blogs />   */}
     </Layout>
   );
 };
