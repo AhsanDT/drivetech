@@ -48,10 +48,12 @@ const BLOGS = [
 
 const Blogs = () => {
   return (
-    <section className={`w-full bg-[#424248] py-[80px]`}>
-      <div className={` img-container w-full relative  `}>
+    <section className={`w-full bg-[#424248] pt-[80px] border-b border-b-[#747474]  relative`}>
+        <div className="w-full h-full">
+      <div className={` img-container h-screen olute top-0`}>
         <Image src={image} alt="img" />
-        <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[80px] ">
+        </div>
+        <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px] py-[80px] lg:px-[80px] ">
           <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
             Blogs
           </h1>
@@ -80,8 +82,8 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#ffffff] bg-opacity-[10%] mt-[150px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[240px] py-[38px]">
-        <div className="flex flex-col">
+      <div className="bg-[#ffffff] bg-opacity-[10%] mt-[120px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[240px] py-[38px]">
+        <div className="flex flex-col ">
           <span className="font-oswald text-[24px] lg:text-[50px] font-bold text-[#ffffff] uppercase">
           Have an idea?
           </span>
