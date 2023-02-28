@@ -12,7 +12,7 @@ const ProjectDetail = ({ id, DATA }) => {
         {DATA.map((data) => {
           return (
             <div className="pt-[50px] pb-[92px]">
-              <div className="px-[130px]">
+              <div className="px-[30px] md:px-[130px]">
                 <Link href="/portfolio">
                   <span className="text-[rgb(140,140,140)] text-[14px] cursor-pointer">
                     Portfolio /
@@ -23,28 +23,28 @@ const ProjectDetail = ({ id, DATA }) => {
                 </span>
               </div>
               <div>
-                <div className="pt-[77px] flex flex-col gap-y-[21px] justify-center items-center">
-                  <div className="flex items-center px-[130px] mt-[21px]">
+                <div className="pt-[20px] md:pt-[77px] flex flex-col gap-y-[21px] justify-center md:items-center">
+                  <div className="flex items-center px-[30px] md:px-[130px] mt-[21px]">
                     <div className=" bg-[#3C3C3C] w-[68px] h-[2px]"></div>
                     <div className=" bg-[#3C3C3C] w-[12px] h-[12px] rounded-full"></div>
                   </div>
-                  <h1 className="text-[32px] font-oswald font-bold text-[#3F3F3F] lg:text-[48px] px-[130px]">
+                  <h1 className="text-[32px] font-oswald font-bold text-[#3F3F3F] lg:text-[48px] px-[30px] md:px-[130px]">
                     {data.title}
                   </h1>
-                  <div className="font-jakarta text-[15px] px-[130px] flex gap-x-[40px]">
+                  <div className="font-jakarta text-[15px] px-[30px] md:px-[130px] flex gap-x-[10px] md:gap-x-[40px]">
                     <span>{data.type}</span>
                     <span className="text-[black]  w-[2px]">|</span>
 
                     <span>Founder: {data.founder}</span>
                   </div>
-                  <Button className="mx-[130px] px-[16px] border-black py-[8px] font-jakarta text-[14px]">
+                  <Button className="mx-[30px] w-fit md:mx-[130px] px-[16px] border-black py-[8px] font-jakarta text-[14px]">
                     View Website
                   </Button>
                 </div>
                 <div className="img-container py-[48px]">
                   <div className={`${styles.parallax}`}></div>
                 </div>
-                <div className="px-[300px] flex flex-col gap-y-[32px]">
+                <div className="px-[30px] md:px-[120px] xl:px-[300px] flex flex-col gap-y-[32px]">
                   <h3 className="text-[32px] text-[#3F3F3F] font-oswald font-bold">
                     The Project Sub Title
                   </h3>
@@ -54,15 +54,15 @@ const ProjectDetail = ({ id, DATA }) => {
                   <span>{data.subTitle.substring(1000, 1600)}</span>
                 </div>
               </div>
-              <div className="flex justify-center gap-x-[180px] px-[130px] py-[40px]">
-                <div className="img-container w-[366px] h-[261px]">
+              <div className="flex flex-col gap-y-[20px] md:flex-row justify-center gap-x-[10px] xl:gap-x-[180px] px-[30px] md:px-[130px] py-[40px]">
+                <div className="img-container w-full md:w-[366px] md:h-[261px]">
                   <Image src={data.img} alt="img" />
                 </div>
-                <div className="img-container w-[366px] h-[261px]">
+                <div className="img-container w-full md:w-[366px] md:h-[261px]">
                   <Image src={data.img} alt="img" />
                 </div>
               </div>
-              <div className="px-[300px] flex flex-col gap-y-[32px]">
+              <div className="px-[30px] md:px-[120px] xl:px-[300px] flex flex-col gap-y-[32px]">
                 <h3 className="text-[32px] text-[#3F3F3F] font-oswald font-bold">
                   The Project Sub Title
                 </h3>
