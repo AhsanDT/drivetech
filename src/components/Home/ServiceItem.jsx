@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 const ServiceItem = ({ service }) => {
   return (
     <>
-      <div className="img-container w-full h-[218px] sm:w-[500px]  lg:w-[371px] lg:h-[384px]">
+       <div className="img-container w-full  sm:min-w-[200px] sm:h-[218px]  lg:w-[371px] lg:h-[384px]">
         <Image src={service.img}  alt={service.serviceName}  />
       </div>
       <div className="flex flex-col  gap-y-[21px] lg:gap-y-[55px]  lg:w-[495px]">

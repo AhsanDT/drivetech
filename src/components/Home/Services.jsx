@@ -4,11 +4,12 @@ import ServiceItem from "./ServiceItem";
 import Button from "../UI/Button";
 import styles from "../../styles/Hero.module.css";
 import styles2 from "../../styles/Blogs.module.css";
+import styles3 from "../../styles/Services.module.css";
 import Idea from "./Idea";
 import { useRouter } from "next/router";
 
-const Services = ({ services,name, padding, className, image }) => {
-  const {route} = useRouter();
+const Services = ({ services, name, padding, className, image }) => {
+  const { route } = useRouter();
   return (
     <>
       <section className={` w-full h-full linear-grad relative `}>
@@ -23,7 +24,7 @@ const Services = ({ services,name, padding, className, image }) => {
               <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
                 {name}
               </h1>
-              <div className="flex flex-col gap-y-[48px] xl:gap-y-[158px] pt-[45px] xl:pt-[150px]">
+            <div className="flex flex-col gap-y-[48px] xl:gap-y-[158px] pt-[45px] xl:pt-[150px]">
                 {services.map((service, index) => {
                   return (
                     <div
@@ -47,20 +48,26 @@ const Services = ({ services,name, padding, className, image }) => {
             </div>
           </div>
         </div>
-        {route == "/services" ?(
+        {route == "/services" ? (
           <>
             <div
               className={`${styles2.box}  linear-grad  hidden md:block`}
             ></div>
             <Idea title="Start a Project" />
           </>
-        ) : route == "/development"?      <>
-        <div
-          className={`${styles2.box}  linear-grad  hidden md:block`}
-        ></div>
-        <Idea title="Start a Project" />
-      </>:"" }
+        ) : route == "/development" ? (
+          <>
+            <div
+              className={`${styles2.box}  linear-grad  hidden md:block`}
+            ></div>
+            <Idea title="Start a Project" />
+          </>
+        ) : (
+          ""
+        )}
+     {route =="/" && <div className={`${styles3.box}   linear-grad mt-[20%] 2xl:mt-[20.2%]  relative hidden xl:block`}></div>}
       </section>
+      
     </>
   );
 };
