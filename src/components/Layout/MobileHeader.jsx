@@ -11,7 +11,7 @@ const MobileHeader = () => {
             <Link href={"/"}><li className={`${ route == "/" ? "text-[#ffffff]" : "text-[#808080] " }`}>Home</li></Link>
             <Link href={"/services"}><li className={`${ route == "/services" ? "text-[#ffffff]" : "text-[#808080] " }`}>Services</li></Link>
             <Link href={"/development"}><li className={`${ route == "/development" ? "text-[#ffffff]" : "text-[#808080] " }`}>Development</li></Link>
-            <Link href={"/portfolio"}><li className={`${ route == "/portfolio" ? "text-[#ffffff]" : "text-[#808080] " }`}>Portfolio</li></Link>
+            <Link href={"/portfolio"}><li className={`${ route == "/portfolio" ? "text-[#ffffff]" : route == "/portfolio/[projectId]" ?"text-[#ffffff]": "text-[#808080] " }`}>Portfolio</li></Link>
             <Link href={"#"}><li className={`${ route == "#" ? "text-[#ffffff]" : "text-[#808080] " }`}>Partnership</li></Link>
             <Link href={"#"}><li className={`${ route == "#" ? "text-[#ffffff]" : "text-[#808080] " }`}>Blog</li></Link>
         </ul>
