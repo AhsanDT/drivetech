@@ -30,7 +30,7 @@ const development = () => {
         name="Development"
         image={bgImage}
         className="top-[150px]"
-        padding="pb-[470px]"
+        padding="pb-[360px] md:pb-[470px]"
       />
     </Layout>
   );

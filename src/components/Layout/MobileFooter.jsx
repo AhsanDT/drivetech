@@ -31,8 +31,8 @@ const MobileFooter = () => {
       </div>
       <div className="border-b-[2px] border-b-[#A3A3A3]">
         <ul className="flex flex-col gap-y-[25px]">
-          <li>Services</li>
-          <li>Deployment</li>
+          <Link href={"/services"}><li>Services</li></Link>
+          <Link href={"/development"}><li>Development</li></Link>
           <li>Reesources</li>
           <li className="pb-[25px]">Legal</li>
         </ul>

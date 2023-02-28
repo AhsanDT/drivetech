@@ -9,6 +9,7 @@ import MobileHeader from "./MobileHeader";
 const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const { route } = useRouter();
+  console.log(route);
   return (
     <>
       <header className="w-full bg-[#36373A] px-[20px] md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100]">
@@ -18,9 +19,12 @@ const Header = () => {
               <Link href={"/"}>
                 <Image src={logo} width={55} height={48} />
               </Link>
-              <span className="text-[16px] sm:text-[20px] text-white font-bold  md:hidden lg:block">
-                Drive Technology
-              </span>
+              <Link href={"/"}>
+                {" "}
+                <span className="text-[16px] sm:text-[20px] text-white font-bold  md:hidden lg:block">
+                  Drive Technology
+                </span>
+              </Link>
             </div>
 
             <div>
@@ -99,11 +103,13 @@ const Header = () => {
                     </ul>
                   </div>
                 </div>
-                <Link href={"portfolio"}>
+                <Link href={"/portfolio"}>
                   {" "}
                   <li
                     className={`${
                       route == "/portfolio"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : route == "/portfolio/[projectId]"
                         ? "text-[#ffffff] border-b-[#136C2C]"
                         : "text-[#808080] "
                     }  text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}

@@ -47,14 +47,19 @@ const Services = ({ services,name, padding, className, image }) => {
             </div>
           </div>
         </div>
-        {route == "/services" &&(
+        {route == "/services" ?(
           <>
             <div
               className={`${styles2.box}  linear-grad  hidden md:block`}
             ></div>
             <Idea title="Start a Project" />
           </>
-        )}
+        ) : route == "/development"?      <>
+        <div
+          className={`${styles2.box}  linear-grad  hidden md:block`}
+        ></div>
+        <Idea title="Start a Project" />
+      </>:"" }
       </section>
     </>
   );

@@ -53,15 +53,15 @@ const Footer = () => {
         <div className="flex gap-x-[32px]  xl:gap-x-[64px] text-white text-[12px] font-jakarta  ">
           <div>
             <ul className="flex flex-col gap-y-[24px]">
-              <Link href={"#"}>
+              <Link href={"/services"}>
                 {" "}
                 <li className="font-bold font-oswald text-[14px]">Services</li>
               </Link>
-              <Link href={"#"}>
+              <Link href={"/services"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%]">Digital Marketing Services</li>
               </Link>
-              <Link href={"#"}>
+              <Link href={"/services"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%]">Back office Services</li>
               </Link>
@@ -70,15 +70,15 @@ const Footer = () => {
 
           <div>
             <ul className="flex flex-col gap-y-[24px]">
-              <Link href={"#"}>
+              <Link href={"/development"}>
                 {" "}
                 <li className="font-bold font-oswald text-[14px]">Development</li>
               </Link>
-              <Link href={"#"}>
+              <Link href={"/development"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%]">Mobile & Web Development</li>
               </Link>
-              <Link href={"#"}>
+              <Link href={"/development"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%]">AI & Machine Learning</li>
               </Link>

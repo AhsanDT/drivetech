@@ -29,7 +29,7 @@ const SERVICES = [
 const services = () => {
   return (
     <Layout>
-        <Services services={SERVICES} image={bgImage} name="Services" className="top-[150px]" padding="pb-[470px]"/>
+        <Services services={SERVICES} image={bgImage} name="Services" className="top-[150px]" padding="pb-[360px] md:pb-[470px]"/>
     </Layout>
   )
 }

@@ -37,7 +37,7 @@ const ProjectDetail = ({ id, DATA }) => {
 
                     <span>Founder: {data.founder}</span>
                   </div>
-                  <Button className="mx-[30px] w-fit md:mx-[130px] px-[16px] border-black py-[8px] font-jakarta text-[14px]">
+                  <Button className="mx-[30px] w-fit md:mx-[130px] px-[16px] border-black py-[8px] font-jakarta text-[14px] hover:bg-black hover:text-white">
                     View Website
                   </Button>
                 </div>
