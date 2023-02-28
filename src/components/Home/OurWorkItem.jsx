@@ -4,7 +4,7 @@ import Link from "next/link";
 const OurWorkItem = ({ data }) => {
   return (
     <>
-      <Link href="#" className="img-container sm:w-[352px] h-[262px]">
+      <Link href={`/portfolio/${data.id}`} className="img-container sm:w-[352px] h-[262px]">
         <Image src={data.img} alt="img" />
       </Link>
       <p className="text-[24px] font-oswald font-bold text-white">
