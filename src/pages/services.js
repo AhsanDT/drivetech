@@ -3,6 +3,9 @@ import Layout from '@/components/Layout/Layout'
 import React from 'react'
 import service1 from "../assets/services/service1.png";
 import service4 from "../assets/services/service3.png";
+import bgImage from "../assets/services/bg2.png"
+import Idea from '@/components/Home/Idea';
+import styles from "../styles/Blogs.module.css"
 
 
 const SERVICES = [
@@ -26,7 +29,7 @@ const SERVICES = [
 const services = () => {
   return (
     <Layout>
-        <Services services={SERVICES} className="top-[150px]" />
+        <Services services={SERVICES} image={bgImage} name="Services" className="top-[150px]" padding="pb-[470px]"/>
     </Layout>
   )
 }

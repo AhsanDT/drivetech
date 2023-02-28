@@ -49,10 +49,12 @@ const BLOGS = [
 
 const Blogs = () => {
   return (
-    <section className={`w-full linear-grad pt-[80px] border-b border-b-[#747474] pb-[210px] md:pb-[unset]  relative`}>
-        <div className="w-full">
-      <div className={` img-container h-[500px] abso lute top-0`}>
-        <Image src={image} alt="img" />
+    <section
+      className={`w-full linear-grad pt-[80px] border-b border-b-[#747474] pb-[210px] md:pb-[unset]  relative`}
+    >
+      <div className="w-full">
+        <div className={` img-container h-[500px] abso lute top-0`}>
+          <Image src={image} alt="img" />
         </div>
         <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px]  lg:px-[80px] ">
           <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
@@ -83,11 +85,10 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className={`${styles.box} linear-grad mt-[260px] hidden md:block`}></div>
-            <Idea />
-
-      
-
+      <div
+        className={`${styles.box} linear-grad mt-[260px] hidden md:block`}
+      ></div>
+      <Idea title="Achieve Your Goals Faster With Us" />
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import Button from "../UI/Button";
@@ -7,6 +8,7 @@ import MobileHeader from "./MobileHeader";
 
 const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const { route } = useRouter();
   return (
     <>
       <header className="w-full bg-[#36373A] px-[20px] md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100]">
@@ -24,16 +26,32 @@ const Header = () => {
             <div>
               <ul className="gap-x-[32px] xl:gap-x-[64px] items-center hidden md:flex">
                 <Link href={"/"}>
-                  <li className="text-[#ffffff] text-[14px] font-bold border-b-[4px] border-b-[#136C2C] p-[2]">
+                  <li
+                    className={`${
+                      route == "/"
+                        ? "text-[#ffffff] border-b-[4px] border-b-[#136C2C]"
+                        : "text-[#808080] border-b-[4px] border-b-transparent hover:border-b-[#136C2C]"
+                    } text-[14px] font-bold    p-[2]`}
+                  >
                     Home
                   </li>{" "}
                 </Link>
                 <div className="flex gap-x-2 items-center cursor-pointer group relative h-[90px]">
                   {" "}
-                  <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent  group-hover:border-b-[#136C2C] group-hover:text-white">
+                  <li
+                    className={`${
+                      route == "/services"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : "text-[#808080] "
+                    } text-[14px] font-bold border-b-[4px] border-transparent  group-hover:border-b-[#136C2C] group-hover:text-white`}
+                  >
                     Services
                   </li>
-                  <i class="fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold"></i>
+                  <i
+                    class={`${
+                      route == "/services" && "rotate-[180deg] text-white"
+                    } fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold`}
+                  ></i>
                   <div className="w-[205px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
                       <Link href="/services">
@@ -50,27 +68,46 @@ const Header = () => {
                   </div>
                 </div>
                 <div className="flex gap-x-2 items-center cursor-pointer group relative h-[90px]">
-                  <Link href={"#"}>
-                    {" "}
-                    <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent group-hover:border-b-[#136C2C] group-hover:text-white">
-                      Development
-                    </li>
-                  </Link>
-                  <i class="fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold"></i>
+                  <li
+                    className={`${
+                      route == "/development"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : "text-[#808080] "
+                    } text-[14px] font-bold border-b-[4px] border-transparent group-hover:border-b-[#136C2C] group-hover:text-white`}
+                  >
+                    Development
+                  </li>
+
+                  <i
+                    class={`${
+                      route == "/development" && "rotate-[180deg] text-white"
+                    } fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold`}
+                  ></i>
                   <div className="w-[212px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
-                      <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                        Mobile & Web Applications
-                      </li>
-                      <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                        AI & Machine Learning
-                      </li>
+                      <Link href={"/development"}>
+                        {" "}
+                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                          Mobile & Web Applications
+                        </li>
+                      </Link>
+                      <Link href="/development">
+                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                          AI & Machine Learning
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
-                <Link href={"#"}>
+                <Link href={"portfolio"}>
                   {" "}
-                  <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">
+                  <li
+                    className={`${
+                      route == "/portfolio"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : "text-[#808080] "
+                    }  text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}
+                  >
                     Portfolio
                   </li>
                 </Link>
@@ -82,7 +119,13 @@ const Header = () => {
                 </Link>
                 <Link href={"#"}>
                   {" "}
-                  <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">
+                  <li
+                    className={`${
+                      route == "/blog"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : "text-[#808080] "
+                    } text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}
+                  >
                     Blog
                   </li>
                 </Link>

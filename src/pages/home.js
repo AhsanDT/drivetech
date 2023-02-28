@@ -10,6 +10,8 @@ import service1 from "../assets/services/service1.png";
 import service2 from "../assets/services/service2.png";
 import service3 from "../assets/services/service4.png";
 import service4 from "../assets/services/service3.png";
+import bgImage from "../assets/bg-images/service.png";
+
 
 const SERVICES = [
     {
@@ -47,7 +49,7 @@ const HomePage = () => {
   return (
     <Layout>
        <Hero />
-      <Services services={SERVICES}/>  
+      <Services services={SERVICES} name="Digital Services" image={bgImage}/>  
        <WhyUs />
        
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import heroImage from "../../assets/bg-images/hero.png";
-import heromobImage from "../../assets/bg-images/hero-mob.png";
+import heroImage from "../../assets/bg-images/about-bg.png";
+import heromobImage from "../../assets/bg-images/mobile-bg.png";
 import styles from "../../styles/Hero.module.css";
 import React from "react";
 
