@@ -63,10 +63,10 @@ const Partnership = ({DATA,className}) => {
             <Idea title="Start a Project" />
           </div>
         ) : route == "/partnership/ecological" ? (
-          <div className="relative pt-[200px]">
+            <div className="relative pt-[210px] lg:pt-[230px] bg-[#37373B]">
             <div
-              className={`${styles2.box}  linear-grad  hidden md:block relative z-[21]`}
-            ></div> 
+              className={`${styles2.box}  linear-grad  hidden md:block `}
+            ></div>
             <Idea title="Start a Project" />
           </div>
         ) : (
