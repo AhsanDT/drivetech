@@ -3,7 +3,7 @@ import Button from '../UI/Button'
 
 const Idea = ({title}) => {
   return (
-    <div className="absolute bottom-0 w-full bg-[black] bg-opacity-[10%] lg:mt-[120px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[120px] py-[38px]">
+    <div className="absolute bottom-0 w-full bg-[black] bg-opacity-[10%] lg:mt-[120px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center px-[30px] lg:px-[214px] py-[38px]">
       <div className="flex flex-col ">
         <span className="font-oswald text-[24px] lg:text-[50px] font-bold text-[#ffffff] uppercase">
         Have an idea?

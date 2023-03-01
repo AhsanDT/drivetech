@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <header className="w-full bg-[#36373A] px-[30px] md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100]">
-        <div className="w-full xl:max-w-[14 40px] h-[80px]  flex items-center justify-between  gap-x-[64px]">
+        <div className="w-full xl:max-w-[14 40px] h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[64px]">
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">
               <Link href={"/"}>
@@ -21,7 +21,7 @@ const Header = () => {
               </Link>
               <Link href={"/"}>
                 {" "}
-                <span className="text-[16px] sm:text-[20px] text-white font-bold  md:hidden lg:block">
+                <span className="text-[13px] sm:text-[20px] text-white font-bold  md:hidden lg:block">
                   Drive Technology
                 </span>
               </Link>
@@ -136,8 +136,10 @@ const Header = () => {
                     className={`${
                       route == "/blogs"
                         ? "text-[#ffffff] border-b-[#136C2C]"
+                        : route == "/blogs/[blogId]"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
                         : "text-[#808080] "
-                    } text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}
+                    }  text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}
                   >
                     Blog
                   </li>

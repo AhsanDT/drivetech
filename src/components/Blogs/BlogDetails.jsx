@@ -13,7 +13,7 @@ const BlogDetails = ({ id, DATA }) => {
           return (
             <div className="pt-[50px] pb-[92px]">
               <div className=" font-jakarta">
-                <Link href="/blog">
+                <Link href="/blogs">
                   <span className="text-[rgb(140,140,140)] text-[14px] cursor-pointer">
                     Blog /      
                   </span>
