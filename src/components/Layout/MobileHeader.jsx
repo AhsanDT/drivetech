@@ -5,7 +5,7 @@ import React from 'react'
 const MobileHeader = () => {
     const {route} = useRouter()
   return (
-    <div className='fixed top-[88px] z-40 bg-[#1F1F22ED] w-full h-[100vh] backdrop-blur-[5px] pt-[20px] '>
+    <div className='fixed top-[68px] z-40 bg-[#1F1F22ED] w-full h-[100vh] backdrop-blur-[5px] pt-[20px] '>
     <div className=' '>
         <ul className='flex flex-col gap-y-[24px] justify-center items-center text-[36px] font-oswald font-bold text-white'>
             <Link href={"/"}><li className={`${ route == "/" ? "text-[#ffffff]" : "text-[#808080] " }`}>Home</li></Link>
