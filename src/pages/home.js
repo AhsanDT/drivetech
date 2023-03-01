@@ -11,6 +11,8 @@ import service2 from "../assets/services/service2.png";
 import service3 from "../assets/services/service4.png";
 import service4 from "../assets/services/service3.png";
 import bgImage from "../assets/bg-images/service.png";
+import image from "../assets/partnership/img.png";
+
 
 
 const SERVICES = [
@@ -45,6 +47,12 @@ const SERVICES = [
     },
   ];
 
+  const PARTNERSHIP = [
+    { id: "d1", img: image, name: "Core Partner Name" },
+    { id: "d2", img: image, name: "Core Partner Name" },
+    { id: "d3", img: image, name: "The Project Title" },
+  ];
+
 const HomePage = () => {
   return (
     <Layout>
@@ -54,7 +62,7 @@ const HomePage = () => {
        
 
        <OurWorks />
-       <Partnership />
+       <Partnership DATA={PARTNERSHIP} />
       <Blogs /> 
     </Layout>
   );

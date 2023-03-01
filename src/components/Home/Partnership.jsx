@@ -1,19 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
-import image from "../../assets/partnership/img.png";
 import styles from "../../styles/Hero.module.css";
-import Button from "../UI/Button";
+import styles2 from "../../styles/Blogs.module.css";
+import Idea from "./Idea";
 
 
-const DATA = [
-  { id: "d1", img: image, name: "Core Partner Name" },
-  { id: "d2", img: image, name: "Core Partner Name" },
-  { id: "d3", img: image, name: "The Project Title" },
-];
 
-const Partnership = () => {
+const Partnership = ({DATA,className}) => {
+    const {route} = useRouter();
   return (
-    <section className={`w-full  py-[100px] relative`}>
+    <section className={`w-full  py-[100px] relative ${className}`}>
       <div className="flex flex-col gap-y-[16px] lg:items-center px-[20px]  md:px-[80px]">
         <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center">
           Partnership
@@ -25,12 +23,14 @@ const Partnership = () => {
         </p>    
         <div className="mt-[30px]">
           <ul className="text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] lg:justify-center items-center">
-            <li className="text-white bg-black px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black">
+            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"}  px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               CORE PARTNERS
             </li>
-            <li className="text-black hover:bg-black hover:text-white border border-black px-[8px] lg:px-[16px] py-[8px] cursor-pointer">
+            </Link>
+            <Link href={"/partnership/ecological"}><li className={`${route== "/partnership/ecological" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"}  px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               ECOLOGICAL PARTNERS
             </li>
+            </Link>
           </ul>
         </div>
         <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px] pb-[130px]">
@@ -54,7 +54,25 @@ const Partnership = () => {
         
       </div>
    
-      <div className={`${styles.box} linear-grad`}></div>
+      {route == "/" && <div className={`${styles.box} linear-grad`}></div>}
+
+      {route == "/partnership/core" ? (
+          <>
+            <div
+              className={`${styles2.box}  linear-grad  hidden md:block`}
+            ></div>
+            <Idea title="Start a Project" />
+          </>
+        ) : route == "/partnership/ecological" ? (
+          <>
+            <div
+              className={`${styles2.box}  linear-grad  hidden md:block`}
+            ></div>
+            <Idea title="Start a Project" />
+          </>
+        ) : (
+          ""
+        )}
     </section>
   );
 };

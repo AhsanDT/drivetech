@@ -117,17 +117,24 @@ const Header = () => {
                     Portfolio
                   </li>
                 </Link>
-                <Link href={"#"}>
-                  {" "}
-                  <li className="text-[#808080] text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white">
+                <Link href={"/partnership/core"}>
+                <li
+                    className={`${
+                      route == "/partnership/core"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : route == "/partnership/ecological"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : "text-[#808080] "
+                    }  text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}
+                  >
                     Partnership
                   </li>
                 </Link>
-                <Link href={"#"}>
+                <Link href={"/blogs"}>
                   {" "}
                   <li
                     className={`${
-                      route == "/blog"
+                      route == "/blogs"
                         ? "text-[#ffffff] border-b-[#136C2C]"
                         : "text-[#808080] "
                     } text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}
