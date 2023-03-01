@@ -5,7 +5,7 @@ const Policy = ({ title }) => {
   return (
     <section className="py-[50px]  relative top-[50px]  px-[30px] md:px-[130px]">
       <div className="pt-[50px] pb-[92px]">
-        <div>
+        <div className="font-jakarta">
           <Link href="/">
             <span className="text-[rgb(140,140,140)] text-[14px] cursor-pointer">
               Home /

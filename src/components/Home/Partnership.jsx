@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import styles from "../../styles/Hero.module.css";
-import styles2 from "../../styles/Blogs.module.css";
+import styles2 from "../../styles/Partnership.module.css";
 import Idea from "./Idea";
 
 
@@ -11,7 +11,7 @@ import Idea from "./Idea";
 const Partnership = ({DATA,className}) => {
     const {route} = useRouter();
   return (
-    <section className={`w-full  py-[100px] relative ${className}`}>
+    <section className={`w-full py-[100px] relative ${className}`}>
       <div className="flex flex-col gap-y-[16px] lg:items-center px-[20px]  md:px-[80px]">
         <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center">
           Partnership
@@ -50,29 +50,31 @@ const Partnership = ({DATA,className}) => {
               </div>
             );
           })}
+          
         </div>
         
       </div>
-   
-      {route == "/" && <div className={`${styles.box} linear-grad`}></div>}
-
+      
       {route == "/partnership/core" ? (
-          <>
+          <div className="relative pt-[200px]">
             <div
-              className={`${styles2.box}  linear-grad  hidden md:block`}
+              className={`${styles2.box}  linear-grad  hidden md:block  relative z-[21]`}
             ></div>
             <Idea title="Start a Project" />
-          </>
+          </div>
         ) : route == "/partnership/ecological" ? (
-          <>
+          <div className="relative pt-[200px]">
             <div
-              className={`${styles2.box}  linear-grad  hidden md:block`}
+              className={`${styles2.box}  linear-grad  hidden md:block relative z-[21]`}
             ></div>
             <Idea title="Start a Project" />
-          </>
+          </div>
         ) : (
           ""
         )}
+   
+      {route == "/" && <div className={`${styles.box} linear-grad `}></div>}
+
     </section>
   );
 };

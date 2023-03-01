@@ -1,0 +1,10 @@
+
+.box:after {
+    content: " ";
+    border-bottom: 30vh solid white;
+    border-left: 50vw solid transparent;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }

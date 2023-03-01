@@ -21,8 +21,8 @@ const PARTNERSHIP = [
 const ecological = () => {
   return (
     <Layout>
-        <Partnership DATA={PARTNERSHIP} className="py-[100px]" />
-    </Layout>
+        <Partnership DATA={PARTNERSHIP} className="top-[100px]" />
+      </Layout>
   )
 }
 
