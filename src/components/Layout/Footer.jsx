@@ -108,15 +108,15 @@ const Footer = () => {
                 {" "}
                 <li className="font-bold font-oswald text-[14px]">Legal</li>
               </Link>
-              <Link href={"#"}>
+              <Link href={"/privacypolicy"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%]">Privacy Policy</li>
               </Link>
-              <Link href={"#"}>
+              <Link href={"/termsandconditions"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%]">Terms & Condition</li>
               </Link>
-              <Link href={"#"}>
+              <Link href={"/cookiepolicy"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%]">Cookie Policy</li>
               </Link>
