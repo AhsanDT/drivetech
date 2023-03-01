@@ -9,7 +9,6 @@ import MobileHeader from "./MobileHeader";
 const Header = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const { route } = useRouter();
-  console.log(route);
   return (
     <>
       <header className="w-full bg-[#36373A] px-[30px] md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100]">
@@ -17,7 +16,7 @@ const Header = () => {
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">
               <Link href={"/"}>
-                <Image src={logo} width={55} height={48} />
+                <Image src={logo} width={55} height={48} alt="img"/>
               </Link>
               <Link href={"/"}>
                 {" "}
@@ -52,7 +51,7 @@ const Header = () => {
                     Services
                   </li>
                   <i
-                    class={`${
+                    className={`${
                       route == "/services" && "rotate-[180deg] text-white"
                     } fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold`}
                   ></i>
@@ -83,7 +82,7 @@ const Header = () => {
                   </li>
 
                   <i
-                    class={`${
+                    className={`${
                       route == "/development" && "rotate-[180deg] text-white"
                     } fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold`}
                   ></i>
@@ -149,13 +148,13 @@ const Header = () => {
           </div>
           {openMobileMenu || (
             <i
-              class="fa-solid fa-bars md:hidden text-[#E2E2E2] text-[20px]"
+              className="fa-solid fa-bars md:hidden text-[#E2E2E2] text-[20px]"
               onClick={() => setOpenMobileMenu(true)}
             ></i>
           )}
           {openMobileMenu && (
             <i
-              class="fa-solid fa-xmark md:hidden text-[#E2E2E2] text-[20px]"
+              className="fa-solid fa-xmark md:hidden text-[#E2E2E2] text-[20px]"
               onClick={() => setOpenMobileMenu(false)}
             ></i>
           )}

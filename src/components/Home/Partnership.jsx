@@ -36,7 +36,7 @@ const Partnership = ({DATA,className}) => {
         <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px] pb-[130px]">
           {DATA.map((data) => {
             return (
-              <div className=" flex flex-col ustify-center lg:items-center ">
+              <div className=" flex flex-col ustify-center lg:items-center " key={data.id}>
                 <div className="img-container ">
                   <Image src={data.img} alt="img" />
                 </div>

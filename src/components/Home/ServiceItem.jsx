@@ -6,7 +6,7 @@ const ServiceItem = ({ service }) => {
   return (
     <>
        <div className="img-container w-full  sm:min-w-[200px] sm:h-[218px]  lg:w-[371px] lg:h-[384px]">
-        <Image src={service.img}  alt={service.serviceName}  />
+        <Image src={service.img}  alt="img"  />
       </div>
       <div className="flex flex-col  gap-y-[21px] lg:gap-y-[55px]  lg:w-[495px]">
         <h1 className="text-[20px] lg:text-[40px] font-oswald font-bold text-white">{service.serviceName}</h1>

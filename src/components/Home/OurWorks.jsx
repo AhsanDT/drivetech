@@ -41,7 +41,7 @@ const OurWorks = ({ className, padding }) => {
               Our Works
             </h1>
             <div className="relative flex items-center justify-center">
-              <i class="fa-solid fa-magnifying-glass absolute md:left-[140px] lg:left-[220px] left-[10px] top-3 text-[16px]"></i>
+              <i className="fa-solid fa-magnifying-glass absolute md:left-[140px] lg:left-[220px] left-[10px] top-3 text-[16px]"></i>
               <input
                 type="text"
                 placeholder="Search industry or name"
@@ -76,7 +76,7 @@ const OurWorks = ({ className, padding }) => {
             <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[24px] lg:gap-y-[40px] mt-[30px]">
               {DATA.map((data) => {
                 return (
-                  <div className=" flex flex-col gap-y-[21px]">
+                  <div className=" flex flex-col gap-y-[21px]" key={data.id}>
                     <OurWorkItem data={data} />
                   </div>
                 );

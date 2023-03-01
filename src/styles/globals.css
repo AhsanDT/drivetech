@@ -21,6 +21,8 @@ font-family: 'Oswald', sans-serif;
   height: 100% !important;
   object-fit: cover;
 }
+.home-linear-grad{
+  background: linear-gradient(270.23deg, #FFFFFF 4.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%), url(../assets/bg-images/about.png);}
 .linear-grad {
   background: linear-gradient(180deg, #424248 9.85%, #252525 47.46%, #303031 82.43%);
 }

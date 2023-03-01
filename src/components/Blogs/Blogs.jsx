@@ -20,7 +20,7 @@ const Blogs = ({BLOGS}) => {
           <div className="flex gap-x-[32px] overflow-scroll xl:overflow-hidden xl:flex-wrap">
             {BLOGS.map((data) => {
               return (
-                <Link href={`/blogs/${data.id}`} className="w-full md:w-[255px] md:min-h-[393px] bg-white flex flex-col gap-y-[16px]">
+                <Link href={`/blogs/${data.id}`} className="w-full md:w-[255px] md:min-h-[393px] bg-white flex flex-col gap-y-[16px]" key={data.id}>
                   <div className="img-container w-[255px] h-[210px]">
                     <Image src={data.img} alt="img" />
                   </div>

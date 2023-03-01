@@ -64,7 +64,7 @@ const Blogs = () => {
           <div className="flex gap-x-[32px] justify-center overflow-scroll xl:overflow-hidden">
             {BLOGS.map((data) => {
               return (
-                <div className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]">
+                <div className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]" key={data.id}>
                   <div className="img-container w-[210px] h-[210px]">
                     <Image src={data.img} alt="img" />
                   </div>
@@ -84,7 +84,7 @@ const Blogs = () => {
             })}
           </div>
         </div>
-      </div>'
+      </div>
       <div
         className={`${styles.box} linear-grad mt-[260px] hidden md:block`}
       ></div>

@@ -1,17 +1,21 @@
 import Image from "next/image";
 import heroImage from "../../assets/bg-images/about-bg.png";
+import design from "../../assets/bg-images/design.png";
 import heromobImage from "../../assets/bg-images/mobile-bg.png";
 import styles from "../../styles/Hero.module.css";
 import React from "react";
 
 const Hero = () => {
   return (
-    <section className="w-full relative ">
+    <section className="w-full relative   bg- [#E2E2E2]">
         <div className="w-full h-sc reen  ">
-      <div className={` img-container w-full h-full absolute z-[-2]`}>
-        <Image src={heroImage} alt="img" className=" hidden sm:block" />
+      <div className={` img-container w-full h-full absolute z-[-2] `}>
+        <Image src={heroImage} alt="img" className=" hidden sm:block " />
         <Image src={heromobImage} alt="img" className="sm:hidden min-h-[640px]" />
       </div>
+      {/* <div className={` img-container w-full h-[] absolute top-[150px] z-[-1]`}>
+        <Image src={design} alt="img" className=" hidden sm:block" />
+      </div> */}
       <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[80%] lg:w-[70%] xl:w-[49%] z-[11] px-[20px] md:px-[80px]">
         <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]">
           We help you drive your business to{" "}
