@@ -41,7 +41,7 @@ const OurWorks = ({ className, padding }) => {
               Our Works
             </h1>
             <div className="relative flex items-center justify-center">
-              <i className="fa-solid fa-magnifying-glass absolute md:left-[140px] lg:left-[220px] left-[10px] top-3 text-[16px]"></i>
+              <i className="fa-solid fa-magnifying-glass absolute left-[3%] md:left-[16.5%] top-3 text-[16px]"></i>
               <input
                 type="text"
                 placeholder="Search industry or name"
