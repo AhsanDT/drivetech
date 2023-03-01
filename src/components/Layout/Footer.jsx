@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-x-2 items-center">
             <div>
-              <Image src={logo} width={55} height={48} />
+              <Image src={logo} width={55} height={48} alt="img" />
             </div>
             <span className="text-[16px]  text-white font-bold">
               Drive Technology
@@ -49,7 +49,7 @@ const Footer = () => {
           <span>
             Phone: <span><a href="tel:+1 (888) 910 8298 92188" className="hover:underline">+1 (888) 910 8298 92188 </a></span>
           </span>
-          <Button>Start a Project</Button>
+          <Button className="w-fit">Start a Project</Button>
         </div>
         <div className="flex gap-x-[32px]  xl:gap-x-[64px] text-white text-[12px] font-jakarta  ">
           <div>
