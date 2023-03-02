@@ -42,7 +42,7 @@ const Hero = () => {
         </Link>
       </div>
       </div>
-      <div className={`${styles.box} pt-[110px] sm:pt-[360px]`}></div>
+      <div className={`${styles.box} pt-[210px] sm:pt-[360px]`}></div>
     </section>
   );
 };
