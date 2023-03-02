@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       <header className="w-full bg-[#36373A] px-[30px] md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100]">
-        <div className="w-full xl:max-w-[14 40px] h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[64px]">
+        <div className="w-full  h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[6 4px]">
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">
               <Link href={"/"}>
@@ -24,20 +24,25 @@ const Header = () => {
                   Drive Technology
                 </span>
               </Link>
+              
             </div>
+            
 
             <div>
+                
               <ul className="gap-x-[32px] xl:gap-x-[64px] items-center hidden md:flex">
                 <Link href={"/"}>
-                  <li
+                <li
                     className={`${
                       route == "/"
-                        ? "text-[#ffffff] border-b-[4px] border-b-[#136C2C]"
-                        : "text-[#808080] border-b-[4px] border-b-transparent hover:border-b-[#136C2C]"
-                    } text-[14px] font-bold    p-[2]`}
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : route == "/startproject"
+                        ? "text-[#ffffff] border-b-[#136C2C]"
+                        : "text-[#808080] "
+                    }  text-[14px] font-bold border-b-[4px] border-transparent hover:border-b-[#136C2C] hover:text-white`}
                   >
                     Home
-                  </li>{" "}
+                  </li>
                 </Link>
                 <div className="flex gap-x-2 items-center cursor-pointer group relative h-[90px]">
                   {" "}
@@ -145,21 +150,26 @@ const Header = () => {
                 </Link>
               </ul>
             </div>
+            
           </div>
-          {openMobileMenu || (
+
+          
+      
+       
+          <Button className="hidden xl:block">Start a Project</Button>
+          {!openMobileMenu ? (
+            
             <i
               className="fa-solid fa-bars md:hidden text-[#E2E2E2] text-[20px]"
               onClick={() => setOpenMobileMenu(true)}
             ></i>
-          )}
-          {openMobileMenu && (
-            <i
-              className="fa-solid fa-xmark md:hidden text-[#E2E2E2] text-[20px]"
-              onClick={() => setOpenMobileMenu(false)}
-            ></i>
-          )}
-          <Button className="hidden xl:block">Start a Project</Button>
+            
+          ):  <i
+          className="fa-solid fa-xmark md:hidden text-[#E2E2E2] text-[20px]"
+          onClick={() => setOpenMobileMenu(false)}
+        ></i>}
         </div>
+        
       </header>
 
       {openMobileMenu && <MobileHeader />}

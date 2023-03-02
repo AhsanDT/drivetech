@@ -12,7 +12,7 @@ const Partnership = ({DATA,className}) => {
     const {route} = useRouter();
   return (
     <section className={`w-full py-[100px] relative ${className} `}>
-      <div className="flex flex-col gap-y-[16px] lg:items-center px-[20px]  md:px-[80px]">
+      <div className="flex flex-col gap-y-[16px] lg:items-center px-[30px]  md:px-[80px]">
         <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center">
           Partnership
         </h1>

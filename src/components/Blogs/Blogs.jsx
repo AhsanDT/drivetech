@@ -7,9 +7,9 @@ import Idea from '../Home/Idea'
 
 const Blogs = ({BLOGS}) => {
   return (
-    <section className='w-full linear-grad bottom-[80px] top-[60px]  lg:top-[100px]  relative '>
+    <section className='w-full linear-grad bottom-[80 px] top-[70px] lg:top-[100px]  relative '>
         <div className='w-full'>
-        <div className='img-container min-h-[910px]'>
+        <div className='img-container min-h-[890px] lg:min-h-[910px]'>
             <Image src={bgImage} alt="img" />
         </div>
         <div className="absolute top-[40px] md:top-[86px] z-[11]  w-full  flex flex-col gap-y-[40px] md:gap-y-[70px] items-cen ter justify-center px-[30px]  lg:px-[80px] ">

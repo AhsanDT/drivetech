@@ -34,6 +34,10 @@ background: linear-gradient(180deg, #C1328C 0%, #FA8E22 100%);
   background: linear-gradient(180deg, #C1328C 0%, #FA8E22 100%);
 }
 
+.calendly-inline-widget {
+  overflow: hidden !important;
+}
+
 
 /* @media (prefers-color-scheme: dark) {
   html {

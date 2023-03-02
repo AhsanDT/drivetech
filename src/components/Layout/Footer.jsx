@@ -9,7 +9,7 @@ import MobileFooter from "./MobileFooter";
 const Footer = () => {
   return (
     
-    <footer className=" bg-[#36373A]  px-[20px] lg:px-[80px] py-[40px] lg:py-[10px] relative z-[11] ">
+    <footer className=" bg-[#36373A]  px-[30px] lg:px-[80px] py-[40px] lg:py-[10px] relative z-[11] ">
       <div className="w-full xl:max-w-[14 40px] h-[298px] pt-[83px] justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex border-b border-b-[#6F6F6F]">
         <div className="flex flex-col gap-y-[16px]">
      
