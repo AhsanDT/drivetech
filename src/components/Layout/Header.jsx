@@ -156,7 +156,8 @@ const Header = () => {
           
       
        
-          <Button className="hidden xl:block">Start a Project</Button>
+          <Link href={"/startproject"}>
+<Button className="hidden xl:block">Start a Project</Button> </Link>
           {!openMobileMenu ? (
             
             <i

@@ -22,8 +22,17 @@ font-family: 'Oswald', sans-serif;
   object-fit: cover;
 }
 .home-linear-grad{
-  background: linear-gradient(270.23deg, #FFFFFF 4.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%), url(../assets/bg-images/about.png);}
+  background-repeat: no-repeat;
+  
+  background: linear-gradient(270.23deg, #FFFFFF 4.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%), url(../assets/bg-images/about.png);
+}
+.home-linear-grad2{
+  background-repeat: no-repeat;
+  background: linear-gradient(270.23deg, #FFFFFF 4.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%);
+}
 .linear-grad {
+  height: 100%;
+  background-repeat: no-repeat;
   background: linear-gradient(180deg, #424248 9.85%, #252525 47.46%, #303031 82.43%);
 }
 .icon-grad{
@@ -35,12 +44,64 @@ background: linear-gradient(180deg, #C1328C 0%, #FA8E22 100%);
 }
 
 .calendly-inline-widget {
-  overflow: hidden !important;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Microsoft Edge */
+  overflow: -moz-scrollbars-none; /* For older versions of Firefox */
 }
 
+.calendly-inline-widget::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
 
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 } */
+
+
+
+
+
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: transparent;
+}
+
+.wave {
+  background: url(../assets/bg-images/design.png) repeat-x; 
+  position: absolute;
+  width: 6400px;
+  height: 298px;
+  top: 450px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}

@@ -8,25 +8,23 @@ import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
   return (
-    
     <footer className=" bg-[#36373A]  px-[30px] lg:px-[80px] py-[40px] lg:py-[10px] relative z-[11] ">
       <div className="w-full xl:max-w-[14 40px] h-[298px] pt-[83px] justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex border-b border-b-[#6F6F6F]">
         <div className="flex flex-col gap-y-[16px]">
-     
           <div className="flex gap-x-[16px]">
             <FooterIcon
               icon="fa-brands fa-facebook-f"
               className="bg-[#3B5998] text-[18px] "
             />
-            <FooterIcon icon="fa-brands fa-twitter" className="bg-[#2DAAE1] text1814]" />
+            <FooterIcon
+              icon="fa-brands fa-twitter"
+              className="bg-[#2DAAE1] text1814]"
+            />
             <FooterIcon
               icon="fa-brands fa-linkedin-in"
               className="bg-[#007BB6] text-[18px] "
             />
-            <FooterIcon
-              icon="fa-brands fa-instagram"
-              className="icon-grad"
-            />
+            <FooterIcon icon="fa-brands fa-instagram" className="icon-grad" />
             <FooterIcon
               icon="fa-brands fa-pinterest"
               className="bg-[#CD1E25] text-[18px]  text-[#37373B]"
@@ -44,12 +42,23 @@ const Footer = () => {
         <div className="flex flex-col gap-y-[24px] text-white text-[14px] font-jakarta">
           <span>
             Email:{" "}
-            <span className="text-[#4169E1] hover:underline"><a href="mailto:info@drivetechnology.co">info@drivetechnology.co</a></span>
+            <span className="text-[#4169E1] hover:underline">
+              <a href="mailto:info@drivetechnology.co">
+                info@drivetechnology.co
+              </a>
+            </span>
           </span>
           <span>
-            Phone: <span><a href="tel:+1 (888) 910 8298 92188" className="hover:underline">+1 (888) 910 8298 92188 </a></span>
+            Phone:{" "}
+            <span>
+              <a href="tel:+1 (888) 910 8298 92188" className="hover:underline">
+                +1 (888) 910 8298 92188{" "}
+              </a>
+            </span>
           </span>
-          <Button className="w-fit">Start a Project</Button>
+          <Link href={"/startproject"}>
+            <Button className="w-fit">Start a Project</Button>
+          </Link>
         </div>
         <div className="flex gap-x-[32px]  xl:gap-x-[64px] text-white text-[12px] font-jakarta  ">
           <div>
@@ -60,11 +69,15 @@ const Footer = () => {
               </Link>
               <Link href={"/services"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">Digital Marketing Services</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                  Digital Marketing Services
+                </li>
               </Link>
               <Link href={"/services"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">Back office Services</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                  Back office Services
+                </li>
               </Link>
             </ul>
           </div>
@@ -73,15 +86,21 @@ const Footer = () => {
             <ul className="flex flex-col gap-y-[24px]">
               <Link href={"/development"}>
                 {" "}
-                <li className="font-bold font-oswald text-[14px]">Development</li>
+                <li className="font-bold font-oswald text-[14px]">
+                  Development
+                </li>
               </Link>
               <Link href={"/development"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">Mobile & Web Development</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                  Mobile & Web Development
+                </li>
               </Link>
               <Link href={"/development"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">AI & Machine Learning</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                  AI & Machine Learning
+                </li>
               </Link>
             </ul>
           </div>
@@ -92,10 +111,12 @@ const Footer = () => {
                 {" "}
                 <li className="font-bold font-oswald text-[14px]">Resources</li>
               </Link>
-             
+
               <Link href={"#"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline font-normal">Blogs</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline font-normal">
+                  Blogs
+                </li>
               </Link>
             </ul>
           </div>
@@ -108,24 +129,34 @@ const Footer = () => {
               </Link>
               <Link href={"/privacypolicy"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">Privacy Policy</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                  Privacy Policy
+                </li>
               </Link>
               <Link href={"/termsandconditions"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">Terms & Condition</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                  Terms & Condition
+                </li>
               </Link>
               <Link href={"/cookiepolicy"}>
                 {" "}
-                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">Cookie Policy</li>
+                <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                  Cookie Policy
+                </li>
               </Link>
             </ul>
           </div>
         </div>
       </div>
       <div className="text-[12px] text-[#6F6F6F] font-jakarta font-medium hidden lg:flex justify-end gap-x-[160px] py-[30px]">
-        <Link href={"/privacypolicy"} className="hover:underline"><span> Privacy Policy</span></Link>
-        <Link href={"/termsandconditions"} className="hover:underline"><span>Terms of Use</span></Link>
-        <span >Copyright 2023 DriveTech. All Rights Reserved.</span>
+        <Link href={"/privacypolicy"} className="hover:underline">
+          <span> Privacy Policy</span>
+        </Link>
+        <Link href={"/termsandconditions"} className="hover:underline">
+          <span>Terms of Use</span>
+        </Link>
+        <span>Copyright 2023 DriveTech. All Rights Reserved.</span>
       </div>
       {/* mobile footer */}
       <div className="lg:hidden text-[16px] flex flex-col gap-y-[20px] text-[#A3A3A3] font-jakarta">
