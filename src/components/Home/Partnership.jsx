@@ -21,13 +21,13 @@ const Partnership = ({DATA,className}) => {
           The best thing about DriveTech is it values its partnership with the
           intention of making everyone succeed.
         </p>    
-        <div className="mt-[30px]">
-          <ul className="text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] lg:justify-center items-center">
-            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"}  px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
+        <div className="mt-[30px] w-full">
+          <ul className="text-[14px] md:text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] lg:justify-center items-center">
+            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"} w-[130px] md:w-[208px]  text-center px-[16px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               CORE PARTNERS
             </li>
             </Link>
-            <Link href={"/partnership/ecological"}><li className={`${route== "/partnership/ecological" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"}  px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
+            <Link href={"/partnership/ecological"}><li className={`${route== "/partnership/ecological" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"}   md:w-[208px] text-center  px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               ECOLOGICAL PARTNERS
             </li>
             </Link>

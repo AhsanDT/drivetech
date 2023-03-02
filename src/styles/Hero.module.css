@@ -2,7 +2,7 @@
 
 .box:after {
   content: " ";
-  border-bottom: 30vh solid #424248;
+  border-bottom: 20vh solid #424248;
   border-right: 100vw solid transparent;
   width: 0;
   position: absolute;
