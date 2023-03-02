@@ -4,6 +4,7 @@ import design from "../../assets/bg-images/design.png";
 import heromobImage from "../../assets/bg-images/mobile-bg.png";
 import styles from "../../styles/Hero.module.css";
 import React from "react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -31,15 +32,17 @@ const Hero = () => {
           Driving innovation, one solution at a time. The drive to succeed is
           powered by its people and advanced technology.
         </p>
-        <button className="border-[2px] border-black bg-[transparent]  text-[20px] px-[40px] py-[10px] w-fit text-black font-bold hidden lg:block ">
+        <Link href={"/startproject"}><button className="border-[2px] border-black bg-[transparent]  text-[20px] px-[40px] py-[10px] w-fit text-black font-bold hidden lg:block ">
           Achieve Your Goals Faster With Us
         </button>
-        <button className="border-black border-[2px] bg-[transparent] text-[20px] px-[40px] py-[10px] w-fit text-black font-bold lg:hidden font-oswald mb-[100px] sm:mb-[20px]">
+        </Link>
+       <Link href={"/startproject"}> <button className="border-black border-[2px] bg-[transparent] text-[20px] px-[40px] py-[10px] w-fit text-black font-bold lg:hidden font-oswald mb-[100px] sm:mb-[20px]">
           Start a Project
         </button>
+        </Link>
       </div>
       </div>
-      <div className={`${styles.box} pt-[110px] sm:pt-[350px]`}></div>
+      <div className={`${styles.box} pt-[110px] sm:pt-[360px]`}></div>
     </section>
   );
 };

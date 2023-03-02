@@ -6,7 +6,7 @@ import Layout from '@/components/Layout/Layout'
 const portfolio = () => {
   return (
     <Layout>
-    <OurWorks className="top-[150px]" padding="pb-[470px]"  />
+    <OurWorks className="top-[150px]" padding="pb-[220px] xl:pb-[470px]"  />
     </Layout>
   )
 }

@@ -112,7 +112,7 @@ const Footer = () => {
                 <li className="font-bold font-oswald text-[14px]">Resources</li>
               </Link>
 
-              <Link href={"#"}>
+              <Link href={"/blogs"}>
                 {" "}
                 <li className="text-[#ffffff] text-opacity-[50%] hover:underline font-normal">
                   Blogs

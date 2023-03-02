@@ -11,7 +11,7 @@ const Project = ({ BLOGS }) => {
             Book a call with us by selecting any of the dates that your are
             available on.
           </h1>
-          <div className="w-full overflow-hidden">
+          <div className="w-full overflow-hidden pb-[50px]">
           <InlineWidget url="https://calendly.com/kumaladevelopment/60min"  styles={{height:'750px'}}/>
           </div>
         </div>

@@ -10,7 +10,7 @@ const WhyUsItem = ({data}) => {
 
     </div>
     </div>
-    <p className='text-[16px] font-jakarta lg:text-center'>{data.content}</p>
+    <p className='text-[16px] font-jakarta font-normal lg:text-center'>{data.content}</p>
     </>
   )
 }

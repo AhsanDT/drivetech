@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import Button from '../UI/Button'
 
@@ -11,8 +12,8 @@ const Idea = ({title}) => {
         <span className="font-oswald text-[24px] lg:text-[50px] font-light text-[#ffffff] uppercase">Tell us about it.</span>
       </div>
       <div>
-      <Button className="hidden md:block w-fit">{title}</Button>
-      <Button className=" md:hidden w-fit">Start a Project</Button>
+      <Link href="/startproject"><Button className="hidden md:block w-fit">{title}</Button></Link>
+      <Link href="/startproject"><Button className=" md:hidden w-fit">Start a Project</Button></Link>
       </div>
     </div>
   )

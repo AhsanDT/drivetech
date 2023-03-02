@@ -49,7 +49,7 @@ const OurWorks = ({ className, padding }) => {
               />
             </div>
             <div>
-              <ul className="text-[16px] font-oswald font-bold flex gap-x-[14px] flex-wrap lg:gap-x-[86px] justify-center items-center">
+              <ul className="text-[16px] font-oswald font-bold flex gap-x-[14px] gap-y-[8px] flex-wrap lg:gap-x-[86px] lg:justify-center items-center">
                 <li className="text-black bg-white px-[16px] py-[8px] cursor-pointer">
                   ALL CATEGORIES
                 </li>

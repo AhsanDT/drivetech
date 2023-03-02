@@ -40,11 +40,11 @@ const Services = ({ services, name, padding, className, image }) => {
               </div>
             </div>
             <div className="bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[30px] py-[20px]">
-              <p className="font-oswald text-[20px] font-bold text-[#ffffff] text-opacity-[60%] lg:text-center">
+              <p className="font-oswald text-[20px] font-medium text-[#ffffff] text-opacity-[60%] lg:text-center">
                 ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL
                 MARKETING SERVICES{" "}
               </p>
-              <Button>BOOK A FREE CONSULTATION</Button>
+              <Button className="w-full md:w-fit">BOOK A FREE CONSULTATION</Button>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Services = ({ services, name, padding, className, image }) => {
         ) : (
           ""
         )}
-     {route =="/" && <div className={`${styles3.box}   linear-grad mt-[20%] 2xl:mt-[20.2%]  relative hidden xl:block`}></div>}
+     {route =="/" && <div className={`${styles3.box}  linear-grad mt-[16%]   relative hidden xl:block`}></div>}
       </section>
       
     </>

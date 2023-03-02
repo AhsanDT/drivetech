@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
-import styles from "../../styles/Hero.module.css";
-import styles2 from "../../styles/Partnership.module.css";
+import styles from "../../styles/Partnership.module.css";
 import Idea from "./Idea";
 
 
@@ -11,7 +10,7 @@ import Idea from "./Idea";
 const Partnership = ({DATA,className}) => {
     const {route} = useRouter();
   return (
-    <section className={`w-full py-[100px] relative ${className} `}>
+    <section className={`w-full py-[100px] relative ${className}  `}>
       <div className="flex flex-col gap-y-[16px] lg:items-center px-[30px]  md:px-[80px]">
         <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center">
           Partnership
@@ -23,7 +22,7 @@ const Partnership = ({DATA,className}) => {
         </p>    
         <div className="mt-[30px] w-full">
           <ul className="text-[14px] md:text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] lg:justify-center items-center">
-            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"} w-[130px] md:w-[208px]  text-center px-[16px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
+            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"} w-[13  0px] md:w-[208px]  text-center px-[16px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               CORE PARTNERS
             </li>
             </Link>
@@ -33,7 +32,7 @@ const Partnership = ({DATA,className}) => {
             </Link>
           </ul>
         </div>
-        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px] pb-[130px]">
+        <div className={`flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px] ${className}`}>
           {DATA.map((data) => {
             return (
               <div className=" flex flex-col ustify-center lg:items-center " key={data.id}>
@@ -58,14 +57,14 @@ const Partnership = ({DATA,className}) => {
       {route == "/partnership/core" ? (
           <div className="relative pt-[210px] lg:pt-[230px] bg-[#37373B]">
             <div
-              className={`${styles2.box}  linear-grad  hidden md:block `}
+              className={`${styles.box}  linear-grad  hidden md:block `}
             ></div>
             <Idea title="Start a Project" />
           </div>
         ) : route == "/partnership/ecological" ? (
             <div className="relative pt-[210px] lg:pt-[230px] bg-[#37373B]">
             <div
-              className={`${styles2.box}  linear-grad  hidden md:block `}
+              className={`${styles.box}  linear-grad  hidden md:block `}
             ></div>
             <Idea title="Start a Project" />
           </div>
@@ -73,7 +72,7 @@ const Partnership = ({DATA,className}) => {
           ""
         )}
    
-      {route == "/" && <div className={`${styles.box} linear-grad `}></div>}
+      {route == "/" && <div className={`${styles.box2} linear-grad `}></div>}
 
     </section>
   );

@@ -21,7 +21,7 @@ const PARTNERSHIP = [
 const core = () => {
   return (
     <Layout>
-        <Partnership DATA={PARTNERSHIP} className="top-[100px]" />
+        <Partnership DATA={PARTNERSHIP} className="top-[100px] pb-[100px]" />
     </Layout>
   )
 }
