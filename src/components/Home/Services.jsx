@@ -14,7 +14,7 @@ const Services = ({ services, name, padding, className, image }) => {
     <>
       <section className={` w-full h-full linear-grad relative `}>
         <div
-          className={`w-full h-full py-[ 40px]  sm:px-[120px] xl:px-[240px] lg:pb-[100px] ${padding}`}
+          className={`w-full h-full py-[ 40px]  sm:px-[120px] xl:px-[240px] pb-[10 0px] ${padding}`}
         >
           <div className={` img-container absolute  le ft-0 w-full`}>
             <Image src={image} alt="img" />
