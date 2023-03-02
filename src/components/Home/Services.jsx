@@ -7,6 +7,7 @@ import styles2 from "../../styles/Blogs.module.css";
 import styles3 from "../../styles/Services.module.css";
 import Idea from "./Idea";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Services = ({ services, name, padding, className, image }) => {
   const { route } = useRouter();
@@ -44,7 +45,7 @@ const Services = ({ services, name, padding, className, image }) => {
                 ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL
                 MARKETING SERVICES{" "}
               </p>
-              <Button className="w-[242px] md:w-fit">BOOK A FREE CONSULTATION</Button>
+              <Link href={"/startproject"}><Button className="w-[242px] md:w-fit">BOOK A FREE CONSULTATION</Button></Link>
             </div>
           </div>
         </div>
