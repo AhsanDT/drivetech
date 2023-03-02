@@ -28,7 +28,7 @@ const OurWorks = ({ className, padding }) => {
   return (
     <>
       <section
-        className={`w-full h-full linear-grad  relative  ${route=="/" &&  "pb-[180px]"}`}
+        className={`w-full h-full linear-grad  relative pb-[180px]`}
       >
         <div className={`w-full ${padding}`}>
           <div className={`img-container absolute top-0 `}>
