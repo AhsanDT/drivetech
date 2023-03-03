@@ -22,7 +22,7 @@ const Partnership = ({DATA,className}) => {
         </p>    
         <div className="mt-[30px] w-full">
           <ul className="text-[14px] md:text-[16px] font-oswald font-bold gap-x-[8px] flex lg:gap-x-[40px] lg:justify-center items-center">
-            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"} w-full md:w-[208px]  text-center px-[25px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
+            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"} w-full md:w-[208px]  text-center px-[15px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               CORE PARTNERS
             </li>
             </Link>
