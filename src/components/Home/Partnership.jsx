@@ -10,7 +10,7 @@ import Idea from "./Idea";
 const Partnership = ({DATA,className}) => {
     const {route} = useRouter();
   return (
-    <section className={`w-full ${route == '/' && "py-[50px]"} lg:py- [50px] relative ${className}  `}>
+    <section className={`w-full ${route == '/' && "py-[50px] pb-[100px]"} lg:py- [50px] relative ${className}  `}>
       <div className="flex flex-col gap-y-[16px] lg:items-center px-[30px]  md:px-[80px]">
         <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center">
           Partnership
@@ -39,7 +39,7 @@ const Partnership = ({DATA,className}) => {
                 <div className="img-container text-center w-full mx-auto">
                   <Image src={data.img} alt="img" />
                 </div>
-                <div className="sm:flex flex-col items-center justify-center">
+                <div>
                 <span className="font-oswald font-bold text-[#3C3C3C] text-[24px]">
                   {data.name}
                 </span>
