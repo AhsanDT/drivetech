@@ -32,14 +32,14 @@ const Hero = () => {
           Driving innovation, one solution at a time. The drive to succeed is
           powered by its people and advanced technology.
         </p>
-        <Link href={"/startproject"}><button className="border-[2px] border-black bg-[transparent]  text-[20px] px-[40px] py-[10px] w-fit text-black font-bold hidden lg:block ">
-          Achieve Your Goals Faster With Us
+        <button className="border-[2px] border-black bg-[transparent]  text-[20px] px-[40px] py-[10px] w-fit text-black font-bold hidden lg:block ">
+        <Link href={"/startproject"}> Achieve Your Goals Faster With Us        </Link>
+
         </button>
-        </Link>
-       <Link href={"/startproject"}> <button className="border-black border-[2px] bg-[transparent] text-[20px] px-[40px] py-[10px] w-fit text-black font-bold lg:hidden font-oswald mb-[100px] sm:mb-[20px]">
-          Start a Project
+        <button className="border-black border-[2px] bg-[transparent] text-[20px] px-[40px] py-[10px] w-fit text-black font-bold lg:hidden font-oswald mb-[100px] sm:mb-[20px]">
+       <Link href={"/startproject"}>  Start a Project </Link>
         </button>
-        </Link>
+       
       </div>
       </div>
       <div className={`${styles.box} pt-[210px] sm:pt-[360px]`}></div>

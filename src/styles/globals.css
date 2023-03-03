@@ -22,12 +22,9 @@ font-family: 'Oswald', sans-serif;
   object-fit: cover;
 }
 .home-linear-grad{
-  background-repeat: no-repeat;
-  
-  background: linear-gradient(270.23deg, #FFFFFF 4.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%), url(../assets/bg-images/about.png);
+  background: linear-gradient(270.23deg, #FFFFFF 55.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%);
 }
 .home-linear-grad2{
-  background-repeat: no-repeat;
   background: linear-gradient(270.23deg, #FFFFFF 4.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%);
 }
 .linear-grad {
