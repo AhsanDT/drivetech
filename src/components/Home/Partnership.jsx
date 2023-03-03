@@ -21,12 +21,12 @@ const Partnership = ({DATA,className}) => {
           intention of making everyone succeed.
         </p>    
         <div className="mt-[30px] w-full">
-          <ul className="text-[14px] md:text-[16px] font-oswald font-bold gap-x-[4px] flex lg:gap-x-[40px] lg:justify-center items-center">
-            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"} w-[13  0px] md:w-[208px]  text-center px-[16px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
+          <ul className="text-[14px] md:text-[16px] font-oswald font-bold gap-x-[8px] flex lg:gap-x-[40px] lg:justify-center items-center">
+            <Link href={"/partnership/core"}><li className={`${route== "/partnership/core" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"} w-full md:w-[208px]  text-center px-[25px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               CORE PARTNERS
             </li>
             </Link>
-            <Link href={"/partnership/ecological"}><li className={`${route== "/partnership/ecological" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"}   md:w-[208px] text-center  px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
+            <Link href={"/partnership/ecological"}><li className={`${route== "/partnership/ecological" ? "text-white bg-black" : "text-black bg-white hover:text-white  hover:bg-black"}  w-full md:w-[208px] text-center  px-[8px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}>
               ECOLOGICAL PARTNERS
             </li>
             </Link>
@@ -36,7 +36,7 @@ const Partnership = ({DATA,className}) => {
           {DATA.map((data) => {
             return (
               <div className="flex flex-col justify-center lg:items-center " key={data.id}>
-                <div className="img-container text-center w-full mx-auto">
+                <div className="img-container">
                   <Image src={data.img} alt="img" />
                 </div>
                 <div>
