@@ -17,5 +17,5 @@
     border-right: 100vw solid transparent;
     width: 0;
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
   }

@@ -10,12 +10,12 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <section className="w-full  h-sc reen relative">
-        <div className="w-full  ">
+        <div className="w-full">
       <div className={` img-container w-full h-full xl:max-h-[600px] absolute z-[-1] `}>
         <Image src={heroImage} alt="img" className=" hidden sm:block " />
         <Image src={heromobImage} alt="img" className="sm:hidden min-h-[640px]" />
       </div>
-      <div className={` img-container w-full h-[] absolute top-[5%] xl:top-[14%] 1xl:top-[12%] 2xl:top-[10%]   3xl:top-[-4%] 4xl:top-[-10%] 5xl:top-[-15%] 6xl:top-[-20%] 7xl:top-[-36%] 8xl:top-[-44%] z-[-1]`}>
+      <div className={` img-container w-full  absolute top-[5%] xl:top-[14%] 1xl:top-[12%] 2xl:top-[10%]   3xl:top-[-4%] 4xl:top-[-10%] 5xl:top-[-15%] 6xl:top-[-20%] 7xl:top-[-36%] 8xl:top-[-44%] z-[-1]`}>
         <Image src={design2} alt="img" className=" hidden xl:block" />
       </div>
       <div className={` img-container w-full h-[] absolute top-[146px] xl:top-[280px] 1xl:top-[180px] 2xl:top-[140px] 3xl:top-[55px] 6xl:top-[-150px] 7xl:top-[-380px] z-[-1] ${styles.wave}`}>
@@ -46,7 +46,7 @@ const Hero = () => {
        
       </div>
       </div>
-      <div className={`${styles.box} pt-[210px] sm:pt-[460px]`}></div>
+      <div className={`${styles.box} pt-[210px] sm:pt-[460px] relative top-[1px]`}></div>
     </section>
   );
 };
