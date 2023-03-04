@@ -18,7 +18,7 @@ const Hero = () => {
       <div className={` img-container w-full h-[] absolute top-[5%] xl:top-[14%] 1xl:top-[12%] 2xl:top-[10%]   3xl:top-[-4%] 4xl:top-[-10%] 5xl:top-[-15%] 6xl:top-[-20%] 7xl:top-[-36%] 8xl:top-[-44%] z-[-1]`}>
         <Image src={design2} alt="img" className=" hidden xl:block" />
       </div>
-      <div className={` img-container w-full h-[] absolute top-[146px] xl:top-[280px] 1xl:top-[180px] 2xl:top-[65px] 3xl:top-[55px] 6xl:top-[-150px] 7xl:top-[-380px] z-[-1] ${styles.wave}`}>
+      <div className={` img-container w-full h-[] absolute top-[146px] xl:top-[280px] 1xl:top-[180px] 2xl:top-[140px] 3xl:top-[55px] 6xl:top-[-150px] 7xl:top-[-380px] z-[-1] ${styles.wave}`}>
         <Image src={design} alt="img" className=" hidden xl:block" />
       </div>
       <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[81%] lg:w-[70%] xl:w-[57%] z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
