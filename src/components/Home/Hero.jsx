@@ -11,15 +11,15 @@ const Hero = () => {
   return (
     <section className="w-full  h-sc reen relative">
         <div className="w-full  ">
-      <div className={` img-container w-full h-full 2xl:max-h-[600px] absolute z-[-1] `}>
+      <div className={` img-container w-full h-full xl:max-h-[600px] absolute z-[-1] `}>
         <Image src={heroImage} alt="img" className=" hidden sm:block " />
         <Image src={heromobImage} alt="img" className="sm:hidden min-h-[640px]" />
       </div>
-      <div className={` img-container w-full h-[] absolute top-[5%] 3xl:top-[-3%] 4xl:top-[-9%] 5xl:top-[-17%] 6xl:top-[-27%] 7xl:top-[-34%] z-[-1]`}>
-        <Image src={design2} alt="img" className=" hidden 2xl:block" />
+      <div className={` img-container w-full h-[] absolute top-[5%] xl:top-[14%] 1xl:top-[12%] 2xl:top-[10%]   3xl:top-[-4%] 4xl:top-[-10%] 5xl:top-[-15%] 6xl:top-[-20%] 7xl:top-[-36%] 8xl:top-[-44%] z-[-1]`}>
+        <Image src={design2} alt="img" className=" hidden xl:block" />
       </div>
-      <div className={` img-container w-full h-[] absolute top-[146px] 3xl:top-[10px] 5xl:top-[5px] 6xl:top-[-100px] 7xl:top-[-200px] z-[-1] ${styles.wave}`}>
-        <Image src={design} alt="img" className=" hidden 2xl:block" />
+      <div className={` img-container w-full h-[] absolute top-[146px] xl:top-[280px] 1xl:top-[180px] 2xl:top-[65px] 3xl:top-[55px] 6xl:top-[-150px] 7xl:top-[-380px] z-[-1] ${styles.wave}`}>
+        <Image src={design} alt="img" className=" hidden xl:block" />
       </div>
       <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[81%] lg:w-[70%] xl:w-[57%] z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
         <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]">
