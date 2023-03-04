@@ -46,7 +46,7 @@ const Hero = () => {
        
       </div>
       </div>
-      <div className={`${styles.box} pt-[210px] sm:pt-[460px] relative top-[1px]`}></div>
+      <div className={`${styles.box} pt-[210px] sm:pt-[460px] relative top-[2px]`}></div>
     </section>
   );
 };
