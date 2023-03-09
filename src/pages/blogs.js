@@ -21,6 +21,7 @@ const BLOGS = [
   ];
 
 const blogs = () => {
+
   return (
     <Layout>
         <Blogs BLOGS={BLOGS} />

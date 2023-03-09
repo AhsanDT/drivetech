@@ -12,9 +12,9 @@ const Header = () => {
   const { route } = useRouter();
   return (
     <>
-      <header className="w-full bg-[#36373A] px-[30px] md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100]">
+      <header className="w-full bg-[#36373A] px-[30px]  md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100] flex justify-center">
        {isActive &&  <div className="absolute left-0 top-[100px] w-full h-screen bg-[#1F1F22ED] backdrop-blur-[5px] z-[99]"></div>}
-        <div className="w-full  h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[6 4px]">
+        <div className="w-full xl:max-w-[1440px] h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[6 4px]">
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">
               <Link href={"/"}>

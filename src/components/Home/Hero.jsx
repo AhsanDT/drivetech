@@ -9,8 +9,8 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="w-full  h-sc reen relative">
-        <div className="w-full">
+    <section className="w-full  min-h-[100vh] r elative flex justify-center">
+        {/* <div className="w-full xl:max-w-[1440px]">
       <div className={` img-container w-full h-full xl:max-h-[600px] absolute z-[-1] `}>
         <Image src={heroImage} alt="img" className=" hidden sm:block " />
         <Image src={heromobImage} alt="img" className="sm:hidden min-h-[640px]" />
@@ -45,8 +45,8 @@ const Hero = () => {
         </button>
        
       </div>
-      </div>
-      <div className={`${styles.box} pt-[210px] sm:pt-[460px] relative top-[2px]`}></div>
+      </div> */}
+      {/* <div className={`${styles.box} pt-[210px] sm:pt-[460px] relative top-[2px]`}></div> */}
     </section>
   );
 };

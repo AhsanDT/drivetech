@@ -50,7 +50,7 @@ const BLOGS = [
 const Blogs = () => {
   return (
     <section
-      className={`w-full linear-grad pt-[80 px] border-b border-b-[#747474] pb-[290px] sm:pb-[90px] md:pb-[130px] xl:pb-[180px]  relative `}
+      className={`w-full linear-grad pt-[80 px] border-b border-b-[#747474] lg:border-none pb-[290px] sm:pb-[90px] md:pb-[130px] xl:pb-[180px]  relative `}
     >
       <div className="w-full">
         <div className={` img-container h-[500px] abso lute top-0`}>
@@ -61,7 +61,7 @@ const Blogs = () => {
             Blogs
           </h1>
 
-          <div className="flex gap-x-[32px] xl:justify-center overflow-scroll xl:overflow-hidden">
+          <div className="flex gap-x-[32px] md:justify-center overflow-scroll xl:overflow-hidden">
             {BLOGS.map((data) => {
               return (
                 <div className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]" key={data.id}>

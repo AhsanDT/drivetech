@@ -8,8 +8,9 @@ import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#36373A]  px-[30px] lg:px-[80px] py-[40px] lg:py-[10px] relative z-[11] ">
-      <div className="w-full xl:max-w-[14 40px] h-[298px] pt-[83px] justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex border-b border-b-[#6F6F6F]">
+    <footer className="w-full bg-[#36373A] md:px-[80px] px-[30px] lg:px-[80px] py-[40px] lg:py-[10px]  2xl:flex justify-center">
+      <div className="w-full xl:max-w-[1440px] ">
+        <div className="pt-[83px] justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex h-[298px]  border-b border-b-[#6F6F6F]">
         <div className="flex flex-col gap-y-[16px]">
           <div className="flex gap-x-[16px]">
             <FooterIcon
@@ -158,6 +159,8 @@ const Footer = () => {
         </Link>
         <span>Copyright 2023 DriveTech. All Rights Reserved.</span>
       </div>
+      </div>
+     
       {/* mobile footer */}
       <div className="lg:hidden text-[16px] flex flex-col gap-y-[20px] text-[#A3A3A3] font-jakarta">
         <MobileFooter />

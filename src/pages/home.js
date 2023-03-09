@@ -58,11 +58,11 @@ const HomePage = () => {
   return (
     <Layout>
        <Hero />
-      <Services services={SERVICES} name="Digital Services" image={bgImage}/>  
-       <WhyUs />
-       <OurWorks />
-       <Partnership DATA={PARTNERSHIP} />
-      <Blogs /> 
+      {/* <Services services={SERVICES} name="Digital Services" image={bgImage}/>   */}
+       {/* <WhyUs /> */}
+       {/* <OurWorks /> */}
+       {/* <Partnership DATA={PARTNERSHIP} /> */}
+      {/* <Blogs />  */}
     </Layout>
   );
 };
