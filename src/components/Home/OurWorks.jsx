@@ -24,9 +24,9 @@ const OurWorks = ({ image }) => {
 
     <>
       {route == "/" && (
-        <div className="w-full  border-b-[15vh] xl:border-b-[15vh] border-b-[#424248] relative top-[6 px] left-0  border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
+        <div className="w-full  border-b-[15vh] xl:border-b-[15vh] border-b-[#424248] relative  left-0  border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
       )}
-      <section className="w-full flex justify-center linear-grad relative top-[-1px] pt-[120px]   md:py-[120px]">
+      <section className={`w-full flex justify-center linear-grad relative  ${route == "/portfolio" ? "top-[7px]" : "top-[-1]"} pt-[120px]   md:py-[120px]`}>
         <div className={`w-full h-full xl:max-w-[1440px] relative ${route == "/" && "top-[-154px]" } ${route == "/portfolio" && "pb-[200px]"}  `}>
           <div className={`absolute ${route == "/" ? "top-[-270px]" : "top-[-50px]"} `}>
             <Image src={image} alt="image" />
@@ -36,7 +36,7 @@ const OurWorks = ({ image }) => {
               Our Works
             </h1>
             <div className="relative flex items-center justify-center">
-              <i className="fa-solid fa-magnifying-glass absolute left-[395px] top-3 text-[18px]"></i>
+              <i className="fa-solid fa-magnifying-glass absolute left-[20px] xl:left-[30%] 1xl:left-[31%] top-3 text-[18px]"></i>
               <input
                 type="text"
                 placeholder="Search industry or name"
