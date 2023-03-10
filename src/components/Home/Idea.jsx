@@ -4,7 +4,7 @@ import Button from "../UI/Button";
 
 const Idea = ({ title }) => {
   return (
-    <section className="w-full  bg-[#37373B] flex justify-center px-[30px] md:px-[80px] xl:px-[250px] py-[38px] h-[223px]  relative ">
+    <section className="w-full  bg-[#37373B] flex justify-center px-[30px] md:px-[80px] xl:px-[250px] py-[38px] h-[223px] top-[2px] relative z-[1]">
       <div className={`box linear-grad hidden lg:block `}></div>
       <div className=" w-full xl:max-w-[1140px] flex flex-col gap-y-[14px] lg:flex-row justify-between lg:items-center ">
         <div className="flex flex-col ">

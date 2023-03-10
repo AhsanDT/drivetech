@@ -24,9 +24,9 @@ const OurWorks = ({ image }) => {
 
     <>
       {route == "/" && (
-        <div className="w-full  border-b-[5vh] xl:border-b-[15vh] border-b-[#424248] relative top-[2px] border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
+        <div className="w-full  border-b-[10vh] xl:border-b-[15vh] border-b-[#424248] relative top-[6px] border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
       )}
-      <section className="w-full flex justify-center linear-grad relative py-[120px]">
+      <section className="w-full flex justify-center linear-grad relative top-[4px] py-[120px]">
         <div className={`w-full h-full xl:max-w-[1440px] relative ${route == "/" && "top-[-154px]" } ${route == "/portfolio" && "pb-[200px]"}  `}>
           <div className={`absolute ${route == "/" ? "top-[-270px]" : "top-[-50px]"} `}>
             <Image src={image} alt="image" />

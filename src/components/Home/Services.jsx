@@ -12,12 +12,12 @@ const Services = ({ services, name, image }) => {
   return (
     <>
       {route == "/" && (
-        <div className="w-full border border-t-[20vh]  border-t-[white] relative  border-l-[100vw]  border-l-[#424248]"></div>
+        <div className="w-full border border-t-[20vh]  border-t-[white] relative top-[6px]  border-l-[100vw]  border-l-[#424248]"></div>
       )}
                 {/* <div className="img-container hidden lg:block absolute top-[-40 s0px] w-full z-[3] lef t-0 ">
           <Image src={design} alt="img" />
         </div> */}
-      <section className={`w-full linear-grad relative ${route == "/" && "top-[-3px]"} px-[90px] `}>
+      <section className={`w-full linear-grad relative ${route == "/" && "top-[-3px]"} top-[4px] px-[90px] `}>
         <div className={`w-full xl:max-[1440px]  relative ${route == "/" ? "top-[-94px]": ""}   flex justify-center`}>
           <div className={`absolute ${route == "/services" && "top-[100px]"} ${route == "/development" && "top-[100px]"}  `}>
             <Image src={image} alt="image" />
@@ -55,7 +55,7 @@ const Services = ({ services, name, image }) => {
         </div>
       </section>
       {route == "/" && (
-        <div className="hidden lg:block w-full  border-t-[16vw] border-t-[#313131] relative top-[-5px] border-l-[50vw] border-l-[transparent] border-r-[50vw] border-r-[transparent] "></div>
+        <div className="hidden lg:block w-full  border-t-[16vw] border-t-[#313131] relative top-[3px] border-l-[50vw] border-l-[transparent] border-r-[50vw] border-r-[transparent] "></div>
       )}
     </>
   );
