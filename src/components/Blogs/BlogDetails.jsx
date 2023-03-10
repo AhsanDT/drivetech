@@ -29,11 +29,16 @@ const BlogDetails = ({ id, DATA }) => {
                   <h1 className="text-[32px] font-oswald font-bold text-[#00000S0] lg:text-[48px]  md:text-center">
                     {data.content}
                   </h1>
+                  <span className="font-jakarta"> 1,203 Reads</span>
                 </div>
                 <div className="img-container py-[48px]">
                   <Image src={data.blogImage} alt="img" />
                 </div>
                 <div className=" md:px-[120px]  flex flex-col gap-y-[32px] font-jakarta">
+                  <div className="flex gap-x-[9px] justify-center items-center ">
+                  <i class="fa-solid fa-thumbs-up cursor-pointer text-[20px]"></i>
+                    <span className="text-[14px] font-jakarta">243</span>
+                  </div>
                   <h3 className="text-[32px] text-[#3F3F3F] font-oswald font-bold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quas, suscipit!
