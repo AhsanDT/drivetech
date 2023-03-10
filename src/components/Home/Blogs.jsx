@@ -72,7 +72,7 @@ const Blogs = () => {
                     <div className="img-container w-[210px] h-[210px]">
                       <Image src={data.img} alt="img" />
                     </div>
-                    <div className="px-[18px]">
+                    <div className="px-[18px] pb-[25px]">
                       <span className="text-[16px] font-oswald font-bold">
                         {data.title}
                       </span>
