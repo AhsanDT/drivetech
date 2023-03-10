@@ -1,7 +1,5 @@
 import React from "react";
 import WhyUsItem from "./WhyUsItem";
-import styles from "../../styles/WhyUs.module.css";
-
 import img1 from "../../assets/whyus/img1.png";
 import img2 from "../../assets/whyus/img2.png";
 import img3 from "../../assets/whyus/img3.png";
@@ -57,38 +55,37 @@ const DATA = [
 
 const WhyUs = () => {
   return (
-    <section className="w-full relative">
- 
-
-      <div className="flex flex-col gap-y-[40px] lg:gap-y-[76px] md:items-center justify-center  md:px-[120px] md:py-[40px]">
-        <div className="bg-[#5E5E5E] bg-opacity-[10%] lg:h-[168px] flex flex-col gap-y-[24px]  px-[30px] py-[20px]  justify-center items-center ">
-          <p className="font-oswald text-[16px] font-bold text-[#1D1D1D] text-opacity-[60%] lg:text-center">
-            In a crowded market of software development, digital marketing, and
-            marketing automation services, what makes Drive Technology stand out
-            as the right choice for you?
-          </p>
-          <p className="font-oswald text-[16px]  text-[#1D1D1D] text-opacity-[60%]">
-            Our Distinctive Approach to Software Development, Digital Marketing,
-            and Marketing Automation
-          </p>
-        </div>
-        <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold px-[30px] ">
-          Why Drive Technology
-        </h1>
-        <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[40px] px-[30px] lg:gap-y-[108px]">
-          {DATA.map((data) => {
-            return (
-              <div
-                className="w-full lg:w-[401px] lg:h-[268px] flex flex-col  md:items-center gap-y-[32px]"
-                key={data.id}
-              >
-                <WhyUsItem data={data} />
-              </div>
-            );
-          })}
+    <section className="w-full flex justify-center items-center ">
+      <div className="w-full xl:max-w-[1440px]">
+        <div className="flex flex-col gap-y-[40px] lg:gap-y-[76px] md:items-center justify-center  md:px-[120px] py-[120px]">
+          <div className="bg-[#5E5E5E] bg-opacity-[10%] lg:h-[168px] flex flex-col gap-y-[24px]  px-[30px] py-[20px]  justify-center items-center ">
+            <p className="font-oswald text-[16px] font-bold text-[#1D1D1D] text-opacity-[60%] lg:text-center">
+              In a crowded market of software development, digital marketing,
+              and marketing automation services, what makes Drive Technology
+              stand out as the right choice for you?
+            </p>
+            <p className="font-oswald text-[16px]  text-[#1D1D1D] text-opacity-[60%]">
+              Our Distinctive Approach to Software Development, Digital
+              Marketing, and Marketing Automation
+            </p>
+          </div>
+          <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold px-[30px] ">
+            Why Drive Technology
+          </h1>
+          <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[40px] px-[30px] lg:gap-y-[108px]">
+            {DATA.map((data) => {
+              return (
+                <div
+                  className="w-full lg:w-[401px] lg:h-[268px] flex flex-col  md:items-center gap-y-[32px]"
+                  key={data.id}
+                >
+                  <WhyUsItem data={data} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-      <div className={`${styles.box} rel `}></div>
     </section>
   );
 };

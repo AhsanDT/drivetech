@@ -3,8 +3,7 @@ import Layout from "@/components/Layout/Layout";
 import React from "react";
 import service2 from "../assets/services/service2.png";
 import service3 from "../assets/services/service5.png";
-import bgImage from "../assets/services/bg2.png";
-import styles from "../styles/Blogs.module.css";
+import bgImage from "../assets/services/bg.png";
 
 const SERVICES = [
   {
@@ -21,6 +20,7 @@ const SERVICES = [
       "Artificial Intelligence(AI) & Machine Learning(ML) Solutions. Build Intelligent Business Empower With Our AI & Machine Learning Services. ai and ml development.",
     img: service3,
   },
+  
 ];
 const development = () => {
   return (
@@ -29,8 +29,6 @@ const development = () => {
         services={SERVICES}
         name="Development"
         image={bgImage}
-        className="top-[150px]"
-        padding="pb-[360px] md:pb-[470px]"
       />
     </Layout>
   );

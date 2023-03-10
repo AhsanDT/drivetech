@@ -1,12 +1,14 @@
 import OurWorks from '@/components/Home/OurWorks'
 import Layout from '@/components/Layout/Layout'
 
+import image from "../assets/ourwork/design2.png"
+
 
 
 const portfolio = () => {
   return (
     <Layout>
-    <OurWorks className="top-[150px]" padding="pb-[220px] xl:pb-[470px]"  />
+    <OurWorks image={image}   />
     </Layout>
   )
 }

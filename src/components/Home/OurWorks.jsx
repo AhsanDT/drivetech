@@ -2,8 +2,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import OurWorkItem from "./OurWorkItem";
 import bgImage from "../../assets/ourwork/design.png";
-import styles from "../../styles/Blogs.module.css";
-import Idea from "./Idea";
 import img1 from "../../assets/ourwork/img1.png";
 import img2 from "../../assets/ourwork/img2.png";
 import img3 from "../../assets/ourwork/img3.png";
@@ -12,40 +10,37 @@ import img5 from "../../assets/ourwork/img5.png";
 import img6 from "../../assets/ourwork/img6.png";
 
 const DATA = [
-    { id: "d1", img: img1, title: "The Project Title", type: "SaaS Solutions" },
-    { id: "d2", img: img2, title: "The Project Title", type: "AI & ML" },
-    { id: "d3", img: img3, title: "The Project Title", type: "EdTech" },
-    { id: "d4", img: img4, title: "The Project Title", type: "Heallth Tech" },
-    { id: "d5", img: img5, title: "The Project Title", type: "Ecommerce" },
-    { id: "d6", img: img6, title: "The Project Title", type: "Crypto" },
-  ];
+  { id: "d1", img: img1, title: "The Project Title", type: "SaaS Solutions" },
+  { id: "d2", img: img2, title: "The Project Title", type: "AI & ML" },
+  { id: "d3", img: img3, title: "The Project Title", type: "EdTech" },
+  { id: "d4", img: img4, title: "The Project Title", type: "Heallth Tech" },
+  { id: "d5", img: img5, title: "The Project Title", type: "Ecommerce" },
+  { id: "d6", img: img6, title: "The Project Title", type: "Crypto" },
+];
 
-
-
-
-const OurWorks = ({ className, padding }) => {
+const OurWorks = ({ image }) => {
   const { route } = useRouter();
   return (
+
     <>
-      <section
-        className={`w-full h-full linear-grad  relative pb-[180px]`}
-      >
-        <div className={`w-full ${padding}`}>
-          <div className={`img-container absolute top-0 `}>
-            <Image src={bgImage} alt="img" />
+      {route == "/" && (
+        <div className="w-full  border-b-[5vh] xl:border-b-[15vh] border-b-[#424248] relative top-[2px] border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
+      )}
+      <section className="w-full flex justify-center linear-grad relative py-[120px]">
+        <div className={`w-full h-full xl:max-w-[1440px] relative ${route == "/" && "top-[-154px]" } ${route == "/portfolio" && "pb-[200px]"}  `}>
+          <div className={`absolute ${route == "/" ? "top-[-270px]" : "top-[-50px]"} `}>
+            <Image src={image} alt="image" />
           </div>
-          <div
-            className={`relative z-[21] w-full flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px] md:px-[40px] lg:px-[80px]  ${className}`}
-          >
-            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white text-center">
+          <div className={`relative ${route == "/" ? "top-[80px]": "top-[40px]"}  flex flex-col gap-y-[32px] px-[30px] md:px-[80px]`}>
+            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
               Our Works
             </h1>
             <div className="relative flex items-center justify-center">
-              <i className="fa-solid fa-magnifying-glass absolute left-[3%] md:left-[16.5%] top-3 text-[16px]"></i>
+              <i className="fa-solid fa-magnifying-glass absolute left-[395px] top-3 text-[18px]"></i>
               <input
                 type="text"
                 placeholder="Search industry or name"
-                className="w-full md:w-[70%] h-[40px] outline-none text-[14px] font-jakarta text-[#000000] text-opacity-[50%] px-[56px] py-[11px]"
+                className="w-full xl:w-[515px] h-[40px] outline-none text-[14px] font-jakarta text-[#000000] text-opacity-[50%] px-[56px] py-[11px]"
               />
             </div>
             <div>
@@ -76,7 +71,7 @@ const OurWorks = ({ className, padding }) => {
             <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[24px] lg:gap-y-[40px] mt-[30px]">
               {DATA.map((data) => {
                 return (
-                  <div className=" flex flex-col gap-y-[21px]" key={data.id}>
+                  <div className=" flex flex-col gap-y-[16px]" key={data.id}>
                     <OurWorkItem data={data} />
                   </div>
                 );
@@ -84,14 +79,6 @@ const OurWorks = ({ className, padding }) => {
             </div>
           </div>
         </div>
-        {route == "/portfolio" && (
-          <>
-            <div
-              className={`${styles.box}  linear-grad  hidden md:block`}
-            ></div>
-            <Idea title="Start a Project" />
-          </>
-        )}
       </section>
     </>
   );

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import heroImage from "../../assets/bg-images/about.png";
-import design from "../../assets/bg-images/design.png";
+import heroImage from "../../assets/bg-images/BG.png";
 import design2 from "../../assets/bg-images/design2.png";
+import design from "../../assets/bg-images/design.png";
 import heromobImage from "../../assets/bg-images/mobile-bg.png";
 import styles from "../../styles/Hero.module.css";
 import React from "react";
@@ -9,19 +9,22 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="w-full  min-h-[100vh] r elative flex justify-center">
-        {/* <div className="w-full xl:max-w-[1440px]">
-      <div className={` img-container w-full h-full xl:max-h-[600px] absolute z-[-1] `}>
-        <Image src={heroImage} alt="img" className=" hidden sm:block " />
-        <Image src={heromobImage} alt="img" className="sm:hidden min-h-[640px]" />
-      </div>
-      <div className={` img-container w-full  absolute top-[5%] xl:top-[14%] 1xl:top-[12%] 2xl:top-[10%]   3xl:top-[-4%] 4xl:top-[-10%] 5xl:top-[-15%] 6xl:top-[-20%] 7xl:top-[-36%] 8xl:top-[-44%] z-[-1]`}>
-        <Image src={design2} alt="img" className=" hidden xl:block" />
-      </div>
-      <div className={` img-container w-full h-[] absolute top-[146px] xl:top-[280px] 1xl:top-[180px] 2xl:top-[140px] 3xl:top-[55px] 6xl:top-[-150px] 7xl:top-[-380px] z-[-1] ${styles.wave}`}>
-        <Image src={design} alt="img" className=" hidden xl:block" />
-      </div>
-      <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[81%] lg:w-[70%] xl:w-[57%] z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
+    <>
+      {" "}
+      <section className="w-full  xl:min-h-[100vh] flex justify-center ">
+        <div className="w-full relative overflow-hidden">
+          <div className="img-container absolute top-[-140px] z-[1] w-full h-full">
+            <Image src={heroImage} alt="img" />
+          </div>
+          {/* <div className="img-container hidden lg:block absolute z-[3] left-0  w-full h-[300 px] overflo">
+          <Image src={design} alt="img" />
+        </div> */}
+          <div className="img-container absolute top-[70px] z-[2]  w-full h-full ">
+            <Image src={design2} alt="img" />
+          </div>
+     
+        <div className="">
+       <div className="relative pt-[160px] lg:pt-[220px] w-full lg:w-[937px] xl:max-w-[1440px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] pb-[150px]  z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
         <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]">
           We help you drive your business to{" "}
           <span className="text-[#136C2C]">success</span>
@@ -45,9 +48,16 @@ const Hero = () => {
         </button>
        
       </div>
-      </div> */}
-      {/* <div className={`${styles.box} pt-[210px] sm:pt-[460px] relative top-[2px]`}></div> */}
-    </section>
+        </div>
+        {/* <div className="w-full border border-t-[20vh]  border-t-[white]  border-l-[100vw]  border-l-[#424248] absolute bottom-[0px] z-[2]"></div> */}
+
+        </div>  
+            
+  
+        
+      </section>
+    
+    </>
   );
 };
 

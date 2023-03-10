@@ -28,8 +28,6 @@ font-family: 'Oswald', sans-serif;
   background: linear-gradient(270.23deg, #FFFFFF 4.44%, rgba(255, 255, 255, 0.05) 50.86%, #FFFFFF 97.29%);
 }
 .linear-grad {
-  height: 100%;
-  background-repeat: no-repeat;
   background: linear-gradient(180deg, #424248 9.85%, #252525 47.46%, #303031 82.43%);
 }
 .icon-grad{
@@ -49,6 +47,20 @@ background: linear-gradient(180deg, #C1328C 0%, #FA8E22 100%);
 .calendly-inline-widget::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
+
+.box:after {
+  content: " ";
+  height: 224px;
+  border-bottom: 23vh solid #434344;
+  border-left: 55vw solid transparent;
+  z-index: -1;
+  width: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
 
 /* @media (prefers-color-scheme: dark) {
   html {

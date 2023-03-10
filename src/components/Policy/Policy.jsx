@@ -8,7 +8,7 @@ const Policy = ({ title }) => {
         <div className="font-jakarta">
           <Link href="/">
             <span className="text-[rgb(140,140,140)] text-[14px] cursor-pointer">
-              Home /
+              Home &nbsp;/&nbsp;&nbsp;
             </span>
           </Link>
           <span className="text-[#1D356A] text-[14px] font-bold">{title}</span>

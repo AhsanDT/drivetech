@@ -1,22 +1,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import React from 'react'
 import bgImage from "../../assets/blogs/blogs-bg.png"
-import styles from "../../styles/Blogs.module.css"
-import Idea from '../Home/Idea'
+
 
 const Blogs = ({BLOGS}) => {
   return (
-    <section className='w-full linear-grad bottom-[80 px] top-[70px] lg:top-[100px]  relative '>
-        <div className='w-full'>
-        <div className='img-container min-h-[890px] lg:min-h-[910px]'>
-            <Image src={bgImage} alt="img" />
+    <>
+
+    <section className="w-full flex justify-center linear-grad py-[120px] pb-[312px]">
+      <div className={`w-full h-full xl:max-w-[1440px] relative`}>
+        <div className={`absolute top-[-20px]`}>
+          <Image src={bgImage} alt="image" />
         </div>
-        <div className="absolute top-[40px] md:top-[86px] z-[11]  w-full  flex flex-col gap-y-[40px] md:gap-y-[70px] items-cen ter justify-center px-[30px]  lg:px-[80px] ">
-          <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
+        <div className="relative top-[40px] flex flex-col gap-y-[32px] px-[30px] md:px-[80px]">
+          <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
             Blogs
           </h1>
-
           <div className="flex gap-x-[32px] overflow-scroll xl:overflow-hidden xl:flex-wrap">
             {BLOGS.map((data) => {
               return (
@@ -36,15 +37,11 @@ const Blogs = ({BLOGS}) => {
               );
             })}
           </div>
+      
         </div>
-        </div>
-        <div className='relative bottom-[80px] md:bottom-[100px] pt-[22%]'>
-        <div
-        className={`${styles.box} linear-grad  hidden md:block`}
-      ></div>
-      <Idea title="Achieve Your Goals Faster With Us" />
       </div>
     </section>
+  </>
   )
 }
 

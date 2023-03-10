@@ -10,8 +10,9 @@ import service1 from "../assets/services/service1.png";
 import service2 from "../assets/services/service2.png";
 import service3 from "../assets/services/service4.png";
 import service4 from "../assets/services/service3.png";
-import bgImage from "../assets/bg-images/service.png";
+import bgImage from "../assets/services/bg.png";
 import image from "../assets/partnership/img.png";
+import ourWorkImage from "../assets/ourwork/design.png";
 
 
 
@@ -45,6 +46,15 @@ const SERVICES = [
         "We identify your brand by developing a logo, corporate identity, user manuals, any mockups, and souvenir products. Whatever it takes to get your brand noticed.",
       img: service4,
     },
+    {
+      id: "s4",
+      serviceName: "Back Office Services",
+      content:
+        "We identify your brand by developing a logo, corporate identity, user manuals, any mockups, and souvenir products. Whatever it takes to get your brand noticed.",
+      img: service4,
+    },
+    
+    
   ];
 
   const PARTNERSHIP = [
@@ -58,11 +68,11 @@ const HomePage = () => {
   return (
     <Layout>
        <Hero />
-      {/* <Services services={SERVICES} name="Digital Services" image={bgImage}/>   */}
-       {/* <WhyUs /> */}
-       {/* <OurWorks /> */}
-       {/* <Partnership DATA={PARTNERSHIP} /> */}
-      {/* <Blogs />  */}
+      <Services services={SERVICES} name="Digital Services" image={bgImage}/>  
+       <WhyUs />
+       <OurWorks image={ourWorkImage} />
+       <Partnership DATA={PARTNERSHIP} />
+      <Blogs /> 
     </Layout>
   );
 };

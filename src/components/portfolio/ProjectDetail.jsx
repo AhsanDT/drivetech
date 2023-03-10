@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Layout from "../Layout/Layout";
 import Button from "../UI/Button";
 import styles from "../../styles/Portfolio.module.css";
@@ -8,14 +7,15 @@ import Link from "next/link";
 const ProjectDetail = ({ id, DATA }) => {
   return (
     <Layout>
-      <section className="py-[50px]  relative top-[50px]">
+    
+      <section className="w-full py-[50px]  relative top-[50px]">
         {DATA.map((data) => {
           return (
             <div className="pt-[50px] pb-[92px] font-jakarta">
               <div className="px-[30px] md:px-[130px] font-jakarta">
                 <Link href="/portfolio">
                   <span className="text-[rgb(140,140,140)] text-[14px] cursor-pointer">
-                    Portfolio /      
+                    Portfolio &nbsp;/&nbsp;&nbsp;    
                   </span>
                 </Link>
                 <span className="text-[#1D356A] text-[14px] font-bold">
@@ -74,7 +74,8 @@ const ProjectDetail = ({ id, DATA }) => {
             </div>
           );
         })}
-      </section>
+        </section>
+     
     </Layout>
   );
 };

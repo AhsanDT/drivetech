@@ -13,7 +13,9 @@ const Header = () => {
   return (
     <>
       <header className="w-full bg-[#36373A] px-[30px]  md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100] flex justify-center">
-       {isActive &&  <div className="absolute left-0 top-[100px] w-full h-screen bg-[#1F1F22ED] backdrop-blur-[5px] z-[99]"></div>}
+        {isActive && (
+          <div className="absolute left-0 top-[100px] w-full h-screen bg-[#1F1F22ED] backdrop-blur-[5px] z-[99]"></div>
+        )}
         <div className="w-full xl:max-w-[1440px] h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[6 4px]">
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">
@@ -43,18 +45,22 @@ const Header = () => {
                     Home
                   </li>
                 </Link>
-                <div className="flex gap-x-2 items-center cursor-pointer group relative z-[111] h-[90px]" onMouseOver={() => setIsActive(true)} onMouseOut={() => setIsActive(false)}>
-                  {" "}
-                  <li
-                    className={`${
-                      route == "/services"
-                        ? "text-[#ffffff] border-b-[#136C2C]"
-                        : "text-[#808080] "
-                     }  text-[14px] font-bold border-b-[4px] border-transparent  group-hover:border-b-[#136C2C] group-hover:text-white`}
-                     
-                  >
-                    Services
-                  </li>
+                <div
+                  className="flex gap-x-2 items-center cursor-pointer group relative z-[111] h-[90px]"
+                  onMouseOver={() => setIsActive(true)}
+                  onMouseOut={() => setIsActive(false)}
+                >
+                  <Link href={"/services"}>
+                    <li
+                      className={`${
+                        route == "/services"
+                          ? "text-[#ffffff] border-b-[#136C2C]"
+                          : "text-[#808080] "
+                      }  text-[14px] font-bold border-b-[4px] border-transparent  group-hover:border-b-[#136C2C] group-hover:text-white`}
+                    >
+                      Services
+                    </li>
+                  </Link>
                   <i
                     className={`${
                       route == "/services" && "rotate-[180deg] text-white"
@@ -75,16 +81,22 @@ const Header = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="flex gap-x-2 items-center cursor-pointer group relative z-[111] h-[90px]" onMouseOver={() => setIsActive(true)} onMouseOut={() => setIsActive(false)}>
-                  <li
-                    className={`${
-                      route == "/development"
-                        ? "text-[#ffffff] border-b-[#136C2C]"
-                        : "text-[#808080] "
-                    } text-[14px] font-bold border-b-[4px] border-transparent group-hover:border-b-[#136C2C] group-hover:text-white`}
-                  >
-                    Development
-                  </li>
+                <div
+                  className="flex gap-x-2 items-center cursor-pointer group relative z-[111] h-[90px]"
+                  onMouseOver={() => setIsActive(true)}
+                  onMouseOut={() => setIsActive(false)}
+                >
+                  <Link href={"/development"}>
+                    <li
+                      className={`${
+                        route == "/development"
+                          ? "text-[#ffffff] border-b-[#136C2C]"
+                          : "text-[#808080] "
+                      } text-[14px] font-bold border-b-[4px] border-transparent group-hover:border-b-[#136C2C] group-hover:text-white`}
+                    >
+                      Development
+                    </li>
+                  </Link>
 
                   <i
                     className={`${

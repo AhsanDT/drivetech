@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import Layout from "../Layout/Layout";
-import Button from "../UI/Button";
-import styles from "../../styles/Portfolio.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,7 +13,7 @@ const BlogDetails = ({ id, DATA }) => {
               <div className=" font-jakarta">
                 <Link href="/blogs">
                   <span className="text-[rgb(140,140,140)] text-[14px] cursor-pointer">
-                    Blog /
+                    Blog &nbsp;/&nbsp;&nbsp;
                   </span>
                 </Link>
                 <span className="text-[#1D356A] text-[14px] font-bold">

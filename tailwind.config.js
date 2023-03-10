@@ -33,6 +33,9 @@ module.exports = {
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
       
+      'cxs': '480px',
+      'csm': '544px',
+      'cmd': '585px',
       '1xl': '1400px',
       '3xl': '1760px',
       '4xl': '1926px',

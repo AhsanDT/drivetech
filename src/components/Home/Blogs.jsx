@@ -1,13 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../../styles/Blogs.module.css";
-import image from "../../assets/blogs/blogs-bg.png";
+import image from "../../assets/ourwork/design.png";
 import img1 from "../../assets/blogs/img1.png";
 import img2 from "../../assets/blogs/img2.png";
 import img3 from "../../assets/blogs/img3.png";
 import img4 from "../../assets/blogs/img4.png";
-import Button from "../UI/Button";
-import Idea from "./Idea";
+import { useRouter } from "next/router";
 
 const BLOGS = [
   {
@@ -48,48 +46,51 @@ const BLOGS = [
 ];
 
 const Blogs = () => {
+  const { route } = useRouter();
   return (
-    <section
-      className={`w-full linear-grad pt-[80 px] border-b border-b-[#747474] lg:border-none pb-[290px] sm:pb-[90px] md:pb-[130px] xl:pb-[180px]  relative `}
-    >
-      <div className="w-full">
-        <div className={` img-container h-[500px] abso lute top-0`}>
-          <Image src={image} alt="img" />
-        </div>
-        <div className="absolute top-0 z-[11]  w-full  flex flex-col gap-y-[32px] items-cen ter justify-center px-[30px]  lg:px-[80px]">
-          <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center">
-            Blogs
-          </h1>
+    <>
+      {route == "/" && (
+        <div className="w-full border-b-[15vh] border-b-[#424248]  border-t-[white] relative top-[2px] border-l-[100vw] border-l-[transparent]"></div>
+      )}
+      <section className="w-full flex justify-center linear-grad relative  py-[120px]">
+        <div className="w-full h-full xl:max-w-[1440px] relative top-[-154px]">
+          <div className="absolute top-[-270px]">
+            <Image src={image} alt="image" />
+          </div>
+          <div className="relative top-[40px] flex flex-col gap-y-[70px] px-[30px] md:px-[80px]">
+            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
+              Blogs
+            </h1>
 
-          <div className="flex gap-x-[32px] md:justify-center overflow-scroll xl:overflow-hidden">
-            {BLOGS.map((data) => {
-              return (
-                <div className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]" key={data.id}>
-                  <div className="img-container w-[210px] h-[210px]">
-                    <Image src={data.img} alt="img" />
-                  </div>
-                  <div className="px-[18px]">
-                    <span className="text-[16px] font-oswald font-bold">
-                      {data.title}
-                    </span>
-                    <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">
-                      {data.content}
-                      <span className="text-[#F28E1C] cursor-pointer">
-                        Read More
+            <div className="flex gap-x-[32px] xl:justify-center overflow-scroll xl:overflow-hidden">
+              {BLOGS.map((data) => {
+                return (
+                  <div
+                    className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]"
+                    key={data.id}
+                  >
+                    <div className="img-container w-[210px] h-[210px]">
+                      <Image src={data.img} alt="img" />
+                    </div>
+                    <div className="px-[18px]">
+                      <span className="text-[16px] font-oswald font-bold">
+                        {data.title}
                       </span>
-                    </p>
+                      <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">
+                        {data.content}
+                        <span className="text-[#F28E1C] cursor-pointer">
+                          Read More
+                        </span>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        className={`${styles.box} linear-grad mt-[260px] hidden md:block`}
-      ></div>
-      <Idea title="Achieve Your Goals Faster With Us" />
-    </section>
+      </section>
+    </>
   );
 };
 
