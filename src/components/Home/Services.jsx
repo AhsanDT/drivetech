@@ -23,10 +23,10 @@ const Services = ({ services, name, image }) => {
             <Image src={image} alt="image" />
           </div>
           <div className={`relative ${route == "/" ? "top-[100px] md:top-[80px]" : "top-[130px]" } `}>
-            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[90px] md:px-[0px]">
+            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[30px] md:px-[0px]">
               {name}
             </h1>
-            <div className="flex flex-col gap-y-[48px] xl:gap-y-[158px] pt-[45px] xl:pt-[158px] px-[90px] md:px-[0px]">
+            <div className="flex flex-col gap-y-[48px] xl:gap-y-[158px] pt-[45px] xl:pt-[158px] px-[30px] md:px-[0px]">
               {services.map((service, index) => {
                 return (
                   <div
