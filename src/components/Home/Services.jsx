@@ -17,16 +17,16 @@ const Services = ({ services, name, image }) => {
                 {/* <div className="img-container hidden lg:block absolute top-[-40 s0px] w-full z-[3] lef t-0 ">
           <Image src={design} alt="img" />
         </div> */}
-      <section className={`w-full linear-grad relative ${route == "/" && "top-[-3px]"} top-[4px]  `}>
+      <section className={`w-full linear-grad relative ${route == "/" && "top-[-3px]"} top-[4px] md:px-[90px]  `}>
         <div className={`w-full xl:max-[1440px] relative ${route == "/" ? "top-[-94px]": ""}   flex justify-center`}>
           <div className={`absolute ${route == "/services" && "top-[100px]"} ${route == "/development" && "top-[100px]"}  `}>
             <Image src={image} alt="image" />
           </div>
           <div className={`relative ${route == "/" ? "top-[100px] md:top-[80px]" : "top-[130px]" } `}>
-            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[90px]">
+            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[90px] md:px-[0px]">
               {name}
             </h1>
-            <div className="flex flex-col gap-y-[48px] xl:gap-y-[158px] pt-[45px] xl:pt-[158px] px-[90px]">
+            <div className="flex flex-col gap-y-[48px] xl:gap-y-[158px] pt-[45px] xl:pt-[158px] px-[90px] md:px-[0px]">
               {services.map((service, index) => {
                 return (
                   <div
