@@ -38,7 +38,7 @@ const Services = ({ services, name, image }) => {
                 );
               })}
             </div>
-            <div className={`bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[30px] py-[20px] mb-[88px] ${route == "/development" && "mb-[190px] md:mb-[381px]"} ${route == "/services" && "mb-[190px] md:mb-[381px]"}`}>
+            <div className={`bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[30px] py-[20px] mb-[88px] ${route == "/development" && "mb-[200px] md:mb-[381px]"} ${route == "/services" && "mb-[200px] md:mb-[381px]"}`}>
               <p className="font-oswald text-[16px] lg:text-[20px] font-medium text-[#ffffff] text-opacity-[60%] text-center">
                 ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL
                 MARKETING SERVICES{" "}
