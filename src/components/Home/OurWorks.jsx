@@ -24,7 +24,7 @@ const OurWorks = ({ image }) => {
 
     <>
       {route == "/" && (
-        <div className="w-full border-b-[6vh] lg:border-b-[15vh] xl:border-b-[15vh] border-b-[#424248] relative  left-0  border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
+        <div className="w-full border-b-[7vh] lg:border-b-[15vh] xl:border-b-[15vh] border-b-[#424248] relative  left-0  border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
       )}
       <section className={`w-full flex justify-center linear-grad relative  ${route == "/portfolio" ? "top-[7px]" : "top-[-1px]"} pt-[120px]   md:py-[120px]`}>
         <div className={`w-full h-full xl:max-w-[1440px] relative ${route == "/" && "top-[-154px]" } ${route == "/portfolio" && "pb-[200px]"}  `}>

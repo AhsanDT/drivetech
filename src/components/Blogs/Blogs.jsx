@@ -9,7 +9,7 @@ const Blogs = ({BLOGS}) => {
   return (
     <>
 
-    <section className="w-full flex justify-center linear-grad relative top-[4px] py-[120px] pb-[312px]">
+    <section className="w-full flex justify-center linear-grad relative top-[5px] py-[120px] pb-[312px]">
       <div className={`w-full h-full xl:max-w-[1440px] relative`}>
         <div className={`absolute top-[-20px]`}>
           <Image src={bgImage} alt="image" />
