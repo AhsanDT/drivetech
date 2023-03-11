@@ -15,7 +15,7 @@ const Services = ({ services, name, image }) => {
         <div className="w-full lg:hidden border border-t-[20vh]  border-t-[white] relative z-[3] top-[5px]  border-l-[100vw]  border-l-[#424248]"></div>
       )} */}
 
-      <section className={`w-full linear-grad relative z-[3] ${route == "/" && "top-[-3px]"} top-[4px] md:px-[90px]  `}>
+      <section className={`w-full linear-grad relative z-[3] ${route == "/" && "top-[-3px]"} top-[6px] md:px-[90px]  `}>
         <div className={`w-full xl:max-[1440px] relative ${route == "/" ? "top-[-94px]": ""}   flex justify-center`}>
           <div className={`absolute ${route == "/services" && "top-[100px]"} ${route == "/development" && "top-[100px]"}  `}>
             <Image src={image} alt="image" />
@@ -38,7 +38,7 @@ const Services = ({ services, name, image }) => {
                 );
               })}
             </div>
-            <div className={`bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[30px] py-[20px] ${route == "/development" && "mb-[170px] md:mb-[381px]"} ${route == "/services" && "mb-[170px] md:mb-[381px]"}`}>
+            <div className={`bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[30px] py-[20px] mb-[100px] ${route == "/development" && "mb-[170px] md:mb-[381px]"} ${route == "/services" && "mb-[170px] md:mb-[381px]"}`}>
               <p className="font-oswald text-[16px] lg:text-[20px] font-medium text-[#ffffff] text-opacity-[60%] text-center">
                 ACCELERATE YOUR BUSINESS BY LEVERAGING EXCEPTIONAL DIGITAL
                 MARKETING SERVICES{" "}
