@@ -24,7 +24,7 @@ const Hero = () => {
           >
             <Image src={design} alt="img" />
           </div>
-          <div className="img-container absolute hidden lg:block xl:top-[60px] 7xl:top-[10px] z-[2]  w-full h-full ">
+          <div className="img-container absolute hidden lg:block xl:top-[40px] 2xl:top-[70px] 7xl:top-[10px] z-[2]  w-full h-full ">
             <Image src={design2} alt="img" />
           </div>
 
