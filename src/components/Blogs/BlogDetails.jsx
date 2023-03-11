@@ -6,10 +6,10 @@ import Link from "next/link";
 const BlogDetails = ({ id, DATA }) => {
   return (
     <Layout>
-      <section className="py-[50px] px-[30px] md:px-[130px]  relative top-[50px]">
+      <section className="flex justify-center py-[50px] px-[30px] md:px-[130px]  relative top-[50px]">
         {DATA.map((data) => {
           return (
-            <div className="pt-[50px] pb-[92px]">
+            <div className="pt-[50px] pb-[92px] w-full xl:max-w-[1440px]">
               <div className=" font-jakarta">
                 <Link href="/blogs">
                   <span className="text-[rgb(140,140,140)] text-[14px] cursor-pointer">
