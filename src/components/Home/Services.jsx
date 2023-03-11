@@ -12,15 +12,15 @@ const Services = ({ services, name, image }) => {
   return (
     <>
        {/* {route == "/" && (
-        <div className="w-full lg:hidden border border-t-[20vh]  border-t-[white] relative z-[3] top-[5px]  border-l-[100vw]  border-l-[#424248]"></div>
+        <div className="w-full  border border-t-[10vh] border-t-[white] relative z-[2] top-[8px]  border-l-[100vw]  border-l-[#424248]"></div>
       )} */}
 
       <section className={`w-full linear-grad relative z-[3] ${route == "/" && "top-[-3px]"} top-[6px] md:px-[90px]  `}>
-        <div className={`w-full xl:max-[1440px] relative ${route == "/" ? "top-[-94px]": ""}   flex justify-center`}>
+        <div className={`w-full xl:max-[1440px] relative ${route == "/" ? "top-[-47px]": ""}   flex justify-center`}>
           <div className={`absolute ${route == "/services" && "top-[100px]"} ${route == "/development" && "top-[100px]"}  `}>
             <Image src={image} alt="image" />
           </div>
-          <div className={`relative ${route == "/" ? "top-[180px] md:top-[180px]" : "top-[130px]" } `}>
+          <div className={`relative ${route == "/" ? "top-[100px] md:top-[100px]" : "top-[130px]" } `}>
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[30px] md:px-[0px]">
               {name}
             </h1>

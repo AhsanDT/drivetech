@@ -16,7 +16,7 @@ const Header = () => {
         {isActive && (
           <div className="absolute left-0 top-[100px] w-full h-screen bg-[#1F1F22ED] backdrop-blur-[5px] z-[99]"></div>
         )}
-        <div className="w-full xl:max-w-[1440px] h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[6 4px]">
+        <div className="w-full  h-[64px] lg:h-[80px]  flex items-center justify-between  gap-x-[6 4px]">
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">
               <Link href={"/"}>
@@ -74,7 +74,7 @@ const Header = () => {
                         </li>
                       </Link>
                       <Link href="/services">
-                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                        <li className="text-[14px] w-fit text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
                           Back Office Services
                         </li>
                       </Link>
@@ -112,7 +112,7 @@ const Header = () => {
                         </li>
                       </Link>
                       <Link href="/development">
-                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                        <li className="text-[14px] w-fit text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
                           AI & Machine Learning
                         </li>
                       </Link>

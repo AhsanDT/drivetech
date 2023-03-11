@@ -46,13 +46,6 @@ const SERVICES = [
         "We identify your brand by developing a logo, corporate identity, user manuals, any mockups, and souvenir products. Whatever it takes to get your brand noticed.",
       img: service4,
     },
-    {
-      id: "s4",
-      serviceName: "Back Office Services",
-      content:
-        "We identify your brand by developing a logo, corporate identity, user manuals, any mockups, and souvenir products. Whatever it takes to get your brand noticed.",
-      img: service4,
-    },
     
     
   ];
