@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
 
           <div className="w-full max-w-[1440px] mx-auto">
-            <div className="relative pt-[160px] lg:pt-[220px] w-full lg:w-[937px] xl:max-w-[1440px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] pb-[150px]  z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
+            <div className="relative pt-[160px] lg:pt-[220px] w-full lg:w-[937px] xl:max-w-[1440px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] sm:pb-[150px]  z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
               <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]">
                 We help you drive your business to{" "}
                 <span className="text-[#136C2C]">success</span>
