@@ -58,7 +58,7 @@ const Blogs = () => {
             <Image src={image} alt="image" />
           </div>
           <div className="relative top-[40px] flex flex-col gap-y-[70px] px-[30px] md:px-[80px]">
-            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
+            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center pt-[50px] md:pt-0 ">
               Blogs
             </h1>
 
