@@ -37,7 +37,7 @@ module.exports = {
       'csm': '544px',
       'cmd': '585px',
       '1xl': '1400px',
-      '3xl': '1760px',
+      '3xl': '1700px',
       '4xl': '1926px',
       '5xl': '2150px',
       '6xl': '2370px',

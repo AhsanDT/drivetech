@@ -6,7 +6,7 @@
 
 .wave {
 
-  animation: wave 2s  ease-in-out;
+  animation: wave 2s infinite  ease-in-out;
 }
 
 @keyframes wave {
