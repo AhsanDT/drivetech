@@ -18,7 +18,15 @@ const DATA = [
   { id: "d6", img: img6, title: "The Project Title", type: "Crypto" },
 ];
 
-const OurWorks = ({ image, categories, portfolios }) => {
+const OurWorks = ({
+  image,
+  categories,
+  portfolios,
+  selectedCategory,
+  setSelectedCategory,
+  portfolioName,
+  setPortfolioName,
+}) => {
   const { route } = useRouter();
   return (
     <>
@@ -56,17 +64,31 @@ const OurWorks = ({ image, categories, portfolios }) => {
                 type="text"
                 placeholder="Search industry or name"
                 className="w-full xl:w-[515px] h-[40px] outline-none text-[14px] font-jakarta text-[#000000] text-opacity-[50%] px-[56px] py-[11px]"
+                value={portfolioName}
+                onChange={(e) => setPortfolioName(e.target.value)}
               />
             </div>
             <div>
               <ul className="text-[16px] font-oswald font-bold flex gap-x-[14px] gap-y-[8px] flex-wrap lg:gap-x-[86px] lg:justify-center items-center">
-                <li className="text-black bg-white px-[16px] py-[8px] cursor-pointer">
+                <li
+                  className={`${
+                    selectedCategory === "all"
+                      ? "text-black bg-white"
+                      : "text-white hover:bg-white hover:text-black"
+                  } px-[16px] py-[8px] cursor-pointer`}
+                  onClick={() => setSelectedCategory("all")}
+                >
                   ALL CATEGORIES
                 </li>
                 {categories?.map((category, ind) => (
                   <li
-                    className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer"
+                    className={`${
+                      selectedCategory === category?.id
+                        ? "text-black bg-white"
+                        : "text-white hover:bg-white hover:text-black"
+                    }  px-[16px] py-[8px] cursor-pointer`}
                     key={ind}
+                    onClick={() => setSelectedCategory(category?.id)}
                   >
                     {category?.attributes?.title}
                   </li>

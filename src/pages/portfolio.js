@@ -10,16 +10,32 @@ import { fetchCategories, fetchPortfolios } from "api";
 const portfolio = () => {
   const [categories, setCategories] = useState([]);
   const [portfolios, setPortfolios] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [portfolioName, setPortfolioName] = useState("");
 
   useEffect(() => {
     getData();
   }, []);
 
+  useEffect(() => {
+    getPortfolioData();
+  }, [selectedCategory, portfolioName]);
+
   const getData = async () => {
     try {
       let categoriesResponse = await fetchCategories();
       setCategories(categoriesResponse?.data?.data);
-      let portfoliosResponse = await fetchPortfolios();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getPortfolioData = async () => {
+    try {
+      let portfoliosResponse = await fetchPortfolios(
+        selectedCategory,
+        portfolioName
+      );
       setPortfolios(portfoliosResponse?.data?.data);
     } catch (error) {
       console.log(error);
@@ -28,7 +44,15 @@ const portfolio = () => {
 
   return (
     <Layout>
-      <OurWorks image={image} categories={categories} portfolios={portfolios} />
+      <OurWorks
+        image={image}
+        categories={categories}
+        portfolios={portfolios}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        portfolioName={portfolioName}
+        setPortfolioName={setPortfolioName}
+      />
     </Layout>
   );
 };

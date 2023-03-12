@@ -35,8 +35,18 @@ export const fetchCategories = () => {
   return axios.get(`${baseURL}/categories`);
 };
 
-export const fetchPortfolios = () => {
-  return axios.get(`${baseURL}/portfolios?populate=*`);
+export const fetchPortfolios = (filter, search) => {
+  if (search) {
+    return axios.get(
+      `${baseURL}/portfolios?filters[title][$containsi]=${search}&populate=*`
+    );
+  } else if (filter === "all") {
+    return axios.get(`${baseURL}/portfolios?populate=*`);
+  } else {
+    return axios.get(
+      `${baseURL}/portfolios?filters[category][id][$eq]=${filter}&populate=*`
+    );
+  }
 };
 
 export const fetchPortfolioById = (id) => {

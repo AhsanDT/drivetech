@@ -4,7 +4,7 @@ import styles from "../../styles/Portfolio.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectDetail = ({ id, DATA, portfolio }) => {
+const ProjectDetail = ({ portfolio }) => {
   return (
     <Layout>
       <section className="w-full xl:max-w-[1640px] xl:mx-auto py-[50px]  relative top-[50px]">
