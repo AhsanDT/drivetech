@@ -1,12 +1,13 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+
 import logo from "../../assets/logo.png";
 import Button from "../UI/Button";
 import MobileHeader from "./MobileHeader";
 
-const Header = () => {
+const Header = ({ services }) => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const { route } = useRouter();
@@ -49,6 +50,7 @@ const Header = () => {
                   className="flex gap-x-2 items-center cursor-pointer group relative z-[111] h-[90px]"
                   onMouseOver={() => setIsActive(true)}
                   onMouseOut={() => setIsActive(false)}
+                  id="navbar-example2"
                 >
                   <Link href={"/services"}>
                     <li
@@ -68,16 +70,16 @@ const Header = () => {
                   ></i>
                   <div className="w-[205px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
-                      <Link href="/services">
-                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                          Digital Marketing Services
-                        </li>
-                      </Link>
-                      <Link href="/services">
-                        <li className="text-[14px] w-fit text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                          Back Office Services
-                        </li>
-                      </Link>
+                      {services?.map((service, ind) => (
+                        <Link
+                          href={`/services/#${service?.attributes?.title}`}
+                          key={ind}
+                        >
+                          <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                            {service?.attributes?.title}
+                          </li>
+                        </Link>
+                      ))}
                     </ul>
                   </div>
                 </div>
