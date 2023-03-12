@@ -30,3 +30,7 @@ export const fetchBlogBySlug = (slug) => {
 export const updateBlog = (id, data) => {
   return axios.put(`${baseURL}/blogs/${id}`, data);
 };
+
+export const fetchCategories = () => {
+  return axios.get(`${baseURL}/categories`);
+};

@@ -11,12 +11,13 @@ import Blogs from "@/components/Home/Blogs";
 import bgImage from "../assets/services/bg.png";
 import ourWorkImage from "../assets/ourwork/design.png";
 
-import { fetchBlogs, fetchPartners, fetchServices } from "api";
+import { fetchBlogs, fetchCategories, fetchPartners, fetchServices } from "api";
 
 const HomePage = () => {
   const [services, setServices] = useState([]);
   const [partners, setPartners] = useState([]);
   const [blogs, setBlogs] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     getData();
@@ -30,6 +31,8 @@ const HomePage = () => {
       setPartners(partnersResponse?.data?.data);
       let blogsResponse = await fetchBlogs();
       setBlogs(blogsResponse?.data?.data);
+      let categoriesResponse = await fetchCategories();
+      setCategories(categoriesResponse?.data?.data);
     } catch (error) {
       console.log(error);
     }
@@ -40,7 +43,7 @@ const HomePage = () => {
       <Hero />
       <Services services={services} name="Digital Services" image={bgImage} />
       <WhyUs />
-      <OurWorks image={ourWorkImage} />
+      <OurWorks image={ourWorkImage} categories={categories} />
       <Partnership partners={partners} />
       <Blogs blogs={blogs} />
     </Layout>

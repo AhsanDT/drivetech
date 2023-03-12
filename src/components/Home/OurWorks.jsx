@@ -18,20 +18,35 @@ const DATA = [
   { id: "d6", img: img6, title: "The Project Title", type: "Crypto" },
 ];
 
-const OurWorks = ({ image }) => {
+const OurWorks = ({ image, categories }) => {
   const { route } = useRouter();
   return (
-
     <>
       {route == "/" && (
         <div className="w-full border-b-[7vh] lg:border-b-[15vh] xl:border-b-[15vh] border-b-[#424248] relative  left-0  border-t-[white] border-l-[100vw] border-l-[transparent]"></div>
       )}
-      <section className={`w-full flex justify-center linear-grad relative  ${route == "/portfolio" ? "top-[7px]" : "top-[-1px]"} pt-[120px]   md:py-[120px]`}>
-        <div className={`w-full h-full xl:max-w-[1440px] relative ${route == "/" && "top-[-154px]" } ${route == "/portfolio" && "pb-[200px]"}  `}>
-          <div className={`absolute ${route == "/" ? "top-[-270px]" : "top-[-50px]"} `}>
+      <section
+        className={`w-full flex justify-center linear-grad relative  ${
+          route == "/portfolio" ? "top-[7px]" : "top-[-1px]"
+        } pt-[120px]   md:py-[120px]`}
+      >
+        <div
+          className={`w-full h-full xl:max-w-[1440px] relative ${
+            route == "/" && "top-[-154px]"
+          } ${route == "/portfolio" && "pb-[200px]"}  `}
+        >
+          <div
+            className={`absolute ${
+              route == "/" ? "top-[-270px]" : "top-[-50px]"
+            } `}
+          >
             <Image src={image} alt="image" />
           </div>
-          <div className={`relative ${route == "/" ? "top-[80px]": "top-[40px]"}  flex flex-col gap-y-[32px] px-[30px] md:px-[80px]`}>
+          <div
+            className={`relative ${
+              route == "/" ? "top-[80px]" : "top-[40px]"
+            }  flex flex-col gap-y-[32px] px-[30px] md:px-[80px]`}
+          >
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
               Our Works
             </h1>
@@ -48,24 +63,14 @@ const OurWorks = ({ image }) => {
                 <li className="text-black bg-white px-[16px] py-[8px] cursor-pointer">
                   ALL CATEGORIES
                 </li>
-                <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">
-                  HEALTH TECH
-                </li>
-                <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">
-                  FINTECH
-                </li>
-                <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">
-                  E-COMMERCE
-                </li>
-                <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">
-                  EDTECH
-                </li>
-                <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">
-                  AI/BIG DATA
-                </li>
-                <li className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer">
-                  CRYPTO
-                </li>
+                {categories?.map((category, ind) => (
+                  <li
+                    className="text-white hover:bg-white hover:text-black px-[16px] py-[8px] cursor-pointer"
+                    key={ind}
+                  >
+                    {category?.attributes?.title}
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[24px] lg:gap-y-[40px] mt-[30px]">
