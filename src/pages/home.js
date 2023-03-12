@@ -12,16 +12,11 @@ import bgImage from "../assets/services/bg.png";
 import image from "../assets/partnership/img.png";
 import ourWorkImage from "../assets/ourwork/design.png";
 
-import { fetchServices } from "api";
-
-const PARTNERSHIP = [
-  { id: "d1", img: image, name: "Core Partner Name" },
-  { id: "d2", img: image, name: "Core Partner Name" },
-  { id: "d3", img: image, name: "The Project Title" },
-];
+import { fetchPartners, fetchServices } from "api";
 
 const HomePage = () => {
   const [services, setServices] = useState([]);
+  const [partners, setPartners] = useState([]);
 
   useEffect(() => {
     getData();
@@ -31,17 +26,20 @@ const HomePage = () => {
     try {
       let servicesResponse = await fetchServices();
       setServices(servicesResponse?.data?.data);
+      let partnersResponse = await fetchPartners();
+      setPartners(partnersResponse?.data?.data);
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <Layout>
       <Hero />
       <Services services={services} name="Digital Services" image={bgImage} />
       <WhyUs />
       <OurWorks image={ourWorkImage} />
-      <Partnership DATA={PARTNERSHIP} />
+      <Partnership partners={partners} />
       <Blogs />
     </Layout>
   );

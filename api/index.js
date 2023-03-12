@@ -10,3 +10,11 @@ axios.interceptors.request.use(function (config) {
 export const fetchServices = () => {
   return axios.get(`${baseURL}/services?populate=*`);
 };
+
+export const fetchPartners = () => {
+  return axios.get(`${baseURL}/partners`);
+};
+
+export const fetchPartnersWithFilter = (type) => {
+  return axios.get(`${baseURL}/partners?filters[type][$eq]=${type}`);
+};

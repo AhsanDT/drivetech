@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Partnership = ({ DATA, className }) => {
+import image from "../../assets/partnership/img.png";
+
+const Partnership = ({ partners, className }) => {
   const { route } = useRouter();
   return (
     <section
@@ -26,7 +28,9 @@ const Partnership = ({ DATA, className }) => {
                 className={`${
                   route == "/"
                     ? "text-white bg-black"
-                    : route == "/partnership/core"? "text-white bg-black": "text-black bg-white hover:text-white  hover:bg-black"
+                    : route == "/partnership/core"
+                    ? "text-white bg-black"
+                    : "text-black bg-white hover:text-white  hover:bg-black"
                 }  w-full md:w-[208px]  text-center px-[20px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}
               >
                 CORE PARTNERS
@@ -48,18 +52,18 @@ const Partnership = ({ DATA, className }) => {
         <div
           className={`flex gap-x-[80px] flex-wrap justify-center gap-y-[21px] lg:gap-y-[40px] mt-[30px]  ${className}`}
         >
-          {DATA.map((data) => {
+          {partners.map((partner, ind) => {
             return (
               <div
                 className="flex flex-col justify-center lg:items-center "
-                key={data.id}
+                key={ind}
               >
                 <div className="img-container w-[352px] h-[262px]">
-                  <Image src={data.img} alt="img" />
+                  <Image src={image} alt="img" />
                 </div>
                 <div className="px-[30px]  md:px-[80px]">
                   <span className="font-oswald font-bold text-[#3C3C3C] text-[24px]">
-                    {data.name}
+                    {partner?.attributes?.title}
                   </span>
                   <div className="flex items-center mt-[21px] ">
                     <div className=" bg-[#3C3C3C] w-[68px] h-[2px]"></div>
