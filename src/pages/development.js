@@ -1,4 +1,4 @@
-import Services from "@/components/Home/Services";
+import Services from "@/components/Home/ServicesDefault";
 import Layout from "@/components/Layout/Layout";
 import React from "react";
 import service2 from "../assets/services/service2.png";
@@ -20,16 +20,11 @@ const SERVICES = [
       "Artificial Intelligence(AI) & Machine Learning(ML) Solutions. Build Intelligent Business Empower With Our AI & Machine Learning Services. ai and ml development.",
     img: service3,
   },
-  
 ];
 const development = () => {
   return (
     <Layout>
-      <Services
-        services={SERVICES}
-        name="Development"
-        image={bgImage}
-      />
+      <Services services={SERVICES} name="Development" image={bgImage} />
     </Layout>
   );
 };
