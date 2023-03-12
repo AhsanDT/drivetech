@@ -1,51 +1,11 @@
-import Image from "next/image";
 import React from "react";
-import image from "../../assets/ourwork/design.png";
-import img1 from "../../assets/blogs/img1.png";
-import img2 from "../../assets/blogs/img2.png";
-import img3 from "../../assets/blogs/img3.png";
-import img4 from "../../assets/blogs/img4.png";
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 
-const BLOGS = [
-  {
-    id: "b1",
-    img: img1,
-    title: "Technology Blog",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
-  },
-  {
-    id: "b2",
-    img: img2,
-    title: "Technology Blog",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
-  },
-  {
-    id: "b3",
-    img: img3,
-    title: "Technology Blog",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
-  },
-  {
-    id: "b4",
-    img: img4,
-    title: "Technology Blog",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
-  },
-  {
-    id: "b5",
-    img: img4,
-    title: "Technology Blog",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in urna sollicitudin, laoreet arcu dapibus, auctor enim...",
-  },
-];
+import image from "../../assets/ourwork/design.png";
 
-const Blogs = () => {
+const Blogs = ({ blogs }) => {
   const { route } = useRouter();
   return (
     <>
@@ -63,25 +23,41 @@ const Blogs = () => {
             </h1>
 
             <div className="flex gap-x-[32px] xl:justify-center overflow-scroll xl:overflow-hidden">
-              {BLOGS.map((data) => {
+              {blogs.map((blog, ind) => {
                 return (
                   <div
                     className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]"
-                    key={data.id}
+                    key={ind}
                   >
                     <div className="img-container w-[210px] h-[210px]">
-                      <Image src={data.img} alt="img" />
+                      {blog?.attributes && (
+                        <Image
+                          src={
+                            process.env.NEXT_PUBLIC_API_BASEURL +
+                            blog?.attributes?.thumbnail?.data?.attributes?.url
+                          }
+                          alt="img"
+                          width={100}
+                          height={100}
+                        />
+                      )}
                     </div>
                     <div className="px-[18px] pb-[25px]">
                       <span className="text-[16px] font-oswald font-bold">
-                        {data.title}
+                        {blog?.attributes?.title}
                       </span>
-                      <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">
-                        {data.content}
-                        <span className="text-[#F28E1C] cursor-pointer">
+                      <br />
+                      <span
+                        className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]"
+                        dangerouslySetInnerHTML={{
+                          __html: blog?.attributes?.description.slice(0, 60),
+                        }}
+                      ></span>
+                      <Link href={`/blogs/${blog?.attributes?.slug}`}>
+                        <span className="text-[#F28E1C] cursor-pointer text-[12px] font-jakarta text-opacity-[50%] pt-[18px]">
                           Read More
                         </span>
-                      </p>
+                      </Link>
                     </div>
                   </div>
                 );

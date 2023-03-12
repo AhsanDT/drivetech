@@ -18,3 +18,15 @@ export const fetchPartners = () => {
 export const fetchPartnersWithFilter = (type) => {
   return axios.get(`${baseURL}/partners?filters[type][$eq]=${type}`);
 };
+
+export const fetchBlogs = () => {
+  return axios.get(`${baseURL}/blogs?populate=*`);
+};
+
+export const fetchBlogBySlug = (slug) => {
+  return axios.get(`${baseURL}/blogs?filters[slug][$eq]=${slug}&populate=*`);
+};
+
+export const updateBlog = (id, data) => {
+  return axios.put(`${baseURL}/blogs/${id}`, data);
+};

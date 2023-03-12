@@ -9,14 +9,14 @@ import Partnership from "@/components/Home/Partnership";
 import Blogs from "@/components/Home/Blogs";
 
 import bgImage from "../assets/services/bg.png";
-import image from "../assets/partnership/img.png";
 import ourWorkImage from "../assets/ourwork/design.png";
 
-import { fetchPartners, fetchServices } from "api";
+import { fetchBlogs, fetchPartners, fetchServices } from "api";
 
 const HomePage = () => {
   const [services, setServices] = useState([]);
   const [partners, setPartners] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
     getData();
@@ -28,6 +28,8 @@ const HomePage = () => {
       setServices(servicesResponse?.data?.data);
       let partnersResponse = await fetchPartners();
       setPartners(partnersResponse?.data?.data);
+      let blogsResponse = await fetchBlogs();
+      setBlogs(blogsResponse?.data?.data);
     } catch (error) {
       console.log(error);
     }
@@ -40,7 +42,7 @@ const HomePage = () => {
       <WhyUs />
       <OurWorks image={ourWorkImage} />
       <Partnership partners={partners} />
-      <Blogs />
+      <Blogs blogs={blogs} />
     </Layout>
   );
 };
