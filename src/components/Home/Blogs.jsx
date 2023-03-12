@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+import { richTextReducer } from "helpers/utils";
+
 import image from "../../assets/ourwork/design.png";
 
 const Blogs = ({ blogs }) => {
@@ -50,7 +52,9 @@ const Blogs = ({ blogs }) => {
                       <span
                         className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]"
                         dangerouslySetInnerHTML={{
-                          __html: blog?.attributes?.description.slice(0, 60),
+                          __html: richTextReducer(
+                            blog?.attributes?.description.slice(0, 60)
+                          ),
                         }}
                       ></span>
                       <Link href={`/blogs/${blog?.attributes?.slug}`}>

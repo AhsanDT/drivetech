@@ -1,6 +1,7 @@
-import ProjectDetail from "@/components/portfolio/ProjectDetail";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+
+import ProjectDetail from "@/components/portfolio/ProjectDetail";
 
 import img1 from "../../assets/ourwork/img1.png";
 import img2 from "../../assets/ourwork/img2.png";
@@ -8,6 +9,9 @@ import img3 from "../../assets/ourwork/img3.png";
 import img4 from "../../assets/ourwork/img4.png";
 import img5 from "../../assets/ourwork/img5.png";
 import img6 from "../../assets/ourwork/img6.png";
+
+import { fetchPortfolioById } from "api";
+import { richTextReducer } from "helpers/utils";
 
 const DATA = [
   {
@@ -69,16 +73,36 @@ const DATA = [
 const Post = () => {
   const router = useRouter();
   const { projectId } = router.query;
-  console.log(projectId)
   const [project, setProject] = useState([]);
-
- 
+  const [portfolio, setPortfolio] = useState();
 
   useEffect(() => {
-    setProject(DATA.filter((data) => data.id === projectId));
+    if (projectId) {
+      getData();
+    }
   }, [projectId]);
 
-  return <ProjectDetail id={projectId} DATA={project} />;
+  const getData = async () => {
+    try {
+      let portfolioResponse = await fetchPortfolioById(projectId);
+      if (portfolioResponse?.data?.data) {
+        portfolioResponse.data.data.attributes.description = richTextReducer(
+          portfolioResponse?.data?.data.attributes.description
+        );
+        setPortfolio(portfolioResponse?.data?.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return (
+    <ProjectDetail
+      id={projectId}
+      DATA={project}
+      portfolio={portfolio?.attributes}
+    />
+  );
 };
 
 export default Post;

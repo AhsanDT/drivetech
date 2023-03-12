@@ -18,7 +18,7 @@ const DATA = [
   { id: "d6", img: img6, title: "The Project Title", type: "Crypto" },
 ];
 
-const OurWorks = ({ image, categories }) => {
+const OurWorks = ({ image, categories, portfolios }) => {
   const { route } = useRouter();
   return (
     <>
@@ -74,10 +74,13 @@ const OurWorks = ({ image, categories }) => {
               </ul>
             </div>
             <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[24px] lg:gap-y-[40px] mt-[30px]">
-              {DATA.map((data) => {
+              {portfolios.map((portfolio, ind) => {
                 return (
-                  <div className=" flex flex-col gap-y-[16px]" key={data.id}>
-                    <OurWorkItem data={data} />
+                  <div className=" flex flex-col gap-y-[16px]" key={ind}>
+                    <OurWorkItem
+                      portfolio={portfolio?.attributes}
+                      id={portfolio?.id}
+                    />
                   </div>
                 );
               })}

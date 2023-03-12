@@ -5,10 +5,11 @@ import Layout from "@/components/Layout/Layout";
 
 import image from "../assets/ourwork/design2.png";
 
-import { fetchCategories } from "api";
+import { fetchCategories, fetchPortfolios } from "api";
 
 const portfolio = () => {
   const [categories, setCategories] = useState([]);
+  const [portfolios, setPortfolios] = useState([]);
 
   useEffect(() => {
     getData();
@@ -18,6 +19,8 @@ const portfolio = () => {
     try {
       let categoriesResponse = await fetchCategories();
       setCategories(categoriesResponse?.data?.data);
+      let portfoliosResponse = await fetchPortfolios();
+      setPortfolios(portfoliosResponse?.data?.data);
     } catch (error) {
       console.log(error);
     }
@@ -25,7 +28,7 @@ const portfolio = () => {
 
   return (
     <Layout>
-      <OurWorks image={image} categories={categories} />
+      <OurWorks image={image} categories={categories} portfolios={portfolios} />
     </Layout>
   );
 };

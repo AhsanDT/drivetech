@@ -34,3 +34,11 @@ export const updateBlog = (id, data) => {
 export const fetchCategories = () => {
   return axios.get(`${baseURL}/categories`);
 };
+
+export const fetchPortfolios = () => {
+  return axios.get(`${baseURL}/portfolios?populate=*`);
+};
+
+export const fetchPortfolioById = (id) => {
+  return axios.get(`${baseURL}/portfolios/${id}`);
+};

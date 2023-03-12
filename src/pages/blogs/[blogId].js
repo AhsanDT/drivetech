@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import BlogDetails from "@/components/Blogs/BlogDetails";
 
 import { fetchBlogBySlug, updateBlog } from "api";
+import { richTextReducer } from "helpers/utils";
 
 const Post = () => {
   const router = useRouter();
@@ -25,6 +26,9 @@ const Post = () => {
             count: +blogResponse?.data?.data[0]?.attributes?.count + 1,
           },
         });
+        blogResponse.data.data[0].attributes.description = richTextReducer(
+          blogResponse?.data?.data[0].attributes.description
+        );
         setBlog(blogResponse?.data?.data[0]);
       }
     } catch (error) {
