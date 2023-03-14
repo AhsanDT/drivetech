@@ -1,5 +1,6 @@
 import axios from "axios";
 const baseURL = "https://possible-probable-crown.strapiapp.com/api";
+// const baseURL = "http://localhost:1337/api";
 
 axios.interceptors.request.use(function (config) {
   config.headers.Authorization = `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`;
@@ -55,4 +56,8 @@ export const fetchPortfolios = (filter, search) => {
 
 export const fetchPortfolioById = (id) => {
   return axios.get(`${baseURL}/portfolios/${id}`);
+};
+
+export const fetchHeroBox = () => {
+  return axios.get(`${baseURL}/hero-boxes?populate=*`);
 };

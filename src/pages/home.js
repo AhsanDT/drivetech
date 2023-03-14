@@ -14,6 +14,7 @@ import ourWorkImage from "../assets/ourwork/design.png";
 import {
   fetchBlogs,
   fetchCategories,
+  fetchHeroBox,
   fetchPartners,
   fetchPortfolios,
   fetchServices,
@@ -27,6 +28,7 @@ const HomePage = () => {
   const [portfolios, setPortfolios] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [portfolioName, setPortfolioName] = useState("");
+  const [heroBox, setHeroBox] = useState(null);
 
   useEffect(() => {
     getData();
@@ -46,6 +48,10 @@ const HomePage = () => {
       setBlogs(blogsResponse?.data?.data);
       let categoriesResponse = await fetchCategories();
       setCategories(categoriesResponse?.data?.data);
+      let heroBoxResponse = await fetchHeroBox();
+      if (heroBoxResponse?.data?.data?.length) {
+        setHeroBox(heroBoxResponse?.data?.data[0]);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -65,7 +71,7 @@ const HomePage = () => {
 
   return (
     <Layout>
-      <Hero />
+      <Hero heroBox={heroBox} />
       <Services services={services} name="Digital Services" image={bgImage} />
       <WhyUs />
       <OurWorks
