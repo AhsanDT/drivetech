@@ -59,5 +59,23 @@ export const fetchPortfolioById = (id) => {
 };
 
 export const fetchHeroBox = () => {
-  return axios.get(`${baseURL}/hero-boxes?populate=*`);
+  return axios.get(`${baseURL}/hero-boxes?populate=*&pagination[limit]=1`);
+};
+
+export const fetchPrivacyPolicies = () => {
+  return axios.get(
+    `${baseURL}/privacy-policies?populate=*&pagination[limit]=1`
+  );
+};
+
+export const fetchCoockiePolicies = () => {
+  return axios.get(
+    `${baseURL}/coockie-policies?populate=*&pagination[limit]=1`
+  );
+};
+
+export const fetchTermsAndConditions = () => {
+  return axios.get(
+    `${baseURL}/terms-and-conditions?populate=*&pagination[limit]=1`
+  );
 };
