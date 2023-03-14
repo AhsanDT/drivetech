@@ -7,7 +7,7 @@ import logo from "../../assets/logo.png";
 import Button from "../UI/Button";
 import MobileHeader from "./MobileHeader";
 
-const Header = ({ services }) => {
+const Header = ({ services, developments }) => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [isActive, setIsActive] = useState(false);
   const { route } = useRouter();
@@ -32,7 +32,10 @@ const Header = ({ services }) => {
             </div>
 
             <div>
-              <ul className="gap-x-[32px] xl:gap-x-[64px] items-center hidden md:flex">
+              <ul
+                className="gap-x-[32px] xl:gap-x-[64px] items-center hidden md:flex"
+                id="navbar-example2"
+              >
                 <Link href={"/"}>
                   <li
                     className={`${
@@ -50,7 +53,6 @@ const Header = ({ services }) => {
                   className="flex gap-x-2 items-center cursor-pointer group relative z-[111] h-[90px]"
                   onMouseOver={() => setIsActive(true)}
                   onMouseOut={() => setIsActive(false)}
-                  id="navbar-example2"
                 >
                   <Link href={"/services"}>
                     <li
@@ -107,17 +109,16 @@ const Header = ({ services }) => {
                   ></i>
                   <div className="w-[212px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
-                      <Link href={"/development"}>
-                        {" "}
-                        <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                          Mobile & Web Applications
-                        </li>
-                      </Link>
-                      <Link href="/development">
-                        <li className="text-[14px] w-fit text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
-                          AI & Machine Learning
-                        </li>
-                      </Link>
+                      {developments?.map((development, ind) => (
+                        <Link
+                          href={`/development/#${development?.attributes?.title}`}
+                          key={ind}
+                        >
+                          <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                            {development?.attributes?.title}
+                          </li>
+                        </Link>
+                      ))}
                     </ul>
                   </div>
                 </div>

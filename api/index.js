@@ -11,6 +11,10 @@ export const fetchServices = () => {
   return axios.get(`${baseURL}/services?populate=*`);
 };
 
+export const fetchDevelopments = () => {
+  return axios.get(`${baseURL}/developments?populate=*`);
+};
+
 export const fetchPartners = () => {
   return axios.get(`${baseURL}/partners`);
 };

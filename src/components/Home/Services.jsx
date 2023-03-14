@@ -48,7 +48,7 @@ const Services = ({ services, name, image }) => {
               {services?.map((service, ind) => {
                 return (
                   <div
-                    className={`flex flex-col gap-y-[16px] md:flex-row justify-center gap-x-[95px] ${
+                    className={`flex flex-col gap-y-[16px] md:flex-row justify-center gap-x-[95px] scroll-mt-28 ${
                       ind == 1 && "md:flex-row-reverse"
                     } ${ind == 3 && "md:flex-row-reverse"} w-full`}
                     key={service?.attributes?.id}
