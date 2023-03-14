@@ -10,12 +10,11 @@ const ServiceItem = ({ service }) => {
       <div className="img-container w-full  sm:min-w-[200px] sm:h-[218px]  lg:w-[371px] lg:h-[384px]">
         <Image
           src={
-            process.env.NEXT_PUBLIC_API_BASEURL +
             service?.thumbnail?.data?.attributes?.url
           }
-          alt="img"
           width={100}
           height={100}
+          alt="img"
         />
       </div>
       <div className="flex flex-col  gap-y-[21px] lg:gap-y-[55px]  lg:w-[495px]">

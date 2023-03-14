@@ -10,7 +10,6 @@ const OurWorkItem = ({ id, portfolio }) => {
       >
         <Image
           src={
-            process.env.NEXT_PUBLIC_API_BASEURL +
             portfolio?.thumbnail?.data?.attributes?.url
           }
           alt="portfolio-img"

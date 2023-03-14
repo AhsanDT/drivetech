@@ -35,7 +35,6 @@ const BlogDetails = ({ blog }) => {
               {blog?.attributes && (
                 <Image
                   src={
-                    process.env.NEXT_PUBLIC_API_BASEURL +
                     blog?.attributes?.thumbnail?.data?.attributes?.url
                   }
                   alt="img"

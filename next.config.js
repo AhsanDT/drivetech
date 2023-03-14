@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost", "localhost:3000"],
+    domains: ['possible-probable-crown.media.strapiapp.com'],
   },
 };
 
