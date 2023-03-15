@@ -4,9 +4,7 @@
   url('../assets/bg-images/BG3.png');
   width: 100%;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
+  /* background-repeat: no-repeat; */
   height: 110%;
   position: absolute;
 }
