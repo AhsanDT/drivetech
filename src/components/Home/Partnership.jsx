@@ -59,7 +59,12 @@ const Partnership = ({ partners, className }) => {
                 key={ind}
               >
                 <div className="img-container w-[352px] h-[262px]">
-                  <Image src={image} alt="img" />
+                  <Image
+                    src={partner?.attributes?.thumbnail?.data?.attributes?.url}
+                    alt="img"
+                    width={100}
+                    height={100}
+                  />
                 </div>
                 <div className="px-[30px]  md:px-[80px]">
                   <span className="font-oswald font-bold text-[#3C3C3C] text-[24px]">
