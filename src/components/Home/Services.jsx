@@ -25,9 +25,9 @@ const Services = ({ services, name, image }) => {
           }   flex justify-center`}
         >
           <div
-            className={`absolute top-[600px] ${route == "/services" && "top-[100px]"} ${
-              route == "/development" && "top-[100px]"
-            }  `}
+            className={`absolute ${route == "/" && "top-[680px]"}  ${
+              route == "/services" && "top-[100px]"
+            } ${route == "/development" && "top-[100px]"}  `}
           >
             <Image src={image} alt="image" />
           </div>
@@ -36,8 +36,40 @@ const Services = ({ services, name, image }) => {
               route == "/" ? "top-[100px] md:top-[100px]" : "top-[130px]"
             } `}
           >
-            <div className="bg-[#4D4D53] h-[399px]">ddsass</div>
-            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[30px] md:px-[0px]">
+            {route == "/" && (
+              <div className="bg-[#4D4D53] text-white  flex flex-col gap-y-[10px] md:flex-row gap-x-[32px] px-[30px] md:px-[100px] py-[75px] justify-center mx-[30px] md:mx-[unset]   xl:max-w-[1100px] mb-[100px]">
+                <div className="flex flex-col  gap-y-[25px] md:w-[50%]">
+                  <h1 className="text-[48px] font-osawald font-bold">
+                    Mission
+                  </h1>
+                  <div className="flex items-center">
+                    <div className=" bg-[white] w-[68px] h-[2px]"></div>
+                    <div className=" bg-[white] w-[12px] h-[12px] rounded-full"></div>
+                  </div>
+                  <p className="font-jakarta">
+                    At drive Technology, we strive to be a trusted partner to
+                    our clients by understanding their unique needs and
+                    delivering cutting-edge technology solutions that drive
+                    their success.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-y-[25px] md:w-[50%]">
+                  <h1 className="text-[48px] font-osawald font-bold">Vision</h1>
+                  <div className="flex items-center">
+                    <div className=" bg-[white] w-[68px] h-[2px]"></div>
+                    <div className=" bg-[white] w-[12px] h-[12px] rounded-full"></div>
+                  </div>
+                  <p className="font-jakarta">
+                    Our vision is to become the leading provider of technology
+                    solutions for businesses of all sizes,known for our ability
+                    to understand and meet the unique needs of each client and
+                    to foster a culture of creativity and innovation within our
+                    team.
+                  </p>
+                </div>
+              </div>
+            )}
+            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[30px] md:px-[0px] ">
               {name}
             </h1>
             <div
