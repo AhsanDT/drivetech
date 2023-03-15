@@ -83,7 +83,7 @@ const HomePage = () => {
         portfolioName={portfolioName}
         setPortfolioName={setPortfolioName}
       />
-      <Partnership partners={partners} />
+    <Partnership partners={partners} />
       <Blogs blogs={blogs} />
     </Layout>
   );

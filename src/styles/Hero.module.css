@@ -1,19 +1,19 @@
 .heroImage {
   background-image:
-  linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(250, 209, 209, 0.73)),
-  url('../assets/bg-images/BG2.jpeg');
+  /* linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(250, 209, 209, 0.73)), */
+  url('../assets/bg-images/BG3.png');
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: white;
-  height: 100%;
+  height: 110%;
   position: absolute;
 }
 .box:after {
   content: " ";
   border-bottom: 25vh solid #424248;
-  border-right: 110vw solid transparent;
+  border-right: 100vw solid transparent;
   width: 0;
   position: absolute;
   bottom: -9px;

@@ -14,9 +14,9 @@ const Blogs = ({ blogs }) => {
       {route == "/" && (
         <div className="w-full border-b-[6vh] lg:border-b-[15vh] border-b-[#424248]  border-t-[white] relative top-[6px] left-0 border-l-[100vw] border-l-[transparent]"></div>
       )}
-      <section className="w-full flex justify-center linear-grad relative top-[5px]  py-[120px]">
-        <div className="w-full h-full xl:max-w-[1440px] relative top-[-154px]">
-          <div className="absolute top-[-270px]">
+      <section className="w-full flex justify-center linear-grad relative top-[5px] py-[120px] overflow-hidden">
+        <div className="w-full h-full xl:max-w-[1440px] relati ve top-[-154px] overflow-hidden">
+          <div className="absolute top-[-270px] overflow-hidden">
             <Image src={image} alt="image" />
           </div>
           <div className="relative top-[40px] flex flex-col gap-y-[70px] px-[30px] md:px-[80px]">

@@ -21,11 +21,11 @@ const Services = ({ services, name, image }) => {
       >
         <div
           className={`w-full xl:max-[1440px] relative ${
-            route == "/" ? "top-[-47px]" : ""
+            route == "/" ? "top-[-30px]" : ""
           }   flex justify-center`}
         >
           <div
-            className={`absolute ${route == "/services" && "top-[100px]"} ${
+            className={`absolute top-[600px] ${route == "/services" && "top-[100px]"} ${
               route == "/development" && "top-[100px]"
             }  `}
           >
@@ -36,6 +36,7 @@ const Services = ({ services, name, image }) => {
               route == "/" ? "top-[100px] md:top-[100px]" : "top-[130px]"
             } `}
           >
+            <div className="bg-[#4D4D53] h-[399px]">ddsass</div>
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white lg:text-center px-[30px] md:px-[0px]">
               {name}
             </h1>

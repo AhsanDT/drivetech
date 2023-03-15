@@ -52,7 +52,7 @@ const OurWorks = ({
           </div>
           <div
             className={`relative ${
-              route == "/" ? "top-[80px]" : "top-[40px]"
+              route == "/" ? "top-[80px]" : "to p-[40px]"
             }  flex flex-col gap-y-[32px] px-[30px] md:px-[80px]`}
           >
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
