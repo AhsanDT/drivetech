@@ -8,6 +8,7 @@ import { richTextReducer } from "helpers/utils";
 import image from "../../assets/ourwork/design.png";
 
 const Blogs = ({ blogs }) => {
+  console.log(blogs)
   const { route } = useRouter();
   return (
     <>
