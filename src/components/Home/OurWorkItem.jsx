@@ -25,7 +25,7 @@ const OurWorkItem = ({ id, portfolio }) => {
         <div className=" bg-white w-[12px] h-[12px] rounded-full"></div>
       </div>
       <p className="text-white text-[15px] font-jakarta">
-        {portfolio?.category?.data?.attributes?.title}
+        {portfolio?.sub_title}
       </p>
     </>
   );

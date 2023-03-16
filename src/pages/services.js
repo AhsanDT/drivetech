@@ -7,26 +7,17 @@ import bgImage from "../assets/services/bg3.png";
 
 import { fetchServices } from "api";
 
-const services = () => {
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const getData = async () => {
-    try {
-      let servicesResponse = await fetchServices();
-      setServices(servicesResponse?.data?.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const services = ({ services = [] }) => {
   return (
     <Layout>
       <Services services={services} image={bgImage} name="Services" />
     </Layout>
   );
+};
+
+services.getInitialProps = async (context) => {
+  let servicesResponse = await fetchServices();
+  return { services: servicesResponse?.data?.data };
 };
 
 export default services;

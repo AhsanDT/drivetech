@@ -31,7 +31,7 @@ const ProjectDetail = ({ portfolio }) => {
                 {portfolio?.title}
               </h1>
               <div className="font-jakarta text-[15px] px-[30px] md:px-[130px] flex gap-x-[10px] md:gap-x-[40px]">
-                <span>{portfolio?.type}</span>
+                <span>{portfolio?.sub_title}</span>
                 <span className="text-[black]  w-[2px]">|</span>
 
                 <span>Founder: {portfolio?.founder}</span>
