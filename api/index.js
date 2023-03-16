@@ -17,11 +17,11 @@ export const fetchDevelopments = () => {
 };
 
 export const fetchPartners = () => {
-  return axios.get(`${baseURL}/partners`);
+  return axios.get(`${baseURL}/partners?populate=*`);
 };
 
 export const fetchPartnersWithFilter = (type) => {
-  return axios.get(`${baseURL}/partners?filters[type][$eq]=${type}`);
+  return axios.get(`${baseURL}/partners?populate=*&filters[type][$eq]=${type}`);
 };
 
 export const fetchBlogs = () => {

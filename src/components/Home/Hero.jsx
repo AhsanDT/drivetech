@@ -15,7 +15,6 @@ const Hero = ({ heroBox }) => {
           {heroBox && (
             <Image
               src={
-                "http://localhost:1337" +
                 heroBox?.attributes?.image?.data?.attributes?.url
               }
               alt="img"

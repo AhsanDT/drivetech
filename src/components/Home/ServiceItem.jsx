@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Button from "../UI/Button";
 
-const ServiceItem = ({ service }) => {
+const ServiceItem = ({ service, id }) => {
   return (
     <>
       <div className="img-container w-full  sm:min-w-[200px] sm:h-[218px]  lg:w-[371px] lg:h-[384px]">
@@ -28,7 +28,7 @@ const ServiceItem = ({ service }) => {
         <p className=" text-[15px] lg:text-[16px] text-white font-jakarta">
           {service?.description}
         </p>
-        <Link href={`/services/#${service?.title}`}>
+        <Link href={`/services/#${id}`}>
           <Button className="bg-transparent text-white text-[16px] px-[40px] py-1 font-oswald font-medium w-fit hidden md:block">
             Learn More
           </Button>
