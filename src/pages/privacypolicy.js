@@ -4,9 +4,11 @@ import Layout from "@/components/Layout/Layout";
 import Policy from "@/components/Policy/Policy";
 
 import { fetchPrivacyPolicies } from "api";
+import WhiteLoader from "@/components/UI/WhiteLoader";
 
 const privacypolicy = () => {
   const [privacyPolicy, setPrivacyPolicy] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getData();
@@ -15,6 +17,7 @@ const privacypolicy = () => {
   const getData = async () => {
     try {
       let cookiePolicyResponse = await fetchPrivacyPolicies();
+      setIsLoading(false)
       if (cookiePolicyResponse?.data?.data?.length) {
         setPrivacyPolicy(cookiePolicyResponse?.data?.data[0]);
       }
@@ -25,7 +28,13 @@ const privacypolicy = () => {
 
   return (
     <Layout>
-      <Policy title="Privacy Policy" data={privacyPolicy} />
+      {isLoading ? (
+        <div className="flex justify-center items-center h-[100vh]">
+          <WhiteLoader />
+        </div>
+      ) : (
+        <Policy title="Privacy Policy" data={privacyPolicy} />
+      )}
     </Layout>
   );
 };

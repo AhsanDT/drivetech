@@ -13,7 +13,7 @@ const Blogs = ({ blogs }) => {
           <div className={`absolute top-[-20px]`}>
             <Image src={bgImage} alt="image" />
           </div>
-          <div className="relative top-[40px] flex flex-col gap-y-[32px] px-[30px] md:px-[80px]">
+          <div className="relative top-[40px] flex flex-col gap-y-[32px]  px-[30px] md:px-[80px]">
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
               Blogs
             </h1>
@@ -50,7 +50,7 @@ const Blogs = ({ blogs }) => {
                   );
                 })
               ) : (
-                <Loader />
+                <Loader/>
               )}
             </div>
           </div>
