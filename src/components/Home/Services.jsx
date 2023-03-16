@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import ServiceItem from "./ServiceItem";
 import Button from "../UI/Button";
+import Loader from "../UI/Loader";
 
 const Services = ({ services, name, image }) => {
   const { route } = useRouter();
@@ -78,22 +79,26 @@ const Services = ({ services, name, image }) => {
               data-target="#navbar-example2"
               data-offset="0"
             >
-              {services?.map((service, ind) => {
-                return (
-                  <div
-                    className={`flex flex-col gap-y-[16px] md:flex-row justify-center gap-x-[95px] scroll-mt-28 ${
-                      ind == 1 && "md:flex-row-reverse"
-                    } ${ind == 3 && "md:flex-row-reverse"} w-full`}
-                    key={service?.attributes?.id}
-                    id={service?.id}
-                  >
-                    <ServiceItem
-                      service={service?.attributes}
+              {services?.length ? (
+                services?.map((service, ind) => {
+                  return (
+                    <div
+                      className={`flex flex-col gap-y-[16px] md:flex-row justify-center gap-x-[95px] scroll-mt-28 ${
+                        ind == 1 && "md:flex-row-reverse"
+                      } ${ind == 3 && "md:flex-row-reverse"} w-full`}
+                      key={service?.attributes?.id}
                       id={service?.id}
-                    />
-                  </div>
-                );
-              })}
+                    >
+                      <ServiceItem
+                        service={service?.attributes}
+                        id={service?.id}
+                      />
+                    </div>
+                  );
+                })
+              ) : (
+                <Loader />
+              )}
             </div>
             <div
               className={`bg-[#ffffff] bg-opacity-[10%] lg:h-[168px] w-full mt-[45px] lg:mt-[150px] flex flex-col gap-y-[24px] justify-center items-center px-[30px] py-[20px]  ${

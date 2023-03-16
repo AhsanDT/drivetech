@@ -26,7 +26,7 @@ const Hero = ({ heroBox }) => {
           <span
             className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]"
             dangerouslySetInnerHTML={{
-              __html: richTextReducer(heroBox?.attributes?.heading),
+              __html: richTextReducer(heroBox?.attributes?.heading || ""),
             }}
           >
             {/* We help you drive your business to{" "} */}
