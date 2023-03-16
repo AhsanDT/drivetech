@@ -33,7 +33,7 @@ const Services = ({ services, name, image }) => {
           </div>
           <div
             className={`relative ${
-              route == "/" ? "top-[100px] md:top-[100px]" : "top-[130px]"
+              route == "/" ? "top-[116px] md:top-[100px]" : "top-[130px]"
             } `}
           >
             {route == "/" && (

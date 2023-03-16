@@ -7,7 +7,7 @@ import bgImage from "../../assets/blogs/blogs-bg.png";
 const Blogs = ({ blogs }) => {
   return (
     <>
-      <section className="w-full flex justify-center linear-grad relative top-[5px] py-[120px] pb-[312px]">
+      <section className="w-full flex justify-center linear-grad relative top-[5px] py-[100px] lg:pb-[312px]">
         <div className={`w-full h-full xl:max-w-[1440px] relative`}>
           <div className={`absolute top-[-20px]`}>
             <Image src={bgImage} alt="image" />
@@ -21,10 +21,10 @@ const Blogs = ({ blogs }) => {
                 return (
                   <Link
                     href={`/blogs/${blog?.attributes?.slug}`}
-                    className="w-full md:w-[255px] md:min-h-[393px] bg-white flex flex-col gap-y-[16px]"
+                    className="w-full md:w-[270px] pb-[20px] bg-white flex flex-col gap-y-[16px]"
                     key={ind}
                   >
-                    <div className="img-container w-[255px] h-[210px]">
+                    <div className="img-container w-[270px] h-[210px]">
                       <Image
                         src={
                           blog?.attributes?.thumbnail?.data?.attributes?.url

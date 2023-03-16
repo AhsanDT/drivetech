@@ -15,19 +15,23 @@ const Footer = () => {
             <div className="flex gap-x-[16px]">
               <FooterIcon
                 icon="fa-brands fa-facebook-f"
+                link="https://www.facebook.com/drivetechnologiesuae?_rdc=1&_rdr"
                 className="bg-[#3B5998] text-[18px] "
               />
               <FooterIcon
                 icon="fa-brands fa-twitter"
+                link="https://twitter.com/DriveTechuae"
                 className="bg-[#2DAAE1] text1814]"
               />
               <FooterIcon
                 icon="fa-brands fa-linkedin-in"
+                link="https://www.linkedin.com/company/drivetechnologiesuae/"
                 className="bg-[#007BB6] text-[18px] "
               />
-              <FooterIcon icon="fa-brands fa-instagram" className="icon-grad" />
+              <FooterIcon icon="fa-brands fa-instagram" link="#" className="icon-grad" />
               <FooterIcon
                 icon="fa-brands fa-pinterest"
+                link="#"
                 className="bg-[#CD1E25] text-[18px]  text-[#37373B]"
               />
             </div>

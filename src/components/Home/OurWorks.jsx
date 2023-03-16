@@ -35,13 +35,13 @@ const OurWorks = ({
       )}
       <section
         className={`w-full flex justify-center linear-grad relative  ${
-          route == "/portfolio" ? "top-[7px]" : "top-[-1px]"
-        } pt-[120px]   md:py-[120px]`}
+          route == "/portfolio" ? "top-[7px]" : "top-[-2px] md:top-[-2px]"
+        } pt-[100px]   md:py-[120px]`}
       >
         <div
           className={`w-full h-full xl:max-w-[1440px] relative ${
             route == "/" && "top-[-154px]"
-          } ${route == "/portfolio" && "pb-[200px]"}  `}
+          } ${route == "/portfolio" && "pb-[110px]"}  `}
         >
           <div
             className={`absolute ${

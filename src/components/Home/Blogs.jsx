@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { richTextReducer } from "helpers/utils";
 
 import image from "../../assets/ourwork/design.png";
+import Button from "../UI/Button";
 
 const Blogs = ({ blogs }) => {
   console.log(blogs)
@@ -13,14 +14,14 @@ const Blogs = ({ blogs }) => {
   return (
     <>
       {route == "/" && (
-        <div className="w-full border-b-[6vh] lg:border-b-[15vh] border-b-[#424248]  border-t-[white] relative top-[6px] left-0 border-l-[100vw] border-l-[transparent]"></div>
+        <div className="w-full border-b-[7vh] lg:border-b-[10vh] border-b-[#424248]  border-t-[white] relative top-[7px] xl:top-[8px] left-0 border-l-[100vw] border-l-[transparent]"></div>
       )}
-      <section className="w-full flex justify-center linear-grad relative top-[5px] py-[120px] overflow-hidden">
-        <div className="w-full h-full xl:max-w-[1440px] relati ve top-[-154px] overflow-hidden">
-          <div className="absolute top-[-270px] overflow-hidden">
+      <section className="w-full flex justify-center linear-grad relative top-[6px] pt-[120px] md:py-[120px]">
+        <div className="w-full h-full xl:max-w-[1440px] relative top-[-154px] overflo w-hidden">
+          <div className="absolute h-[1100px]  top-[-270px] overflow-hidden">
             <Image src={image} alt="image" />
           </div>
-          <div className="relative top-[40px] flex flex-col gap-y-[70px] px-[30px] md:px-[80px]">
+          <div className="relative top-[60px] flex flex-col gap-y-[70px] px-[30px] md:px-[80px]">
             <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center pt-[50px] md:pt-0 ">
               Blogs
             </h1>
@@ -29,10 +30,10 @@ const Blogs = ({ blogs }) => {
               {blogs.map((blog, ind) => {
                 return (
                   <div
-                    className="w-full md:w-[210px] md:h-[385px] bg-white flex flex-col gap-y-[18px]"
+                    className="w-full md:w-[230px] bg-white flex flex-col gap-y-[18px]"
                     key={ind}
                   >
-                    <div className="img-container w-[210px] h-[210px]">
+                    <div className="img-container w-[230px] h-[210px]">
                       {blog?.attributes && (
                         <Image
                           src={
@@ -44,23 +45,21 @@ const Blogs = ({ blogs }) => {
                         />
                       )}
                     </div>
-                    <div className="px-[18px] pb-[25px]">
+                    <div className="px-[18px]">
                       <span className="text-[16px] font-oswald font-bold">
                         {blog?.attributes?.title}
                       </span>
                       <br />
-                      <span
+                      {/* <span
                         className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]"
                         dangerouslySetInnerHTML={{
                           __html: richTextReducer(
                             blog?.attributes?.description.slice(0, 60)
                           ),
                         }}
-                      ></span>
+                      ></span> */}
                       <Link href={`/blogs/${blog?.attributes?.slug}`}>
-                        <span className="text-[#F28E1C] cursor-pointer text-[12px] font-jakarta text-opacity-[50%] pt-[18px]">
-                          Read More
-                        </span>
+                        <Button className="bg-[#373737] text-white font-oswald w-full my-[20px]">View Blog</Button>
                       </Link>
                     </div>
                   </div>
