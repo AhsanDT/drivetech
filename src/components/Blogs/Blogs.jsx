@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import bgImage from "../../assets/blogs/blogs-bg.png";
+import Loader from "../UI/Loader";
 
 const Blogs = ({ blogs }) => {
   return (
@@ -17,34 +18,40 @@ const Blogs = ({ blogs }) => {
               Blogs
             </h1>
             <div className="flex gap-x-[32px] overflow-scroll xl:overflow-hidden xl:flex-wrap">
-              {blogs?.map((blog, ind) => {
-                return (
-                  <Link
-                    href={`/blogs/${blog?.attributes?.slug}`}
-                    className="w-full md:w-[230px] pb-[20px] bg-white flex flex-col gap-y-[16px]"
-                    key={ind}
-                  >
-                    <div className="img-container w-[230px] h-[210px]">
-                      <Image
-                        src={
-                          blog?.attributes?.thumbnail?.data?.attributes?.url
-                        }
-                        alt="img"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                    <div className="px-[27px]">
-                      <span className="text-[20px] font-oswald font-bold">
-                        {blog?.attributes?.title}
-                      </span>
-                      <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">
-                        {new Date(blog?.attributes?.createdAt)?.toDateString()}
-                      </p>
-                    </div>
-                  </Link>
-                );
-              })}
+              {blogs?.length ? (
+                blogs?.map((blog, ind) => {
+                  return (
+                    <Link
+                      href={`/blogs/${blog?.attributes?.slug}`}
+                      className="w-full md:w-[230px] pb-[20px] bg-white flex flex-col gap-y-[16px]"
+                      key={ind}
+                    >
+                      <div className="img-container w-[230px] h-[210px]">
+                        <Image
+                          src={
+                            blog?.attributes?.thumbnail?.data?.attributes?.url
+                          }
+                          alt="img"
+                          width={100}
+                          height={100}
+                        />
+                      </div>
+                      <div className="px-[27px]">
+                        <span className="text-[20px] font-oswald font-bold">
+                          {blog?.attributes?.title}
+                        </span>
+                        <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">
+                          {new Date(
+                            blog?.attributes?.createdAt
+                          )?.toDateString()}
+                        </p>
+                      </div>
+                    </Link>
+                  );
+                })
+              ) : (
+                <Loader />
+              )}
             </div>
           </div>
         </div>

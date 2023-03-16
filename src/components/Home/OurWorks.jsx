@@ -9,6 +9,8 @@ import img4 from "../../assets/ourwork/img4.png";
 import img5 from "../../assets/ourwork/img5.png";
 import img6 from "../../assets/ourwork/img6.png";
 
+import Loader from "../UI/Loader";
+
 const DATA = [
   { id: "d1", img: img1, title: "The Project Title", type: "SaaS Solutions" },
   { id: "d2", img: img2, title: "The Project Title", type: "AI & ML" },
@@ -96,16 +98,20 @@ const OurWorks = ({
               </ul>
             </div>
             <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[24px] lg:gap-y-[40px] mt-[30px]">
-              {portfolios.map((portfolio, ind) => {
-                return (
-                  <div className=" flex flex-col gap-y-[16px]" key={ind}>
-                    <OurWorkItem
-                      portfolio={portfolio?.attributes}
-                      id={portfolio?.id}
-                    />
-                  </div>
-                );
-              })}
+              {portfolios?.length ? (
+                portfolios.map((portfolio, ind) => {
+                  return (
+                    <div className=" flex flex-col gap-y-[16px]" key={ind}>
+                      <OurWorkItem
+                        portfolio={portfolio?.attributes}
+                        id={portfolio?.id}
+                      />
+                    </div>
+                  );
+                })
+              ) : (
+                <Loader />
+              )}
             </div>
           </div>
         </div>

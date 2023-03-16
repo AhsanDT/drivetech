@@ -15,7 +15,7 @@ import {
   fetchBlogs,
   fetchCategories,
   fetchHeroBox,
-  fetchPartners,
+  fetchPartnersWithFilter,
   fetchPortfolios,
   fetchServices,
 } from "api";
@@ -24,6 +24,7 @@ import Loader from "@/components/UI/Loader";
 const HomePage = () => {
   const [services, setServices] = useState([]);
   const [partners, setPartners] = useState([]);
+  const [partnerType, setPartnerType] = useState("core");
   const [blogs, setBlogs] = useState([]);
   const [categories, setCategories] = useState([]);
   const [portfolios, setPortfolios] = useState([]);
@@ -41,18 +42,18 @@ const HomePage = () => {
 
   const getData = async () => {
     try {
+      let heroBoxResponse = await fetchHeroBox();
+      if (heroBoxResponse?.data?.data?.length) {
+        setHeroBox(heroBoxResponse?.data?.data[0]);
+      }
       let servicesResponse = await fetchServices();
       setServices(servicesResponse?.data?.data);
-      let partnersResponse = await fetchPartners();
+      let partnersResponse = await fetchPartnersWithFilter("core", 3);
       setPartners(partnersResponse?.data?.data);
       let blogsResponse = await fetchBlogs();
       setBlogs(blogsResponse?.data?.data);
       let categoriesResponse = await fetchCategories();
       setCategories(categoriesResponse?.data?.data);
-      let heroBoxResponse = await fetchHeroBox();
-      if (heroBoxResponse?.data?.data?.length) {
-        setHeroBox(heroBoxResponse?.data?.data[0]);
-      }
     } catch (error) {
       console.log(error);
     }
@@ -65,6 +66,16 @@ const HomePage = () => {
         portfolioName
       );
       setPortfolios(portfoliosResponse?.data?.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getPartners = async (type) => {
+    try {
+      let partnersResponse = await fetchPartnersWithFilter(type, 3);
+      setPartners(partnersResponse?.data?.data);
+      setPartnerType(type);
     } catch (error) {
       console.log(error);
     }
@@ -84,7 +95,11 @@ const HomePage = () => {
         portfolioName={portfolioName}
         setPortfolioName={setPortfolioName}
       />
-    <Partnership partners={partners} />
+      <Partnership
+        partners={partners}
+        getPartners={getPartners}
+        partnerType={partnerType}
+      />
       <Blogs blogs={blogs} />
     </Layout>
   );

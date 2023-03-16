@@ -17,11 +17,13 @@ export const fetchDevelopments = () => {
 };
 
 export const fetchPartners = () => {
-  return axios.get(`${baseURL}/partners?populate=*`);
+  return axios.get(`${baseURL}/partners?populate=*&pagination[limit]=3`);
 };
 
-export const fetchPartnersWithFilter = (type) => {
-  return axios.get(`${baseURL}/partners?populate=*&filters[type][$eq]=${type}`);
+export const fetchPartnersWithFilter = (type, limit = 100) => {
+  return axios.get(
+    `${baseURL}/partners?populate=*&filters[type][$eq]=${type}&pagination[limit]=${limit}`
+  );
 };
 
 export const fetchBlogs = () => {
