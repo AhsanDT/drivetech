@@ -116,7 +116,7 @@ const Services = ({ services, name, image }) => {
         </div>
       </section>
       {route == "/" && (
-        <div className="hidden lg:block w-full  border-t-[16vw] border-t-[#313131] relative top-[3px] border-l-[50vw] border-l-[transparent] border-r-[50vw] border-r-[transparent] "></div>
+        <div className="hidden lg:block w-full  border-t-[16vw] border-t-[#313131] relative top-[4px] border-l-[50vw] border-l-[transparent] border-r-[50vw] border-r-[transparent] "></div>
       )}
     </>
   );
