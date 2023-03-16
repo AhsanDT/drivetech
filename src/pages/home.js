@@ -40,6 +40,10 @@ const HomePage = () => {
 
   const getData = async () => {
     try {
+      let heroBoxResponse = await fetchHeroBox();
+      if (heroBoxResponse?.data?.data?.length) {
+        setHeroBox(heroBoxResponse?.data?.data[0]);
+      }
       let servicesResponse = await fetchServices();
       setServices(servicesResponse?.data?.data);
       let partnersResponse = await fetchPartners();
@@ -48,10 +52,6 @@ const HomePage = () => {
       setBlogs(blogsResponse?.data?.data);
       let categoriesResponse = await fetchCategories();
       setCategories(categoriesResponse?.data?.data);
-      let heroBoxResponse = await fetchHeroBox();
-      if (heroBoxResponse?.data?.data?.length) {
-        setHeroBox(heroBoxResponse?.data?.data[0]);
-      }
     } catch (error) {
       console.log(error);
     }
@@ -83,7 +83,7 @@ const HomePage = () => {
         portfolioName={portfolioName}
         setPortfolioName={setPortfolioName}
       />
-    <Partnership partners={partners} />
+      <Partnership partners={partners} />
       <Blogs blogs={blogs} />
     </Layout>
   );

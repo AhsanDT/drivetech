@@ -1,9 +1,11 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
+
 import heroImage from "../../assets/bg-images/BG3.png";
 import styles from "../../styles/Hero.module.css";
 import Button from "../UI/Button";
+import { richTextReducer } from "helpers/utils";
 
 const Hero = ({ heroBox }) => {
   return (
@@ -21,9 +23,13 @@ const Hero = ({ heroBox }) => {
         </div>
 
         <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[81%] lg:w-[70%] 3xl:mx-auto z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
-          <span className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]">
+          <span
+            className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]"
+            dangerouslySetInnerHTML={{
+              __html: richTextReducer(heroBox?.attributes?.heading),
+            }}
+          >
             {/* We help you drive your business to{" "} */}
-            {heroBox?.attributes?.heading}
             {/* <span className="text-[#136C2C]">success</span> */}
           </span>
           <p className="text-white text-[16px] font-medium font-jakarta hidden lg:block lg:w-[500px]">

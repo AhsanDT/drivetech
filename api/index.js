@@ -17,7 +17,7 @@ export const fetchDevelopments = () => {
 };
 
 export const fetchPartners = () => {
-  return axios.get(`${baseURL}/partners?populate=*`);
+  return axios.get(`${baseURL}/partners?populate=*&pagination[limit]=3`);
 };
 
 export const fetchPartnersWithFilter = (type) => {
