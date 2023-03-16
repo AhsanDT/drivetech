@@ -19,6 +19,7 @@ import {
   fetchPortfolios,
   fetchServices,
 } from "api";
+import Loader from "@/components/UI/Loader";
 
 const HomePage = () => {
   const [services, setServices] = useState([]);
