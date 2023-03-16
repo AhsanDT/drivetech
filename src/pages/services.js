@@ -15,7 +15,7 @@ const services = ({ services = [] }) => {
   );
 };
 
-services.getInitialProps = async (context) => {
+services.getInitialProps = async () => {
   let servicesResponse = await fetchServices();
   return { services: servicesResponse?.data?.data };
 };
