@@ -73,6 +73,7 @@ const HomePage = () => {
 
   const getPartners = async (type) => {
     try {
+      setPartners([]);
       let partnersResponse = await fetchPartnersWithFilter(type, 3);
       setPartners(partnersResponse?.data?.data);
       setPartnerType(type);

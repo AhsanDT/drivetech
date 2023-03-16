@@ -136,10 +136,10 @@ const Header = ({ services, developments }) => {
                     Portfolio
                   </li>
                 </Link>
-                <Link href={"/partnership/core"}>
+                <Link href={"/partnership"}>
                   <li
                     className={`${
-                      route == "/partnership/core"
+                      route == "/partnership"
                         ? "text-[#ffffff] border-b-[#136C2C]"
                         : route == "/partnership/ecological"
                         ? "text-[#ffffff] border-b-[#136C2C]"
