@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import loader from "../../assets/loader2.gif"
-const Loader = () => {
+import loader from "../../assets/loader.gif"
+const WhiteLoader = () => {
   return (
     <div className='flex justify-center items-center'>
     <Image src={loader} alt="loader" />
@@ -9,4 +9,4 @@ const Loader = () => {
   )
 }
 
-export default Loader
+export default WhiteLoader

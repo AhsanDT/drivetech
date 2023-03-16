@@ -11,8 +11,8 @@ const Footer = () => {
     <footer className="w-full   bg-[#36373A] md:px-[80px] px-[30px] lg:px-[80px] py-[40px] lg:py-[10px]  2xl:flex justify-center relative z-[1] ">
       <div className="w-full xl:ma x-w-[1440px] ">
         <div className="pt-[83px] justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex h-[298px]  border-b border-b-[#6F6F6F]">
-          <div className="flex flex-col gap-y-[16px]">
-            <div className="flex gap-x-[16px]">
+          <div className="flex flex-col gap-y-[16px] items-center">
+            <div className="flex gap-x-[16px] items-center">
               <FooterIcon
                 icon="fa-brands fa-facebook-f"
                 link="https://www.facebook.com/drivetechnologiesuae?_rdc=1&_rdr"
@@ -28,12 +28,12 @@ const Footer = () => {
                 link="https://www.linkedin.com/company/drivetechnologiesuae/"
                 className="bg-[#007BB6] text-[18px] "
               />
-              <FooterIcon icon="fa-brands fa-instagram" link="#" className="icon-grad" />
+              {/* <FooterIcon icon="fa-brands fa-instagram" link="#" className="icon-grad" />
               <FooterIcon
                 icon="fa-brands fa-pinterest"
                 link="#"
                 className="bg-[#CD1E25] text-[18px]  text-[#37373B]"
-              />
+              /> */}
             </div>
             <div className="flex gap-x-2 items-center">
               <div>

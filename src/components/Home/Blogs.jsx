@@ -59,7 +59,7 @@ const Blogs = ({ blogs }) => {
                         }}
                       ></span> */}
                       <Link href={`/blogs/${blog?.attributes?.slug}`}>
-                        <Button className="bg-[#373737] text-white font-oswald w-full my-[20px]">View Blog</Button>
+                        <button className="bg-[#373737] text-white font-oswald w-full my-[20px] px-[20px] py-[10px]">View Blog</button>
                       </Link>
                     </div>
                   </div>

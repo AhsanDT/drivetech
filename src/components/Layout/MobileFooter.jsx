@@ -9,7 +9,7 @@ const MobileFooter = () => {
     <>
       <div className="flex flex-col gap-y-[17px]">
         <h3>Social Media</h3>
-        <div className="flex gap-x-[16px]">
+        <div className="flex gap-x-[16px] items-center">
           <FooterIcon icon="fa-brands fa-facebook-f" link="https://www.facebook.com/drivetechnologiesuae?_rdc=1&_rdr" className="bg-[#3B5998]" />
           <FooterIcon icon="fa-brands fa-twitter" link="https://twitter.com/DriveTechuae" className="bg-[#2DAAE1]" />
           <FooterIcon
@@ -17,8 +17,7 @@ const MobileFooter = () => {
             link="https://www.linkedin.com/company/drivetechnologiesuae/"
             className="bg-[#007BB6]"
           />
-          <FooterIcon icon="fa-brands fa-instagram" link="#" className="icon-grad" />
-          <FooterIcon icon="fa-brands fa-pinterest" link="#" className="bg-[#CD1E25]" />
+
         </div>
       </div>
       <div className="flex flex-col gap-y-[17px]">

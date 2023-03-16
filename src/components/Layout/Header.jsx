@@ -77,7 +77,7 @@ const Header = ({ services, developments }) => {
                           href={`/services/#${service?.id}`}
                           key={ind}
                         >
-                          <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                          <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C] w-fit">
                             {service?.attributes?.title}
                           </li>
                         </Link>
@@ -107,14 +107,14 @@ const Header = ({ services, developments }) => {
                       route == "/development" && "rotate-[180deg] text-white"
                     } fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold`}
                   ></i>
-                  <div className="w-[212px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
+                  <div className="w-[282px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
                       {developments?.map((development, ind) => (
                         <Link
                           href={`/development/#${development?.id}`}
                           key={ind}
                         >
-                          <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C]">
+                          <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C] w-fit">
                             {development?.attributes?.title}
                           </li>
                         </Link>
