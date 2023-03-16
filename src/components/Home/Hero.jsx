@@ -6,7 +6,6 @@ import styles from "../../styles/Hero.module.css";
 import Button from "../UI/Button";
 
 const Hero = ({ heroBox }) => {
-  console.log("heroBox", heroBox);
   return (
     <section className="w-full justify-center relative min-h-[100vh]">
       <div className="w-full xl:max-w-[1440px]   ">

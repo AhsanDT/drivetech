@@ -21,10 +21,10 @@ const Blogs = ({ blogs }) => {
                 return (
                   <Link
                     href={`/blogs/${blog?.attributes?.slug}`}
-                    className="w-full md:w-[270px] pb-[20px] bg-white flex flex-col gap-y-[16px]"
+                    className="w-full md:w-[230px] pb-[20px] bg-white flex flex-col gap-y-[16px]"
                     key={ind}
                   >
-                    <div className="img-container w-[270px] h-[210px]">
+                    <div className="img-container w-[230px] h-[210px]">
                       <Image
                         src={
                           blog?.attributes?.thumbnail?.data?.attributes?.url
