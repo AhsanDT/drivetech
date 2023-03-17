@@ -28,7 +28,7 @@ const Partnership = ({ partners, className, getPartners, partnerType }) => {
                 partnerType == "core"
                   ? "text-white bg-black"
                   : "text-black bg-white hover:text-white  hover:bg-black"
-              }  w-full md:w-[208px]  text-center px-[20px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}
+              }  w-full md:w-[208px]  text-center px-[2 0px] lg:px-[16px] py-[8px] cursor-pointer border border-black`}
               onClick={() => getPartners("core")}
             >
               CORE PARTNERS
