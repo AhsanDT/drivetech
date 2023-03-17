@@ -45,13 +45,13 @@ const HomePage = () => {
       if (heroBoxResponse?.data?.data?.length) {
         setHeroBox(heroBoxResponse?.data?.data[0]);
       }
-      let servicesResponse = await fetchServices();
+      let servicesResponse = await fetchServices(4);
       setServices(servicesResponse?.data?.data);
       let partnersResponse = await fetchPartnersWithFilter("core", 3);
       setPartners(partnersResponse?.data?.data);
-      let blogsResponse = await fetchBlogs();
+      let blogsResponse = await fetchBlogs(4);
       setBlogs(blogsResponse?.data?.data);
-      let categoriesResponse = await fetchCategories();
+      let categoriesResponse = await fetchCategories(6);
       setCategories(categoriesResponse?.data?.data);
     } catch (error) {
       console.log(error);
@@ -62,7 +62,8 @@ const HomePage = () => {
     try {
       let portfoliosResponse = await fetchPortfolios(
         selectedCategory,
-        portfolioName
+        portfolioName,
+        6
       );
       setPortfolios(portfoliosResponse?.data?.data);
     } catch (error) {

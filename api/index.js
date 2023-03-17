@@ -8,26 +8,34 @@ axios.interceptors.request.use(function (config) {
   return config;
 });
 
-export const fetchServices = () => {
-  return axios.get(`${baseURL}/services?populate=*`);
+export const fetchServices = (limit = 100) => {
+  return axios.get(
+    `${baseURL}/services?populate=*&sort[0]=createdAt:desc&pagination[limit]=${limit}`
+  );
 };
 
-export const fetchDevelopments = () => {
-  return axios.get(`${baseURL}/developments?populate=*`);
+export const fetchDevelopments = (limit = 100) => {
+  return axios.get(
+    `${baseURL}/developments?populate=*&sort[0]=createdAt:desc&pagination[limit]=${limit}`
+  );
 };
 
 export const fetchPartners = () => {
-  return axios.get(`${baseURL}/partners?populate=*&pagination[limit]=3`);
+  return axios.get(
+    `${baseURL}/partners?populate=*&sort[0]=createdAt:desc&pagination[limit]=3`
+  );
 };
 
 export const fetchPartnersWithFilter = (type, limit = 100) => {
   return axios.get(
-    `${baseURL}/partners?populate=*&filters[type][$eq]=${type}&pagination[limit]=${limit}`
+    `${baseURL}/partners?populate=*&filters[type][$eq]=${type}&sort[0]=createdAt:desc&pagination[limit]=${limit}`
   );
 };
 
-export const fetchBlogs = () => {
-  return axios.get(`${baseURL}/blogs?populate=*`);
+export const fetchBlogs = (limit = 100) => {
+  return axios.get(
+    `${baseURL}/blogs?populate=*&sort[0]=createdAt:desc&pagination[limit]=${limit}`
+  );
 };
 
 export const fetchBlogBySlug = (slug) => {
@@ -38,20 +46,24 @@ export const updateBlog = (id, data) => {
   return axios.put(`${baseURL}/blogs/${id}`, data);
 };
 
-export const fetchCategories = () => {
-  return axios.get(`${baseURL}/categories`);
+export const fetchCategories = (limit = 100) => {
+  return axios.get(
+    `${baseURL}/categories?sort[0]=createdAt:desc&pagination[limit]=${limit}`
+  );
 };
 
-export const fetchPortfolios = (filter, search) => {
+export const fetchPortfolios = (filter, search, limit = 100) => {
   if (search) {
     return axios.get(
-      `${baseURL}/portfolios?filters[title][$containsi]=${search}&populate=*`
+      `${baseURL}/portfolios?filters[title][$containsi]=${search}&populate=*&sort[0]=createdAt:desc&pagination[limit]=${limit}`
     );
   } else if (filter === "all") {
-    return axios.get(`${baseURL}/portfolios?populate=*`);
+    return axios.get(
+      `${baseURL}/portfolios?populate=*&sort[0]=createdAt:desc&pagination[limit]=${limit}`
+    );
   } else {
     return axios.get(
-      `${baseURL}/portfolios?filters[category][id][$eq]=${filter}&populate=*`
+      `${baseURL}/portfolios?filters[category][id][$eq]=${filter}&populate=*&sort[0]=createdAt:desc&pagination[limit]=${limit}`
     );
   }
 };
