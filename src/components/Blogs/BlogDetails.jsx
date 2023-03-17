@@ -48,10 +48,10 @@ const BlogDetails = ({ blog }) => {
                   )}
                 </div>
                 <div className=" md:px-[120px]  flex flex-col gap-y-[32px] font-jakarta">
-                  {/* <div className="flex gap-x-[9px] justify-center items-center ">
+                  <div className="flex gap-x-[9px] justify-center items-center ">
                 <i class="fa-solid fa-thumbs-up cursor-pointer text-[20px]"></i>
                 <span className="text-[14px] font-jakarta">243</span>
-              </div> */}
+              </div>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: blog?.attributes?.description,
