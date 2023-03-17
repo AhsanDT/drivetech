@@ -12,17 +12,18 @@ const Hero = ({ heroBox }) => {
     <section className="w-full justify-center relative min-h-[100vh]">
       <div className="w-full xl:max-w-[1440px]   ">
         <div className={`img-container w-full h-[101%] absolute z-[-1]`}>
-          {heroBox && (
+          <Image src={heroImage} alt="img" />
+          {/* {heroBox && (
             <Image
               src={heroBox?.attributes?.image?.data?.attributes?.url}
               alt="img"
               height={heroBox?.attributes?.image?.data?.attributes?.height}
               width={heroBox?.attributes?.image?.data?.attributes?.width}
             />
-          )}
+          )} */}
         </div>
 
-        <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[81%] lg:w-[70%] 3xl:mx-auto z-[11] px-[30px] md:px-[100px] xl:px-[140px]">
+        <div className=" pt-[160px] lg:pt-[220px] flex flex-col justify-center gap-y-[24px] lg:gap-y-[15px] md:gap-y-[27px] w-[81%] lg:w-[70%] 3xl:mx-auto z-[11] px-[30px] md:px-[100px] xl:px-[140px] pb-[180px]">
           <span
             className="font-bold text-[48px] md:text-[64px] tracki ng-[1px] leading-[55px] md:leading-[73px]"
             dangerouslySetInnerHTML={{
@@ -45,7 +46,7 @@ const Hero = ({ heroBox }) => {
             powered by its people and advanced technology. */}
           </p>
           {heroBox?.attributes?.btn_text && (
-            <Button className="border-[2px] border-black w-fit ">
+            <Button className="border-[2px] border-black w-fit px-[30px] py-[15px] text-[18px ] ">
               <Link href={"/startproject"}>
                 {" "}
                 {heroBox?.attributes?.btn_text}

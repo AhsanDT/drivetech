@@ -6,6 +6,7 @@ import { richTextReducer } from "helpers/utils";
 const Policy = ({ title, data }) => {
   if (!data) return null;
   return (
+
     <section className="py-[50px]  relative top-[50px]  px-[30px] md:px-[130px]">
       <div className="pt-[50px] pb-[92px]">
         <div className="font-jakarta">

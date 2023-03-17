@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 import Loader from "../UI/Loader";
+import WhiteLoader from "../UI/WhiteLoader";
 
 const Partnership = ({ partners, className, getPartners, partnerType }) => {
   const { route } = useRouter();
@@ -77,7 +78,7 @@ const Partnership = ({ partners, className, getPartners, partnerType }) => {
               );
             })
           ) : (
-            <Loader />
+            <WhiteLoader />
           )}
         </div>
       </div>
