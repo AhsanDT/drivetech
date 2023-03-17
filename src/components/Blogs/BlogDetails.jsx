@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Layout from "../Layout/Layout";
 import Loader from "../UI/Loader";
+import WhiteLoader from "../UI/WhiteLoader";
 
 const BlogDetails = ({ blog }) => {
   return (
@@ -10,7 +11,7 @@ const BlogDetails = ({ blog }) => {
       <section className="flex justify-center py-[50px] px-[30px] md:px-[130px]  relative top-[50px]">
         <div className="pt-[50px] pb-[92px] w-full xl:max-w-[1440px]">
           {!blog?.attributes ? (
-            <Loader />
+            <WhiteLoader />
           ) : (
             <>
               <div className=" font-jakarta">
