@@ -17,7 +17,7 @@ const Partnership = ({ partners, className, getPartners, partnerType }) => {
           Partnership
         </h1>
 
-        <p className="text-[16px] font-poppins text-[#000000] text-opacity-[70%] lg:text-center lg:w-[669px] px-[30px]  md:px-[80px] ">
+        <p className="text-[16px] font-poppins text-[#000000] text-opacity-[70%] lg:text-center lg:w-[699px] px-[30px]  md:px-[80px] ">
           The best thing about DriveTech is it values its partnership with the
           intention of making everyone succeed.
         </p>

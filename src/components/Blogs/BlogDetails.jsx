@@ -25,15 +25,15 @@ const BlogDetails = ({ blog }) => {
                 </span>
               </div>
               <div>
-                <div className="pt-[20px] md:pt-[77px] flex flex-col gap-y-[21px] justify-center md:items-center">
+                <div className="pt-[20px]  flex flex-col gap-y-[21px] justify-center md:items-center">
                   <div className="flex items-center  mt-[21px]">
                     <div className=" bg-[#3C3C3C] w-[68px] h-[2px]"></div>
                     <div className=" bg-[#3C3C3C] w-[12px] h-[12px] rounded-full"></div>
                   </div>
-                  <h1 className="text-[32px] font-oswald font-bold text-[#00000S0] lg:text-[48px]  md:text-center">
+                  <h1 className="text-[32px] font-poppins font-bold text-[#00000S0] lg:text-[48px]  md:text-center">
                     {blog?.attributes?.title}
                   </h1>
-                  <span className="font-jakarta">
+                  <span className="font-roboto">
                     {blog?.attributes?.count} Reads
                   </span>
                 </div>
@@ -50,9 +50,10 @@ const BlogDetails = ({ blog }) => {
                 <div className=" md:px-[120px]  flex flex-col gap-y-[32px] font-jakarta">
                   <div className="flex gap-x-[9px] justify-center items-center ">
                 <i class="fa-solid fa-thumbs-up cursor-pointer text-[20px]"></i>
-                <span className="text-[14px] font-jakarta">243</span>
+                <span className="text-[14px] font-roboto">243</span>
               </div>
                   <p
+                  className="font-roboto"
                     dangerouslySetInnerHTML={{
                       __html: blog?.attributes?.description,
                     }}

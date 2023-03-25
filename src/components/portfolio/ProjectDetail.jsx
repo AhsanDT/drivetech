@@ -22,15 +22,15 @@ const ProjectDetail = ({ portfolio }) => {
             </span>
           </div>
           <div>
-            <div className="pt-[20px] md:pt-[77px] flex flex-col gap-y-[21px] justify-center md:items-center">
+            <div className="pt-[20px]  flex flex-col gap-y-[21px] justify-center md:items-center">
               <div className="flex items-center px-[30px] md:px-[130px] mt-[21px]">
                 <div className=" bg-[#3C3C3C] w-[68px] h-[2px]"></div>
                 <div className=" bg-[#3C3C3C] w-[12px] h-[12px] rounded-full"></div>
               </div>
-              <h1 className="text-[32px] font-oswald font-bold text-[#3F3F3F] lg:text-[48px] px-[30px] md:px-[130px]">
+              <h1 className="text-[32px] font-poppins font-bold text-[#3F3F3F] lg:text-[48px] px-[30px] md:px-[130px]">
                 {portfolio?.title}
               </h1>
-              <div className="font-jakarta text-[15px] px-[30px] md:px-[130px] flex gap-x-[10px] md:gap-x-[40px]">
+              <div className="font-roboto text-[15px] px-[30px] md:px-[130px] flex gap-x-[10px] md:gap-x-[40px]">
                 <span>{portfolio?.sub_title}</span>
                 <span className="text-[black]  w-[2px]">|</span>
 
@@ -48,7 +48,7 @@ const ProjectDetail = ({ portfolio }) => {
               <div className={`${styles.parallax}`}></div>
             </div>
             <div
-              className="px-[30px] md:px-[120px] xl:px-[300px] flex flex-col gap-y-[32px]"
+              className="px-[30px] md:px-[120px] font-roboto xl:px-[300px] flex flex-col gap-y-[32px]"
               dangerouslySetInnerHTML={{ __html: portfolio?.description }}
             >
               {/* <h3 className="text-[32px] text-[#3F3F3F] font-oswald font-bold">

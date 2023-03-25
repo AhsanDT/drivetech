@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchDevelopments, fetchServices } from "../../../api";
 import Idea from "../Home/Idea";
+import ScrollToTop from "../ScrollToTop";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -26,6 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header services={services} developments={developments} />
+      <ScrollToTop />
       {children}
       <Idea title="Achieve Your Goals Faster With Us" />
       <Footer />

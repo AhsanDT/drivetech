@@ -4,12 +4,13 @@ import Link from "next/link";
 
 import bgImage from "../../assets/blogs/blogs-bg.png";
 import Loader from "../UI/Loader";
+import Button from "../UI/Button";
 
 const Blogs = ({ blogs }) => {
   return (
     <>
       <section className="w-full flex justify-center linear-grad relative top-[5px] py-[100px] lg:pb-[312px]">
-        <div className={`w-full h-full xl:max-w-[1440px] relative`}>
+        <div className={`w-full h-full xl:max-w-[1240px] relative`}>
           <div className={`absolute top-[-20px]`}>
             <Image src={bgImage} alt="image" />
           </div>
@@ -17,7 +18,7 @@ const Blogs = ({ blogs }) => {
             <h1 className="text-[32px] lg:text-[48px] font-poppins font-bold text-white xl:text-center">
               Blogs
             </h1>
-            <div className="flex gap-x-[32px] overflow-scroll xl:overflow-hidden xl:flex-wrap">
+            <div className="flex gap-x-[32px] gap-y-[40px] overflow-scroll lg:overflow-hidden lg:flex-wrap">
               {blogs?.length ? (
                 blogs?.map((blog, ind) => {
                   return (
@@ -50,9 +51,11 @@ const Blogs = ({ blogs }) => {
                   );
                 })
               ) : (
+                
                 <Loader/>
               )}
             </div>
+            <Button className="w-fit px-[40px] mx-auto uppercase">Add More</Button>
           </div>
         </div>
       </section>

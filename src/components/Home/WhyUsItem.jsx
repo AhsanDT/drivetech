@@ -10,7 +10,7 @@ const WhyUsItem = ({data}) => {
 
     </div>
     </div>
-    <p className='text-[16px] font-roboto font-normal lg:text-center relative z-[11]'>{data.content}</p>
+    <p className='text-[16px] font-roboto font-normal lg:text-center'>{data.content}</p>
     </>
   )
 }

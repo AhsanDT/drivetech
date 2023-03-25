@@ -39,7 +39,7 @@ const Services = ({ services, name, image }) => {
           >
             {route == "/" && (
               <div className="bg-[#4D4D53] text-white  flex flex-col gap-y-[10px] md:flex-row gap-x-[32px] px-[30px] md:px-[100px] py-[75px] justify-center mx-[30px] md:mx-[unset]   xl:max-w-[1100px] mb-[100px]">
-                <div className="flex flex-col  gap-y-[25px] md:w-[50%] font-roboto">
+                <div className="flex flex-col  gap-y-[25px] lg:gap-y-[55px] md:w-[50%] font-roboto">
                   <h1 className="text-[48px] font-poppins font-bold">
                     Mission
                   </h1>
@@ -47,20 +47,20 @@ const Services = ({ services, name, image }) => {
                     <div className=" bg-[white] w-[68px] h-[2px]"></div>
                     <div className=" bg-[white] w-[12px] h-[12px] rounded-full"></div>
                   </div>
-                  <p className="font-jakarta">
+                  <p className="font-jakarta text-[16px]">
                     At drive Technology, we strive to be a trusted partner to
                     our clients by understanding their unique needs and
                     delivering cutting-edge technology solutions that drive
                     their success.
                   </p>
                 </div>
-                <div className="flex flex-col gap-y-[25px] md:w-[50%] font-roboto">
+                <div className="flex flex-col gap-y-[25px] lg:gap-y-[55px] md:w-[50%] font-roboto">
                   <h1 className="text-[48px] font-poppins font-bold">Vision</h1>
                   <div className="flex items-center">
                     <div className=" bg-[white] w-[68px] h-[2px]"></div>
                     <div className=" bg-[white] w-[12px] h-[12px] rounded-full"></div>
                   </div>
-                  <p className="font-jakarta">
+                  <p className="font-jakarta text-[16px]">
                     Our vision is to become the leading provider of technology
                     solutions for businesses of all sizes,known for our ability
                     to understand and meet the unique needs of each client and

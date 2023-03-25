@@ -110,7 +110,11 @@ const OurWorks = ({
                   );
                 })
               ) : (
-                <Loader />
+                <>
+                  <Loader />
+                  {/* <span className="text-[20px] text-black bg-white font-poppins px-[30px] py-[10px]">NOT AVAILABLE</span> */}
+
+                </>
               )}
             </div>
           </div>

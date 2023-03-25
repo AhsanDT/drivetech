@@ -20,13 +20,13 @@ const DATA = [
     id: "d2",
     content:
       "We take a holistic approach to software development, ensuring that the end product not only meets the technical requirements, but also aligns with the overall business strategy and goals.",
-    img: img2,
+    img: img3,
   },
   {
     id: "d3",
     content:
       "Our digital marketing strategies are tailored to each individual client, taking into account their unique target audience, industry, and competitors",
-    img: img3,
+    img: img2,
   },
   {
     id: "d4",
@@ -57,19 +57,9 @@ const DATA = [
 const WhyUs = () => {
   return (
     <section className="w-full flex justify-center items-center ">
-      <div className="w-full xl:max-w-[1440px]">
-        <div className="flex flex-col gap-y-[40px] lg:gap-y-[76px] md:items-center justify-center  md:px-[120px] md:py-[180px] pb-[70px] lg:pb-[unset]">
-          <div className="bg-[#5E5E5E] bg-opacity-[10%] lg:h-[168px] flex flex-col gap-y-[24px]  px-[30px] py-[20px]  justify-center items-center ">
-            <p className="font-oswald text-[16px] font-bold text-[#1D1D1D] text-opacity-[60%] lg:text-center">
-              In a crowded market of software development, digital marketing,
-              and marketing automation services, what makes Drive Technology
-              stand out as the right choice for you?
-            </p>
-            <p className="font-oswald text-[16px]  text-[#1D1D1D] text-opacity-[60%]">
-              Our Distinctive Approach to Software Development, Digital
-              Marketing, and Marketing Automation
-            </p>
-          </div>
+      <div className="w-full xl:max-w-[1440px] relative z-[11]">
+        <div className="flex flex-col gap-y-[40px] lg:gap-y-[76px] md:items-center justify-center  md:px-[120px] md:py-[180px] pb-[70px]">
+          
           <h1 className="text-[32px] lg:text-[48px] font-poppins font-bold px-[30px] ">
             Why Drive Technology
           </h1>
@@ -84,6 +74,17 @@ const WhyUs = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="bg-[#5E5E5E] bg-opacity-[10%] lg:h-[168px] flex flex-col gap-y-[24px]  px-[30px] py-[20px]  justify-center items-center ">
+            <p className="font-oswald text-[16px] font-bold text-[#1D1D1D] text-opacity-[60%] lg:text-center">
+              In a crowded market of software development, digital marketing,
+              and marketing automation services, what makes Drive Technology
+              stand out as the right choice for you?
+            </p>
+            <p className="font-oswald text-[16px]  text-[#1D1D1D] text-opacity-[60%]">
+              Our Distinctive Approach to Software Development, Digital
+              Marketing, and Marketing Automation
+            </p>
           </div>
         </div>
       </div>
