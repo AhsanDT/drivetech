@@ -37,14 +37,14 @@ const Footer = () => {
             </div>
             <div className="flex gap-x-2 items-center">
               <div>
-                <Image src={logo} width={55} height={48} alt="img" />
+                <Image src={logo} width={33} height={45} alt="img" />
               </div>
               <span className="text-[16px]  text-white font-bold">
                 Drive Technology
               </span>
             </div>
           </div>
-          <div className="flex flex-col gap-y-[24px] text-white text-[14px] font-jakarta">
+          <div className="flex flex-col gap-y-[24px] text-white text-[14px] font-roboto">
             <span>
               Email:{" "}
               <span className="text-[#4169E1] hover:underline">
@@ -65,15 +65,15 @@ const Footer = () => {
               </span>
             </span>
             <Link href={"/startproject"}>
-              <Button className="w-fit">Start a Project</Button>
+              <Button className="w-fit font-oswald">Start a Project</Button>
             </Link>
           </div>
-          <div className="flex gap-x-[32px]  xl:gap-x-[64px] text-white text-[12px] font-jakarta  ">
+          <div className="flex gap-x-[32px]  xl:gap-x-[64px] text-white text-[12px] font-roboto">
             <div>
               <ul className="flex flex-col gap-y-[24px]">
                 <Link href={"/services"}>
                   {" "}
-                  <li className="font-bold font-oswald text-[14px]">
+                  <li className="font-bold font-poppins text-[14px]">
                     Services
                   </li>
                 </Link>
@@ -96,7 +96,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-y-[24px]">
                 <Link href={"/development"}>
                   {" "}
-                  <li className="font-bold font-oswald text-[14px]">
+                  <li className="font-bold font-poppins text-[14px]">
                     Development
                   </li>
                 </Link>
@@ -119,7 +119,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-y-[24px]">
                 <Link href={"/blogs"}>
                   {" "}
-                  <li className="font-bold font-oswald text-[14px]">
+                  <li className="font-bold font-poppins text-[14px]">
                     Resources
                   </li>
                 </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-y-[24px]">
                 <Link href={"#"}>
                   {" "}
-                  <li className="font-bold font-oswald text-[14px]">Legal</li>
+                  <li className="font-bold font-poppins text-[14px]">Legal</li>
                 </Link>
                 <Link href={"/privacypolicy"}>
                   {" "}

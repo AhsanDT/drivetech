@@ -13,7 +13,10 @@ module.exports = {
       fontFamily: {
         "jakarta": ["Plus Jakarta Sans", "sans-serif"],
         "oswald": ['Oswald', "sans-serif"],
+        "roboto": ['Roboto', "sans-serif"],
+        "poppins": ['Poppins', "sans-serif"],
         sans: ["Inter", "sans-serif"],
+        
       },
   
     },

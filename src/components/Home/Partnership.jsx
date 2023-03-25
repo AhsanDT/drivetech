@@ -13,11 +13,11 @@ const Partnership = ({ partners, className, getPartners, partnerType }) => {
       } lg:py- [50px] relative flex justify-center ${className} `}
     >
       <div className="w-full xl:max-w-[1440px] flex flex-col gap-y-[16px] lg:items-center ">
-        <h1 className="lg:text-[32px] text-[48px] font-oswald font-bold text-[#282829] lg:text-center px-[30px]  md:px-[80px]">
+        <h1 className="text-[32px] lg:text-[48px] font-poppins font-bold text-[#282829] lg:text-center px-[30px]  md:px-[80px]">
           Partnership
         </h1>
 
-        <p className="text-[16px] font-jakarta text-[#000000] text-opacity-[70%] lg:text-center lg:w-[669px] px-[30px]  md:px-[80px] ">
+        <p className="text-[16px] font-poppins text-[#000000] text-opacity-[70%] lg:text-center lg:w-[669px] px-[30px]  md:px-[80px] ">
           The best thing about DriveTech is it values its partnership with the
           intention of making everyone succeed.
         </p>
@@ -66,7 +66,7 @@ const Partnership = ({ partners, className, getPartners, partnerType }) => {
                     />
                   </div>
                   <div className="px-[30px]  md:px-[80px]">
-                    <span className="font-oswald font-bold text-[#3C3C3C] text-[24px]">
+                    <span className="font-poppins font-bold text-[#3C3C3C] text-[24px]">
                       {partner?.attributes?.title}
                     </span>
                     <div className="flex items-center mt-[21px] ">

@@ -18,14 +18,14 @@ const ServiceItem = ({ service, id }) => {
         />
       </div>
       <div className="flex flex-col  gap-y-[21px] lg:gap-y-[55px]  lg:w-[495px]">
-        <h1 className="text-[20px] lg:text-[40px] font-oswald font-bold text-white">
+        <h1 className="text-[20px] lg:text-[40px] font-poppins font-bold text-white">
           {service?.title}
         </h1>
         <div className="flex items-center">
           <div className=" bg-white w-[68px] h-[2px]"></div>
           <div className=" bg-white w-[12px] h-[12px] rounded-full"></div>
         </div>
-        <p className=" text-[15px] lg:text-[16px] text-white font-jakarta">
+        <p className=" text-[15px] lg:text-[16px] text-white font-roboto">
           {service?.description}
         </p>
         <Link href={`/startproject`}>

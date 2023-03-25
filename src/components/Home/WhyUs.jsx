@@ -70,7 +70,7 @@ const WhyUs = () => {
               Marketing, and Marketing Automation
             </p>
           </div>
-          <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold px-[30px] ">
+          <h1 className="text-[32px] lg:text-[48px] font-poppins font-bold px-[30px] ">
             Why Drive Technology
           </h1>
           <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[40px] px-[30px] lg:gap-y-[108px]">

@@ -46,7 +46,7 @@ const Hero = ({ heroBox }) => {
             powered by its people and advanced technology. */}
           </p>
           {heroBox?.attributes?.btn_text && (
-            <Button className="border-[2px] border-black w-fit px-[30px] py-[15px] text-[18px ] ">
+            <Button className="border-[2px] border-black w-fit px-[32px] py-[16px] text-[18px] ">
               <Link href={"/startproject"}>
                 {" "}
                 {heroBox?.attributes?.btn_text}

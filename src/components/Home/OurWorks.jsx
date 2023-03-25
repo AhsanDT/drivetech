@@ -57,7 +57,7 @@ const OurWorks = ({
               route == "/" ? "top-[80px]" : "to p-[40px]"
             }  flex flex-col gap-y-[32px] px-[30px] md:px-[80px]`}
           >
-            <h1 className="text-[32px] lg:text-[48px] font-oswald font-bold text-white xl:text-center">
+            <h1 className="text-[32px] lg:text-[48px] font-poppins font-bold text-white xl:text-center">
               Our Works
             </h1>
             <div className="relative flex items-center justify-center">

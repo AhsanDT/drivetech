@@ -21,7 +21,7 @@ const Header = ({ services, developments }) => {
           <div className="flex items-center gap-x-[64px] ">
             <div className="flex gap-x-2 items-center">
               <Link href={"/"}>
-                <Image src={logo} width={55} height={48} alt="img" />
+                <Image src={logo} width={33} height={45} alt="img" />
               </Link>
               <Link href={"/"}>
                 {" "}
@@ -33,7 +33,7 @@ const Header = ({ services, developments }) => {
 
             <div>
               <ul
-                className="gap-x-[32px] xl:gap-x-[64px] items-center hidden md:flex"
+                className="gap-x-[32px] xl:gap-x-[64px] items-center hidden md:flex font-roboto"
                 id="navbar-example2"
               >
                 <Link href={"/"}>
