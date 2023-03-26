@@ -32,9 +32,9 @@ export const fetchPartnersWithFilter = (type, limit = 100) => {
   );
 };
 
-export const fetchBlogs = (limit = 100) => {
+export const fetchBlogs = (pageSize = 100, page = 1) => {
   return axios.get(
-    `${baseURL}/blogs?populate=*&sort[0]=createdAt:desc&pagination[limit]=${limit}`
+    `${baseURL}/blogs?populate=*&sort[0]=createdAt:desc&pagination[page]=${page}&pagination[pageSize]=${pageSize}`
   );
 };
 

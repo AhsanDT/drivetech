@@ -6,7 +6,7 @@ import bgImage from "../../assets/blogs/blogs-bg.png";
 import Loader from "../UI/Loader";
 import Button from "../UI/Button";
 
-const Blogs = ({ blogs }) => {
+const Blogs = ({ blogs, totalCount, onPageChange }) => {
   return (
     <>
       <section className="w-full flex justify-center linear-grad relative top-[5px] py-[100px] lg:pb-[312px]">
@@ -51,11 +51,17 @@ const Blogs = ({ blogs }) => {
                   );
                 })
               ) : (
-                
-                <Loader/>
+                <Loader />
               )}
             </div>
-            <Button className="w-fit px-[40px] mx-auto uppercase">Add More</Button>
+            {totalCount > blogs?.length ? (
+              <Button
+                className="w-fit px-[40px] mx-auto uppercase"
+                onClick={onPageChange}
+              >
+                Add More
+              </Button>
+            ) : null}
           </div>
         </div>
       </section>
