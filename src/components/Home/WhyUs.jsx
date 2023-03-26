@@ -58,9 +58,9 @@ const WhyUs = () => {
   return (
     <section className="w-full flex justify-center items-center ">
       <div className="w-full xl:max-w-[1440px] relative z-[11]">
-        <div className="flex flex-col gap-y-[40px] lg:gap-y-[76px] md:items-center justify-center  md:px-[120px] md:py-[180px] pb-[70px]">
+        <div className="flex flex-col gap-y-[40px] lg:gap-y-[76px] md:items-center justify-center pt-[40px]  md:px-[120px] md:py-[180px] pb-[70px]">
           
-          <h1 className="text-[32px] lg:text-[48px] font-poppins font-bold px-[30px] ">
+          <h1 className="text-[24px] lg:text-[48px] font-poppins font-bold px-[30px] ">
             Why Drive Technology
           </h1>
           <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[40px] px-[30px] lg:gap-y-[108px]">
