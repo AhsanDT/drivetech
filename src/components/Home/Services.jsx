@@ -87,7 +87,7 @@ const Services = ({ services, name, image }) => {
                         ind == 1 && "md:flex-row-reverse"
                       } ${ind == 3 && "md:flex-row-reverse"} w-full`}
                       key={service?.attributes?.id}
-                      id={service?.id}
+                      id={service?.attributes?.title?.replaceAll(" ", "-")}
                     >
                       <ServiceItem
                         service={service?.attributes}

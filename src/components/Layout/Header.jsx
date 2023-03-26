@@ -74,7 +74,7 @@ const Header = ({ services, developments }) => {
                     <ul className="flex flex-col gap-y-[17px]">
                       {services?.map((service, ind) => (
                         <Link
-                          href={`/services/#${service?.id}`}
+                          href={`/services/#${service?.attributes?.title?.replaceAll(' ', '-')}`}
                           key={ind}
                         >
                           <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C] w-fit">
@@ -111,7 +111,7 @@ const Header = ({ services, developments }) => {
                     <ul className="flex flex-col gap-y-[17px]">
                       {developments?.map((development, ind) => (
                         <Link
-                          href={`/development/#${development?.id}`}
+                          href={`/development/#${development?.attributes?.title?.replaceAll(' ', '-')}`}
                           key={ind}
                         >
                           <li className="text-[14px] text-white border-b-[4px] border-transparent hover:border-b-[#136C2C] w-fit">
