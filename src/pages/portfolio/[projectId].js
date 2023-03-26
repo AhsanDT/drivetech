@@ -10,7 +10,7 @@ import img4 from "../../assets/ourwork/img4.png";
 import img5 from "../../assets/ourwork/img5.png";
 import img6 from "../../assets/ourwork/img6.png";
 
-import { fetchPortfolioById } from "api";
+import { fetchPortfolioByISlug } from "api";
 import { richTextReducer } from "helpers/utils";
 
 const DATA = [
@@ -84,7 +84,7 @@ const Post = () => {
 
   const getData = async () => {
     try {
-      let portfolioResponse = await fetchPortfolioById(projectId);
+      let portfolioResponse = await fetchPortfolioByISlug(projectId);
       if (portfolioResponse?.data?.data) {
         portfolioResponse.data.data.attributes.description = richTextReducer(
           portfolioResponse?.data?.data.attributes.description

@@ -1,24 +1,9 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+
 import OurWorkItem from "./OurWorkItem";
-import bgImage from "../../assets/ourwork/design.png";
-import img1 from "../../assets/ourwork/img1.png";
-import img2 from "../../assets/ourwork/img2.png";
-import img3 from "../../assets/ourwork/img3.png";
-import img4 from "../../assets/ourwork/img4.png";
-import img5 from "../../assets/ourwork/img5.png";
-import img6 from "../../assets/ourwork/img6.png";
 
 import Loader from "../UI/Loader";
-
-const DATA = [
-  { id: "d1", img: img1, title: "The Project Title", type: "SaaS Solutions" },
-  { id: "d2", img: img2, title: "The Project Title", type: "AI & ML" },
-  { id: "d3", img: img3, title: "The Project Title", type: "EdTech" },
-  { id: "d4", img: img4, title: "The Project Title", type: "Heallth Tech" },
-  { id: "d5", img: img5, title: "The Project Title", type: "Ecommerce" },
-  { id: "d6", img: img6, title: "The Project Title", type: "Crypto" },
-];
 
 const OurWorks = ({
   image,

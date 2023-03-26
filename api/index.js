@@ -68,8 +68,8 @@ export const fetchPortfolios = (filter, search, limit = 100) => {
   }
 };
 
-export const fetchPortfolioById = (id) => {
-  return axios.get(`${baseURL}/portfolios/${id}`);
+export const fetchPortfolioByISlug = (slug) => {
+  return axios.get(`${baseURL}/portfolios?filters[slug][$eq]=${slug}`);
 };
 
 export const fetchHeroBox = () => {

@@ -5,13 +5,11 @@ const OurWorkItem = ({ id, portfolio }) => {
   return (
     <>
       <Link
-        href={`/portfolio/${id}`}
+        href={`/portfolio/${portfolio?.slug}`}
         className="img-container sm:w-[352px] h-[262px]"
       >
         <Image
-          src={
-            portfolio?.thumbnail?.data?.attributes?.url
-          }
+          src={portfolio?.thumbnail?.data?.attributes?.url}
           alt="portfolio-img"
           width={100}
           height={100}
