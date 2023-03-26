@@ -28,6 +28,7 @@ const OurWorks = ({
   setSelectedCategory,
   portfolioName,
   setPortfolioName,
+  loading = false,
 }) => {
   const { route } = useRouter();
   return (
@@ -98,7 +99,7 @@ const OurWorks = ({
               </ul>
             </div>
             <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[24px] lg:gap-y-[40px] mt-[30px]">
-              {portfolios?.length ? (
+              {portfolios?.length && !loading ? (
                 portfolios.map((portfolio, ind) => {
                   return (
                     <div className=" flex flex-col gap-y-[16px]" key={ind}>
@@ -109,12 +110,14 @@ const OurWorks = ({
                     </div>
                   );
                 })
-              ) : (
+              ) : !portfolios?.length && !loading ? (
                 <>
-                  <Loader />
-                  {/* <span className="text-[20px] text-black bg-white font-poppins px-[30px] py-[10px]">NOT AVAILABLE</span> */}
-
+                  <span className="text-[20px] text-black bg-white font-poppins px-[30px] py-[10px]">
+                    NOT AVAILABLE
+                  </span>
                 </>
+              ) : (
+                <Loader />
               )}
             </div>
           </div>

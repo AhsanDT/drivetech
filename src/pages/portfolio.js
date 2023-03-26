@@ -12,6 +12,7 @@ const portfolio = () => {
   const [portfolios, setPortfolios] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [portfolioName, setPortfolioName] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getData();
@@ -32,12 +33,15 @@ const portfolio = () => {
 
   const getPortfolioData = async () => {
     try {
+      setLoading(true);
       let portfoliosResponse = await fetchPortfolios(
         selectedCategory,
         portfolioName
       );
       setPortfolios(portfoliosResponse?.data?.data);
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.log(error);
     }
   };
@@ -52,6 +56,7 @@ const portfolio = () => {
         setSelectedCategory={setSelectedCategory}
         portfolioName={portfolioName}
         setPortfolioName={setPortfolioName}
+        loading={loading}
       />
     </Layout>
   );
