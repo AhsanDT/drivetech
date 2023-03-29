@@ -93,3 +93,7 @@ export const fetchTermsAndConditions = () => {
     `${baseURL}/terms-and-conditions?populate=*&pagination[limit]=1`
   );
 };
+
+export const addEvent = (data) => {
+  return axios.post(`${baseURL}/calendlies`, data);
+};
