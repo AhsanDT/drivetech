@@ -59,7 +59,7 @@ const Blogs = ({ blogs, totalCount, onPageChange }) => {
                 className="w-fit px-[40px] mx-auto uppercase"
                 onClick={onPageChange}
               >
-                Add More
+                Read More
               </Button>
             ) : null}
           </div>
