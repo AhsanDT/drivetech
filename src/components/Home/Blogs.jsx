@@ -14,10 +14,10 @@ const Blogs = ({ blogs }) => {
   return (
     <>
       {route == "/" && (
-        <div className="w-full border-b-[7vh] lg:border-b-[10vh] border-b-[#424248]  border-t-[white] relative top-[7px] xl:top-[8px] left-0 border-l-[100vw] border-l-[transparent]"></div>
-      )}
+        <div className="w-full border-b-[7vh] lg:border-b-[10vh] border-b-[#424248]  border-t-[white] relative top-[8px] xl:top-[8px] left-0 border-r-[100vw] border-r-[transparent]"></div>
+        )}
       <section className="w-full flex justify-center linear-grad relative top-[6px] pt-[120px] md:py-[120px]">
-        <div className="w-full h-full xl:max-w-[1440px] relative top-[-154px] overflo w-hidden">
+        <div className="w-full h-full xl:max-w-[1440px] relative top-[-144px] overflo w-hidden">
           <div className="absolute h-[1100px]  top-[-270px] overflow-hidden">
             <Image src={image} alt="image" />
           </div>

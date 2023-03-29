@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="w-full   bg-[#36373A] md:px-[80px] px-[30px] lg:px-[80px] py-[40px] lg:py-[10px] lg:pb-[30px]  2xl:flex justify-center relative z-[1] ">
       <div className="w-full xl:ma x-w-[1440px] ">
-        <div className="pt-[83px] justify-between gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex h-[298px]  border-b border-b-[#6F6F6F]">
+        <div className="pt-[83px]  gap-x-[32px]  xl:gap-x-[64px] hidden lg:flex h-[298px]  border-b border-b-[#6F6F6F]">
           <div className="flex flex-col gap-y-[16px] items-center">
             <div className="flex gap-x-[16px] items-center">
               <FooterIcon
