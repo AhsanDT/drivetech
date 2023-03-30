@@ -8,7 +8,7 @@ import { fetchBlogs } from "api";
 const blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [page, setPage] = useState(1);
-  const [pageSize] = useState(4);
+  const [pageSize] = useState(12);
   const [totalCount, setTotalCount] = useState(0);
 
   useEffect(() => {
