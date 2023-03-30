@@ -70,7 +70,7 @@ const Header = ({ services, developments }) => {
                       route == "/services" && "rotate-[180deg] text-white"
                     } fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold`}
                   ></i>
-                  <div className="w-[205px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
+                  <div className="w-[342px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
                       {services?.map((service, ind) => (
                         <Link
@@ -107,7 +107,7 @@ const Header = ({ services, developments }) => {
                       route == "/development" && "rotate-[180deg] text-white"
                     } fa-solid fa-chevron-down text-[#808080] text-[12px] group-hover:rotate-[180deg] group-hover:text-white font-bold`}
                   ></i>
-                  <div className="w-[282px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
+                  <div className="w-[342px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
                       {developments?.map((development, ind) => (
                         <Link
