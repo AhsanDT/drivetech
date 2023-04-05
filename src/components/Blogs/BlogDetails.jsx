@@ -5,7 +5,7 @@ import Layout from "../Layout/Layout";
 import Loader from "../UI/Loader";
 import WhiteLoader from "../UI/WhiteLoader";
 
-const BlogDetails = ({ blog }) => {
+const BlogDetails = ({ blog, onLike }) => {
   return (
     <Layout>
       <section className="flex justify-center py-[50px] px-[30px] md:px-[130px]  relative top-[50px]">
@@ -48,12 +48,17 @@ const BlogDetails = ({ blog }) => {
                   )}
                 </div>
                 <div className=" md:px-[120px]  flex flex-col gap-y-[32px] font-jakarta">
-                  <div className="flex gap-x-[9px] justify-center items-center ">
-                <i class="fa-solid fa-thumbs-up cursor-pointer text-[20px]"></i>
-                <span className="text-[14px] font-roboto">243</span>
-              </div>
+                  <div className="flex gap-x-[9px] justify-center items-center">
+                    <i
+                      class="fa-solid fa-thumbs-up cursor-pointer text-[20px]"
+                      onclick={onLike}
+                    ></i>
+                    <span className="text-[14px] font-roboto">
+                      {blog?.attributes?.likes}
+                    </span>
+                  </div>
                   <p
-                  className="font-roboto"
+                    className="font-roboto"
                     dangerouslySetInnerHTML={{
                       __html: blog?.attributes?.description,
                     }}

@@ -36,7 +36,15 @@ const Post = () => {
     }
   };
 
-  return <BlogDetails blog={blog} />;
+  const onLikeHandler = async () => {
+    await updateBlog(blogResponse?.data?.data[0]?.id, {
+      data: {
+        likes: +blog?.attributes?.likes + 1,
+      },
+    });
+  };
+
+  return <BlogDetails blog={blog} onLike={onLikeHandler} />;
 };
 
 export default Post;

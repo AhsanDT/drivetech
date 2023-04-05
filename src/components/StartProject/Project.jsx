@@ -15,7 +15,10 @@ const Project = () => {
       let myHeaders = new Headers();
       myHeaders.append(
         "Authorization",
-        `Bearer ${process.env.NEXT_PUBLIC_CALENDLY_API_TOKEN}`
+        `Bearer ${
+          process.env.NEXT_PUBLIC_CALENDLY_API_TOKEN ||
+          "eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNjgwMDQ0Mzc1LCJqdGkiOiIzZDdkOTU3Mi04MGYzLTQ2ZjEtYmZmMi02ZTFmZTllNjY0NzYiLCJ1c2VyX3V1aWQiOiIyZjNlMjc3Ny05NDdmLTQwNmEtOTMwYi1jNThjYThlNzZkMDkifQ.lD_H94LahLJ6bywDroJ7E7Futm5ScvW1OD4I6bjcWC4InkMrg1DoeOWblPKrrVDax13K0HUPKjl1CKTGTR6hDg"
+        }`
       );
       let requestOptions = {
         method: "GET",

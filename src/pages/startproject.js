@@ -1,13 +1,14 @@
-import Layout from '@/components/Layout/Layout'
-import Project from '@/components/StartProject/Project'
-import React from 'react'
+import React from "react";
+
+import Layout from "@/components/Layout/Layout";
+import Project from "@/components/StartProject/Project";
 
 const startproject = () => {
   return (
     <Layout>
-        <Project />
+      <Project />
     </Layout>
-  )
-}
+  );
+};
 
-export default startproject
+export default startproject;
