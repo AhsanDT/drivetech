@@ -39,7 +39,7 @@ const Post = () => {
   const onLikeHandler = async () => {
     await updateBlog(blog?.id, {
       data: {
-        likes: +blog?.attributes?.likes + 1,
+        likes: +(blog?.attributes?.likes || 0) + 1,
       },
     });
   };
