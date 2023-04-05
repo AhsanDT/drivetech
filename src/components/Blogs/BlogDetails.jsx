@@ -51,7 +51,7 @@ const BlogDetails = ({ blog, onLike }) => {
                   <div className="flex gap-x-[9px] justify-center items-center">
                     <i
                       class="fa-solid fa-thumbs-up cursor-pointer text-[20px]"
-                      onclick={onLike}
+                      onClick={onLike}
                     ></i>
                     <span className="text-[14px] font-roboto">
                       {blog?.attributes?.likes}
