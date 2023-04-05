@@ -85,11 +85,11 @@ const Post = () => {
   const getData = async () => {
     try {
       let portfolioResponse = await fetchPortfolioByISlug(projectId);
-      if (portfolioResponse?.data?.data) {
-        portfolioResponse.data.data.attributes.description = richTextReducer(
-          portfolioResponse?.data?.data.attributes.description
+      if (portfolioResponse?.data?.data?.length) {
+        portfolioResponse.data.data[0].attributes.description = richTextReducer(
+          portfolioResponse?.data?.data[0].attributes.description
         );
-        setPortfolio(portfolioResponse?.data?.data);
+        setPortfolio(portfolioResponse?.data?.data[0]);
       }
     } catch (error) {
       console.log(error);
