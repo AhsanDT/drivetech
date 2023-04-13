@@ -138,10 +138,7 @@ const Footer = ({ services, developments }) => {
 
             <div>
               <ul className="flex flex-col gap-y-[24px]">
-                <Link href={"#"}>
-                  {" "}
                   <li className="font-bold font-poppins text-[14px]">Legal</li>
-                </Link>
                 <Link href={"/privacypolicy"}>
                   {" "}
                   <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
