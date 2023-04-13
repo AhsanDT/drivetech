@@ -13,7 +13,7 @@ const Header = ({ services, developments }) => {
   const { route } = useRouter();
   return (
     <>
-      <header className="w-full bg-[#36373A] px-[30px]  md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[100] flex justify-center">
+      <header className="w-full bg-[#36373A] px-[30px]  md:px-[80px] py-[4px] md:py-[10px] fixed top-0 z-[200] flex justify-center">
         {isActive && (
           <div className="absolute left-0 top-[100px] w-full h-screen bg-[#1F1F22ED] backdrop-blur-[5px] z-[99]"></div>
         )}
