@@ -38,9 +38,9 @@ const Services = ({ services, name, image }) => {
             } `}
           >
             {route == "/" && (
-              <div className="bg-[#4D4D53] text-white  flex flex-col gap-y-[10px] md:flex-row gap-x-[32px] px-[30px] md:px-[100px] py-[75px] justify-center mx-[30px] md:mx-[unset]   xl:max-w-[1100px] mb-[100px]">
+              <div className="bg-[#4D4D53] text-white  flex flex-col gap-y-[30px] md:flex-row gap-x-[32px] px-[30px] md:px-[100px] py-[50px] lg:py-[75px] justify-center mx-[30px] md:mx-[unset]   xl:max-w-[1100px] mb-[100px]">
                 <div className="flex flex-col  gap-y-[25px] lg:gap-y-[55px] md:w-[50%] font-roboto">
-                  <h1 className="text-[48px] font-poppins font-bold">
+                  <h1 className="text-[32px] md:text-[48px] font-poppins font-bold">
                     Mission
                   </h1>
                   <div className="flex items-center">
@@ -55,7 +55,7 @@ const Services = ({ services, name, image }) => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-y-[25px] lg:gap-y-[55px] md:w-[50%] font-roboto">
-                  <h1 className="text-[48px] font-poppins font-bold">Vision</h1>
+                  <h1 className="text-[32px] md:text-[48px] font-poppins font-bold">Vision</h1>
                   <div className="flex items-center">
                     <div className=" bg-[white] w-[68px] h-[2px]"></div>
                     <div className=" bg-[white] w-[12px] h-[12px] rounded-full"></div>
@@ -70,7 +70,7 @@ const Services = ({ services, name, image }) => {
                 </div>
               </div>
             )}
-            <h1 className="text-[32px] lg:text-[48px] font-bold text-white lg:text-center px-[30px] md:px-[0px] font-poppins">
+            <h1 className="text-[32px] lg:text-[32px] md:text-[48px] font-bold text-white lg:text-center px-[30px] md:px-[0px] font-poppins">
               {name}
             </h1>
             <div
