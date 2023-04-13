@@ -72,7 +72,7 @@ const Header = ({ services, developments }) => {
                   ></i>
                   <div className="w-[342px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
-                      {services?.map((service, ind) => (
+                      {services?.slice(0, 10)?.map((service, ind) => (
                         <Link
                           href={`/services/#${service?.attributes?.title?.replaceAll(' ', '-')}`}
                           key={ind}
@@ -109,7 +109,7 @@ const Header = ({ services, developments }) => {
                   ></i>
                   <div className="w-[342px] absolute top-[82px] font-jakarta p-[16px] z-10 bg-[#36373A] hidden group-hover:block">
                     <ul className="flex flex-col gap-y-[17px]">
-                      {developments?.map((development, ind) => (
+                      {developments?.slice(0, 10)?.map((development, ind) => (
                         <Link
                           href={`/development/#${development?.attributes?.title?.replaceAll(' ', '-')}`}
                           key={ind}

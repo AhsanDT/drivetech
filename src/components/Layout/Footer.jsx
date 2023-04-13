@@ -80,7 +80,7 @@ const Footer = ({ services, developments }) => {
                     Services
                   </li>
                 </Link>
-                {services?.slice(0, 5)?.map((service, ind) => (
+                {services?.slice(0, 10)?.map((service, ind) => (
                   <Link
                     href={`/services/#${service?.attributes?.title?.replaceAll(
                       " ",
@@ -104,7 +104,7 @@ const Footer = ({ services, developments }) => {
                     Development
                   </li>
                 </Link>
-                {developments?.slice(0, 5)?.map((development, ind) => (
+                {developments?.slice(0, 10)?.map((development, ind) => (
                   <Link
                     href={`/development/#${development?.attributes?.title?.replaceAll(
                       " ",

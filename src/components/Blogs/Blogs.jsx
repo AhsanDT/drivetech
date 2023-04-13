@@ -21,6 +21,16 @@ const Blogs = ({ blogs, totalCount, onPageChange }) => {
             <div className="flex gap-x-[32px] gap-y-[40px] overflow-scroll lg:overflow-hidden lg:flex-wrap">
               {blogs?.length ? (
                 blogs?.map((blog, ind) => {
+                  let today = new Date(blog?.attributes?.createdAt);
+                  let options = {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  };
+                  let formattedDate = today.toLocaleDateString(
+                    "en-US",
+                    options
+                  );
                   return (
                     <Link
                       href={`/blogs/${blog?.attributes?.slug}`}
@@ -42,9 +52,7 @@ const Blogs = ({ blogs, totalCount, onPageChange }) => {
                           {blog?.attributes?.title}
                         </span>
                         <p className="text-[12px] font-jakarta text-[#000000] text-opacity-[50%] pt-[18px]">
-                          {new Date(
-                            blog?.attributes?.createdAt
-                          )?.toDateString()}
+                          {formattedDate}
                         </p>
                       </div>
                     </Link>
