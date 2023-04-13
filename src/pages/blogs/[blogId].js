@@ -37,11 +37,16 @@ const Post = () => {
   };
 
   const onLikeHandler = async () => {
-    await updateBlog(blog?.id, {
+    let blogResponse = await updateBlog(blog?.id, {
       data: {
         likes: +(blog?.attributes?.likes || 0) + 1,
       },
     });
+    let blogDup = { ...blog };
+    if (blogDup.attributes) {
+      blogDup.attributes.likes = blogResponse?.data?.data?.attributes?.likes;
+      setBlog(blogDup);
+    }
   };
 
   return <BlogDetails blog={blog} onLike={onLikeHandler} />;
