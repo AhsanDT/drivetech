@@ -50,7 +50,7 @@ const BlogDetails = ({ blog, onLike }) => {
                 <div className=" md:px-[120px]  flex flex-col gap-y-[32px] font-jakarta">
                   <div className="flex gap-x-[9px] justify-center items-center">
                     <i
-                      class="fa-solid fa-thumbs-up cursor-pointer text-[20px]"
+                      className="fa-solid fa-thumbs-up cursor-pointer text-[20px]"
                       onClick={onLike}
                     ></i>
                     <span className="text-[14px] font-roboto">

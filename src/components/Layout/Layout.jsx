@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <ScrollToTop />
       {children}
       <Idea title="Achieve Your Goals Faster With Us" />
-      <Footer />
+      <Footer services={services} developments={developments} />
     </>
   );
 };

@@ -1,12 +1,13 @@
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
 import logo from "../../assets/logo.png";
 import Button from "../UI/Button";
 import FooterIcon from "./FooterIcon";
 import MobileFooter from "./MobileFooter";
 
-const Footer = () => {
+const Footer = ({ services, developments }) => {
   return (
     <footer className="w-full   bg-[#36373A] md:px-[80px] px-[30px] lg:px-[80px] py-[40px] lg:py-[10px] lg:pb-[30px]  2xl:flex justify-center relative z-[1] ">
       <div className="w-full xl:ma x-w-[1440px] ">
@@ -36,12 +37,14 @@ const Footer = () => {
               /> */}
             </div>
             <div className="flex gap-x-2 items-center">
-              <div>
-                <Image src={logo} width={33} height={45} alt="img" />
-              </div>
-              <span className="text-[16px]  text-white font-bold">
-                Drive Technology
-              </span>
+              <Link href={"/"}>
+                <div>
+                  <Image src={logo} width={33} height={45} alt="img" />
+                </div>
+                <span className="text-[16px]  text-white font-bold">
+                  Drive Technology
+                </span>
+              </Link>
             </div>
           </div>
           <div className="flex flex-col gap-y-[24px] text-white text-[14px] font-roboto">
@@ -77,18 +80,19 @@ const Footer = () => {
                     Services
                   </li>
                 </Link>
-                <Link href={"/services"}>
-                  {" "}
-                  <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
-                    Digital Marketing Services
-                  </li>
-                </Link>
-                <Link href={"/services"}>
-                  {" "}
-                  <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
-                    Back office Services
-                  </li>
-                </Link>
+                {services?.slice(0, 5)?.map((service, ind) => (
+                  <Link
+                    href={`/services/#${service?.attributes?.title?.replaceAll(
+                      " ",
+                      "-"
+                    )}`}
+                    key={ind}
+                  >
+                    <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                      {service?.attributes?.title}
+                    </li>
+                  </Link>
+                ))}
               </ul>
             </div>
 
@@ -100,18 +104,19 @@ const Footer = () => {
                     Development
                   </li>
                 </Link>
-                <Link href={"/development"}>
-                  {" "}
-                  <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
-                    Mobile & Web Development
-                  </li>
-                </Link>
-                <Link href={"/development"}>
-                  {" "}
-                  <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
-                    AI & Machine Learning
-                  </li>
-                </Link>
+                {developments?.slice(0, 5)?.map((development, ind) => (
+                  <Link
+                    href={`/development/#${development?.attributes?.title?.replaceAll(
+                      " ",
+                      "-"
+                    )}`}
+                    key={ind}
+                  >
+                    <li className="text-[#ffffff] text-opacity-[50%] hover:underline">
+                      {development?.attributes?.title}
+                    </li>
+                  </Link>
+                ))}
               </ul>
             </div>
 

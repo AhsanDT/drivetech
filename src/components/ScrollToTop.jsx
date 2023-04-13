@@ -23,7 +23,7 @@ function ScrollToTop() {
     <div>
       {showButton && (
         <button onClick={handleClick} className="scroll-to-top">
-          <i class="fa-solid fa-arrow-up"></i>
+          <i className="fa-solid fa-arrow-up"></i>
         </button>
       )}    
       {/* code for the rest of the component goes here */}

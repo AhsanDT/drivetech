@@ -9,13 +9,12 @@ import image from "../../assets/ourwork/design.png";
 import Button from "../UI/Button";
 
 const Blogs = ({ blogs }) => {
-  console.log(blogs)
   const { route } = useRouter();
   return (
     <>
       {route == "/" && (
         <div className="w-full border-b-[7vh] lg:border-b-[10vh] border-b-[#424248]  border-t-[white] relative top-[8px] xl:top-[8px] left-0 border-r-[100vw] border-r-[transparent]"></div>
-        )}
+      )}
       <section className="w-full flex justify-center linear-grad relative top-[6px] pt-[120px] md:py-[120px]">
         <div className="w-full h-full xl:max-w-[1440px] relative top-[-144px] overflo w-hidden">
           <div className="absolute h-[1100px]  top-[-270px] overflow-hidden">
@@ -59,7 +58,9 @@ const Blogs = ({ blogs }) => {
                         }}
                       ></span> */}
                       <Link href={`/blogs/${blog?.attributes?.slug}`}>
-                        <button className="bg-[#373737] text-white font-oswald w-full my-[20px] px-[20px] py-[10px]">View Blog</button>
+                        <button className="bg-[#373737] text-white font-oswald w-full my-[20px] px-[20px] py-[10px]">
+                          View Blog
+                        </button>
                       </Link>
                     </div>
                   </div>
