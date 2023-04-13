@@ -36,16 +36,14 @@ const Footer = ({ services, developments }) => {
                 className="bg-[#CD1E25] text-[18px]  text-[#37373B]"
               /> */}
             </div>
-            <div className="flex gap-x-2 items-center">
-              <Link href={"/"}>
+            <Link href={"/"} className="flex gap-x-2 items-center">
                 <div>
                   <Image src={logo} width={33} height={45} alt="img" />
                 </div>
                 <span className="text-[16px]  text-white font-bold">
                   Drive Technology
                 </span>
-              </Link>
-            </div>
+            </Link>
           </div>
           <div className="flex flex-col gap-y-[24px] text-white text-[14px] font-roboto">
             <span>
